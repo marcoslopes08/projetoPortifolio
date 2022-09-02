@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio - Website Pessoal - Fundo Preto</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Ajax jQuery -->
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.3.min.js"></script>
+	
+	<!-- Abaixo - jQuery (necessário para Pluguins de JavaSript no Bootstrap) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<!-- Acima BIBLIOTECAS para controlar o BOTÃO Voltar ao Topo -->
+
+	<!-- Abaixo CSS Estilos da Página  -->
+	<link rel="stylesheet" href="css/styleSiteFundoPreto.css">
+
+	<!-- Abaixo CSS que controlar Botão VOLTAR AO TOPO -->
+	<link rel="stylesheet" href="css/voltarAoTopo.css">
+	
+	<!-- Abaixo jQuery (Java) que faz o Botão VOLTAR AO TOPO aparecer/desaparecer na rolagem da página -->
+	<link rel="stylesheet" href="java/animacaoBotaoVoltarAoTopo.js">
+	
+	<!-- Abaixo CSS para Carrossel sobre Parallax -->
+	<link rel="stylesheet" href="css/carrossel.css">
+
+	<!-- Abaixo CSS para Nomes/Sobrenomes e Títulos sobre Parallax -->
+	<link rel="stylesheet" href="css/titulosCarrossel.css">
+
+	<!-- Abaixo CSS do Botão LUMINOSO no Topo do Site e Boxes de Projetos -->
+	<link rel="stylesheet" href="css/botaoLuminoso.css">
+
+</head>
+<body>
+	<!-- hero Section start - Section 1 - Topo da Página -->
+	<div class="hero">
+		<nav class="navbar">
+			<h2 class="logo">Portfó<span>lio</span></h2>
+			<ul>
+				<li><a href="#about">sobre mim</a></li>
+				<li><a href="#service">habilidades</a></li>
+				<li><a href="#differentials">diferenciais</a></li>
+				<li><a href="#project">projetos</a></li>
+			</ul>
+			<!-- <a href="#contato" class="btn">contatos</a> --> <!-- Botão Original -->			
+			<a class="botaoLuminoso" href="#contato" style="--clr:white;">contatos</a>	
+		</nav>		
+		
+		<div class="content">
+			<h4>Olá, meu nome é</h4>
+			<h1>Marcos <span>Lopes</span></h1>
+			<h3>Sou Desenvolvedor Web</h3>
+			<div class="newslatter">
+				<form>
+					<input type="email" name="email" id="mail" placeholder="Digite seu e-mail">
+					<a class="botao-email" href="mailto:marcos.lopes08@gmail.com">Fale comigo</a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- About section start - Section 2 - Sobre mim -->
+	<section class="about" id="about">
+		<div class="main">
+			<img src="https://thumbs2.imgbox.com/ca/42/YAD9iv9i_t.png" style="border-radius: 50px;">
+			<div class="about-text">
+				<h2>Sobre mim</h2>
+				<div class="line-com-recuo"></div> <!-- linha (SUBLINHADO abaixo dos Títulos)-->
+				<h5>Desenvolvedor <span>& Designer</span></h5>
+				<p>Desenvolvedor web com foco em front-end. Prezo pelo visual belo e dinâmico em 
+					cada projeto. Deixo websites mais interativos com animações web, além de designers 
+					responsivos que tornam a experiência do usuário mais agradável e única, independente 
+					do dispositivo usado, seja celular, tablet ou computador.
+				</p>
+				<a href="https://api.whatsapp.com/send?phone=5511997355410">
+					<button type="button">Enviar WhatsApp</button></a>
+			</div>
+		</div>
+	</section>
+
+	<!-- service section start - Section 3 - Habilidades -->
+	<section class="service" id="service">
+
+		<div class="title">
+			<h2>Habilidades</h2>
+			<div class="line"></div> <!-- linha (SUBLINHADO abaixo dos Títulos)-->
+		</div>
+
+		<div class="box">
+			<div class="card">
+				<i class="fas fa-bars"></i>
+				<h5>Responsividade</h5>
+				<div class="pra">
+					<p>Todo site deve ser construído com dois objetivos principais: 
+						primeiro, ele precisa funcionar em todos os dispositivos; 
+						em segundo lugar, precisa ser o mais rápido possível.
+					</p>
+
+					<p style="text-align: center;">
+						<a class="button" href="pages/pagina1.html">Leia mais</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<i class="far fa-user"></i>
+				<h5>Design</h5>
+				<div class="pra">
+					<p>Facilidade de acesso somado a visuais dinâmicos e interativos, se
+						traduzem em melhores respostas por parte dos usuários,
+						aumentando a satisfação em toda navegação.
+					</p>
+
+					<p style="text-align: center;">
+						<a class="button" href="pages/pagina2.html">Leia mais</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<i class="far fa-bell"></i>
+				<h5>Business Intelligence</h5>
+				<div class="pra">
+					<p>Utilizar Business Intelligence (Ingeligência de Negócios) 
+						integrado ao website traz eficiência, melhora a interação
+						com os usuários e aumenta a produtividade.
+					</p>
+
+					<p style="text-align: center;">
+						<a class="button" href="pages/pagina3.html">Leia mais</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<!-- Contact Me - Section 4 - Diferenciais - Contacte-me -->
+	<section class="contact-me">
+
+		<div class="title" id="differentials">
+			<h2 style="margin-top: 50px;">Diferenciais</h2>
+			<div class="line"></div> <!-- linha (SUBLINHADO abaixo dos Títulos)-->
+		</div>
+
+		<!-- CARROSSEL - início do controle deslizante de imagem (image slider start)-->
+		<div class="controle-deslizante"> <!-- ERA class="slider" -->
+					
+			<div class="slides">
+				
+				<!--início dos botões de controle (radio buttons start)-->
+				<input type="radio" name="radio-botao" id="radio1">
+				<input type="radio" name="radio-botao" id="radio2">
+				<input type="radio" name="radio-botao" id="radio3">
+				<input type="radio" name="radio-botao" id="radio4">
+				<!--fim dos botões de controle (radio buttons end)-->
+			
+				<!--início das imagens do slide (slide images start)-->
+				<div class="slide-carrossel first">
+					<img src="https://thumbs2.imgbox.com/81/db/xROLAQg8_t.png" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para que apareça borda ao Redor da foto -->
+					<h1 class="titulo2-2">
+						<span>linguagens que utilizo</span></h1>
+				</div>
+				<div class="slide-carrossel">
+					<img src="https://thumbs2.imgbox.com/86/24/zv8Voq7y_t.jpeg" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para que apareça borda ao Redor da foto -->
+					<h1 class="titulo2-2">
+						<span>sites responsivos</span></h1>
+				</div>
+				<div class="slide-carrossel">
+					<img src="https://thumbs2.imgbox.com/17/55/bv8fM6tt_t.jpg" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para que apareça borda ao Redor da foto -->
+					<h1 class="titulo2-2">
+						<span>perfeccionismo</span></h1>
+				</div>
+				<div class="slide-carrossel">
+					<img src="https://thumbs2.imgbox.com/ac/41/PrS4gjMw_t.png" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para que apareça borda ao Redor da foto -->
+					<h1 class="titulo2-2">
+						<span>uso de Business Intelligence</span></h1>
+				</div>				
+				<!--fim das imagens do slide (slide images end)-->
+
+				<!--início da navegação automática (automatic navigation start)-->
+				<div class="navegacao-automatica">
+					<div class="auto-botao1"></div>
+					<div class="auto-botao2"></div>
+					<div class="auto-botao3"></div>
+					<div class="auto-botao4"></div>
+				</div>
+				<!--fim da navegação automática (automatic navigation end)-->
+
+			</div>
+
+			<!--início da navegação manual (manual navigation start)-->
+			<div class="navegacao-manual">
+				<label for="radio1" class="manual-botao"></label>
+				<label for="radio2" class="manual-botao"></label>
+				<label for="radio3" class="manual-botao"></label>
+				<label for="radio4" class="manual-botao"></label>
+			</div>
+			<!--fim da navegação manual (manual navigation end)-->
+
+		</div>		
+		<!--fim do controle deslizante de imagem (image slider end)-->
+
+	</section>
+
+	<!-- service section start - Section 5 - Projetos -->
+	<section class="service" id="project">
+
+		<div class="title">
+			<h2>Projetos</h2>
+			<div class="line"></div> <!-- linha (SUBLINHADO abaixo dos Títulos)-->
+		</div>
+
+		<h5 style="text-align: center;">Veja alguns<span> projetos</span></h5>
+
+		<div class="box-projeto">
+			<!-- Box 1 - Projeto Moon Light - Projeto Viagem Cidades -->
+			<div class="card-projeto">			
+				<img class="foto-projeto" src="https://thumbs2.imgbox.com/d2/23/ZJR6Vbf5_t.jpg" alt="">
+				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemCidades/" 
+					style="--clr:white; position:absolute;">visitar</a>			
+			</div>			
+			<!-- Box 2 - Projeto Site Viagem -->
+			<div class="card-projeto">
+				<img class="foto-projeto" src="https://thumbs2.imgbox.com/f7/f9/4YlrhbFN_t.jpg" alt="">
+				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemComMenuParaCelular/" 
+					style="--clr:white; position: absolute;">visitar</a>			
+			</div>					
+			<!-- Box 3 - Projeto Curriculo -->
+			<div class="card-projeto">
+				<img class="foto-projeto" src="https://thumbs2.imgbox.com/78/29/C4qyj0SA_t.jpg" alt="">
+				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoCurriculo/" 
+					style="--clr:white; position: absolute;">visitar</a>			
+			</div>			
+		</div>
+
+	</section>
+
+	<!-- footer start - Section 6 - Rodapé -->
+	<footer id="contato">
+		<p>Marcos Lopes</p>
+		<p>Para outras informações e mais códigos em HTML, CSS, Java e de 
+			outras linguagens, visite minhas redes.</p>
+		<div class="social">
+			<a href="https://marcoslopes08.github.io/calculadoraIMC/" title="GitHub">
+				<i class="fab fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/marcos-lopes-982616215/" title="LinkedIn">
+				<i class="fab fa-linkedin"></i></a>
+			<a href="https://web.facebook.com/marcos.lopes.1614/" title="Facebook">
+				<i class="fab fa-facebook-f"></i></a>				
+		</div>
+		<p class="end">Desenvolvido por Marcos Lopes &nbsp;&nbsp;&nbsp;&nbsp;
+			(11) 99735-5410 &nbsp;&nbsp;&nbsp;&nbsp;
+			marcos.lopes08@gmail.com
+		</p>
+	</footer>
+
+	<!-- Abaixo, jQuery (Java) que faz Botão VOLTAR AO TOPO aparecer/desaparecer na rolagem da página -->
+	<script src="java/animacaoBotaoVoltarAoTopo.js"></script>
+
+	<a href="#" class="voltarAoTopo">
+		<img class="voltarAoTopo" src="https://thumbs2.imgbox.com/0d/fd/60xmUP4b_t.jpg" 
+			 title="Topo da Página" alt="Voltar ao Topo"/>
+	</a>
+	<!-- Acima, jQuery (Java) que faz Botão VOLTAR AO TOPO aparecer/desaparecer na rolagem da página -->
+	
+	<!-- javaScript para controlar Carrossel - Sobre mim -->
+    <script src="java/carrossel.js"></script>
+
+</body>
+</html>
+

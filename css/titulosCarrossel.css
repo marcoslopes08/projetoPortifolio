@@ -1,0 +1,24 @@
+/* CSS Site Fundo Preto */
+/* Classes para controlar Títulos sobre os CARROSSEL em Diferenciais */
+
+.titulo2-2 { /* Linhas ACIMA/ABAIXO do Texto */
+    text-transform: uppercase; /* coloca o texto em Caixa Alta */
+    border-top: 3px solid #f9004d; /* 3px = expessura e Cor da Linha criada abaixo do na Segunda Palavra do Título
+                                      solid = precisa ser colocado, senão a Linha não aparecerá */
+    border-bottom: 3px solid #f9004d; /*  3px = expessura e Cor da Linha criada abaixo do na Segunda Palavra do Título
+                                          solid = precisa ser colocado, senão a Linha não aparecerá */
+    width: fit-content; /* faz a Linha criada abaixo/acima ficar do mesmo tamanho */ 
+    position: absolute; /* precisa ser ABSOLUTE senão o Texto fica acima da Foto */
+    font-size: x-large; /* tamanho da Fonte */
+    margin-left: 20px; /* coloca o Texto/Título no Lado Esquerdo da Foto */
+    margin-top: 20px; /* coloca o Texto/Título no Lado Superior da Foto */
+    padding-top: 7px; /* espaçamento entre o Texto/Título e a Linha criada acima dele */
+    padding-bottom: 2px; /* espaçamento entre o Texto/Título e a Linha criada abaixo dele */
+    border-radius: 8px; /* arredonda as pontas das Linhas Superior/Inferior */
+}
+
+.titulo2-2 span { /* Texto entre as Linhas ACIMA/ABAIXO */
+    color:#fcfc; /* cor da Fonte na tag <span> */
+    text-shadow: 0 0 20px black; /* efeito sombreado */
+    position: relative;
+}

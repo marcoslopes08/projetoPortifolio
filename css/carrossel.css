@@ -1,0 +1,193 @@
+/* CSS Carrossel Site Fundo Preto */
+.controle-deslizante { /* nome da Classe Era Slider */
+    width: 700px; /* espaço que as Fotos HORIZONTALMENTE percorrerão uma pra outra 
+                      800px = faz as fotos ficarem dentro do Slide e serem passadas uma do lado da outra
+                      1800px = causa um efeito como se as fotos saíssem das LATERAIS da Tela */
+    height: 400px; /* altura do Container onde ficarão as Fotos */
+    border-radius: 30px; /* 50px = arredondamento das bordas Esquerda Superior e Direita Inferior
+                             0px = SEM arredondamento das bordas Esquerda Inferior e Direita Superior */
+    overflow: hidden; /* esconde as Barras de Rolagem, tanto na Direita da Tela como abaixo das Fotos */
+    margin: 20px; /* margens Superior/Inferior das Fotos do Carrossel
+                     ajudam a centralizar as Fotos no meio da Tela
+                     na Classe .contact-me (css/styles.css) o comando "padding-bottom: 60px;" 
+                     dá mais um distanciamento fazendo o Container preencher a altura da Tela*/
+}
+ 
+.slides { /* Fotos dentro do 'controle-deslizante' acima */
+    width: 800%;  /* era 800% - largura entre a passagem de uma Foto para outra
+                     caso esse percentual seja mudado para 1500%, por exemplo, 
+                     a Foto Primeira Foto vai passar e ficará uma vão entre a próxima */
+    height: 400px; /* altura da Fotos */
+    display: flex; /* permite que as Fotos sejam manipuladas */
+}
+
+.slides input { 
+    display: none; /* a tag <input type="radio" name="radio-botao" id="radio1"> será escondida atrás das Fotos 
+                      se o comando 'display' for retirado, por exemplo, os Botões ficarão tanto em cima
+                      como embaixo das Fotos, e ainda causará um ERRO na visualização */
+}
+   
+.slide-carrossel { /* nome da Classe era slide */
+    width: 20%; /* espaço entre uma Foto e outra, se for maior que 20%, 
+                   50% = as Fotos passarão muito separadamente uma da outra
+                   10% = fica aparecendo a Foto anterior e posterior enquato passa uma Foto 
+                   DEVE SER 20% */
+    transition: 2s; /* tempo de transição entre uma Foto e outra */
+}
+ 
+.slide-carrossel img { /* nome da Classe era slide */
+    width: 700px; /* centraliza as Fotos no meio da Tela - largura da Foto */
+    height: 400px; /* centraliza as Fotos no meio da Tela - altura da Foto */
+    border-radius: 30px; /* arredondamento das bordas */
+    /* box-shadow: 0 0 0 3px #f9004d; */ /* coloca uma moldura em volta da Foto */
+}
+  
+/* CSS para navegação manual dos slides (css for manual slide navigation) */
+  
+.navegacao-manual { /* nome da Classe era navigation-manual */
+    position: absolute; /* força a centralização dos Botões em cima das Fotos */
+    width: 700px; /* centraliza os Botões no meio das Fotos - largura da Foto */
+    margin-top: -40px; /* é negativa para fazer os Botões ficarem com um espaçamento em relação a parte inferior da Foto */ 
+    display: flex; /* possibilita que os comandos ACIMA sejam executados */
+    justify-content: center; /* justifica e centraliza EXATAMENTE no meio das Fotos */
+}
+  
+.manual-botao { /* nome da Classe era manual-btn */
+    border: 2px solid #191919; /* 5px = expessura da borda criada em volta do Botão
+                                    solid = precisa ser colocado para aparecer a borda ao redor do Botão
+                                  #40D3DC = (antiga) cor da borda criada em volta do Botão */
+    padding: 5px; /* esse 'padding' faz os Botões aumentarem/diminuírem de tamanho, é o espaço INTERNO que os Botões terão */
+    border-radius: 10px; /* arredonda os Botões, tem o mesmo efeito de um 'border-radius' de 50px, 
+                            pois neste caso, os Botões são pequenos */
+    cursor: pointer; /* cursor aparecerá como dedo apontando */
+    transition: 1s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões no HOVER abaixo
+                       quando o mouse for posicionado sobre eles */
+}
+  
+.manual-botao:not(:last-child) { /* nome da Classe era manual-btn */
+    margin-right: 40px; /* espaçamento entre os Botões de Navegação */
+}
+  
+.manual-botao:hover { /* nome da Classe era manual-btn */
+    background: #191919; /* cor de PREENCHIMENTO que os Botões terão quando o mouse for posicionado sobre eles */
+}
+ 
+#radio1:checked ~ .first { /* radio1 = Primeira Foto é mostrada */
+    margin-left: 0; /* 0 = a Primeira Foto ocupará a posição ZERO (início) 
+                           aqui, deve-se levar em consideraão que o Carrossel vai de 0 a 100%, portanto
+                           os percentuais devem ser respeitados.
+                           Se os valores abaixo forem mudados para -20%, -30%, -50% as Fotos ficarão paradas
+                           no meio do Slide */
+}
+  
+#radio2:checked ~ .first { /* radio2 = Segunda Foto é mostrada */
+    margin-left: -20%;
+}
+  
+#radio3:checked ~ .first { /* radio3 = Terceira Foto é mostrada */
+    margin-left: -40%;
+}
+  
+#radio4:checked ~ .first { /* radio4 = Quarta Foto é mostrada */
+    margin-left: -60%;
+} 
+  
+/* CSS para navegação automática (CSS for automatic navigation) */
+  
+.navegacao-automatica { /* nome da Classe era navigation-auto - Aqui, são inseridos Botões que ficam camuflados sobre os já criados acima na Classe .navegação-manual */
+    position: absolute; /* força a centralização dos Botões em cima das Fotos */
+    display: flex; /* possibilita que os comandos ACIMA sejam executados */
+    width: 700px;  /* centraliza os Botões no meio das Fotos - largura da Foto */
+    justify-content: center; /* justifica e centraliza EXATAMENTE no meio das Fotos */
+    margin-top: 360px; /* Como a altura das Fotos é de 400px (700x400), então, aqui a margem é de 360px
+                          já que na Classe .navegação-manual foi colocada uma margem negativa de -40px 
+                          Colocando um valor menor, por exemplo, 450px, aparecerá uma bolinha acima das outras
+                          ai, é só mudar a cor dos #radio1, #radio2, #radio3, #radio4, para VERMELHO que fica interessante */
+}
+  
+.navegacao-automatica div { /* nome da Classe era navigation-auto - outra camuflagem que deve ter os mesmos comando da Classe .manual-botao */
+    border: 2px solid #191919; /* 5px = expessura da borda criada em volta do Botão
+                                  solid = precisa ser colocado para aparecer a borda ao redor do Botão
+                                #40D3DC = cor da borda criada em volta do Botão */
+    padding: 5px; /* esse 'padding' faz os Botões aumentarem/diminuírem de tamanho, é o espaço INTERNO que os Botões terão */
+    border-radius: 10px; /* arredonda os Botões, tem o mesmo efeito de um 'border-radius' de 50px, 
+                            pois neste caso, os Botões são pequenos */
+    transition: 1s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões
+                       quando o mouse for posicionado sobre eles */
+}
+  
+.navegacao-automatica div:not(:last-child) { /* nome da Classe era navigation-auto - Aqui, é a camuflagem oposta a Classe .manual-botao:not(:last-child) */
+    margin-right: 40px; /* espaçamento entre os Botoões de Navegação */
+}
+
+#radio1:checked ~ .navegacao-automatica .auto-botao1 { /* nome da Classe era navigation-auto / auto-btn1 */
+    background: #191919;
+}
+  
+#radio2:checked ~ .navegacao-automatica .auto-botao2 { /* nome da Classe era navigation-auto / auto-btn2 */
+    background: #191919;
+}
+  
+#radio3:checked ~ .navegacao-automatica .auto-botao3 { /* nome da Classe era navigation-auto / auto-btn3 */
+    background: #191919;
+}
+  
+#radio4:checked ~ .navegacao-automatica .auto-botao4 { /* nome da Classe era navigation-auto / auto-btn4 */
+    background: #191919;
+}
+
+
+/* Carrossel
+
+1 - primeira foto
+
+<a href="https://imgbox.com/xROLAQg8" target="_blank"><img src="https://thumbs2.imgbox.com/81/db/xROLAQg8_t.png" alt="image host"/></a>
+
+2 - segunda foto
+
+<a href="https://imgbox.com/PrS4gjMw" target="_blank"><img src="https://thumbs2.imgbox.com/ac/41/PrS4gjMw_t.png" alt="image host"/></a>
+
+3 - terceira foto
+
+<a href="https://imgbox.com/bv8fM6tt" target="_blank"><img src="https://thumbs2.imgbox.com/17/55/bv8fM6tt_t.jpg" alt="image host"/></a>
+
+4 - quarta foto
+
+<a href="https://imgbox.com/zv8Voq7y" target="_blank"><img src="https://thumbs2.imgbox.com/86/24/zv8Voq7y_t.jpeg" alt="image host"/></a>
+
+
+pagina 1 - Website Responsivo - Responsividade
+
+<a href="https://imgbox.com/mb5B1rdO" target="_blank"><img src="https://thumbs2.imgbox.com/06/fa/mb5B1rdO_t.png" alt="image host"/></a>
+
+pagina 1 - Website Responsivo - Responsividade - Sem Texto
+
+<a href="https://imgbox.com/fVA41CNX" target="_blank"><img src="https://thumbs2.imgbox.com/df/9c/fVA41CNX_t.png" alt="image host"/></a>
+
+pagina 2 - Experiência Digital - Satisfação
+
+<a href="https://imgbox.com/F9K1EZk2" target="_blank"><img src="https://thumbs2.imgbox.com/1a/35/F9K1EZk2_t.jpg" alt="image host"/></a>
+
+página 3 - Banco de Dados - Armazenamento
+
+<a href="https://imgbox.com/xipcSFTO" target="_blank"><img src="https://thumbs2.imgbox.com/38/aa/xipcSFTO_t.jpg" alt="image host"/></a>
+ */
+
+
+/* IMAGENS PARA BOXES - PROJETOS
+
+Box 1 - Projeto Moon Light - Foto Quadrada
+
+<a href="https://imgbox.com/ZJR6Vbf5" target="_blank"><img src="https://thumbs2.imgbox.com/d2/23/ZJR6Vbf5_t.jpg" alt="image host"/></a>
+
+Box 1 - Projeto Moon Light - Foto Tamanho Normal
+
+<a href="https://imgbox.com/FiUdYqlI" target="_blank"><img src="https://thumbs2.imgbox.com/ca/de/FiUdYqlI_t.jpg" alt="image host"/></a>
+
+Box 2 - Projeto Site Viagem
+
+<a href="https://imgbox.com/FQnmBa0M" target="_blank"><img src="https://thumbs2.imgbox.com/c6/32/FQnmBa0M_t.png" alt="image host"/></a>
+
+Box 3 - Projeto Calculadora Padrão
+
+<a href="https://imgbox.com/TvGFZMJv" target="_blank"><img src="https://thumbs2.imgbox.com/14/4c/TvGFZMJv_t.jpg" alt="image host"/></a> */

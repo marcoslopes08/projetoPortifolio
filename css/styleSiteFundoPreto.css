@@ -1,0 +1,588 @@
+/* CSS Site Fundo Preto */
+*{
+	padding: 0; /* zera todos os espaços dentro da Tela */
+	margin: 0; /* zera todas as margens */
+	font-family: 'Josefin Sans', sans-serif; /* fonte */
+	box-sizing: border-box; /* cria um box */
+}
+
+body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (antigo Internet Explorer) */   
+    scroll-behavior: smooth; /* suaviza a rolagem em todo o site, quando o Menu 
+								(Projetos/Certificados/Sobre mim/Contato) for clicado */
+    overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
+}
+
+.hero { /* Section 1 - Topo da Página */
+	height: 100vh; /* será responsiva e ocupará toda a altura da Tela */
+	width: 100%; /* largura da Tela */
+	background-image: url("https://thumbs2.imgbox.com/82/18/aEgFFd5X_t.png");
+	background-size: cover; /* ocupa todos os espaços */
+	background-position: center; /* centraliza a Foto */
+}
+
+nav { /* Menu de Navegação - Section 1 - Topo da Página */
+	display: flex; /* permite que Logo/Menu/Botão Inscreva-se sejam manipulados dentro do Container */
+	align-items: center; /* centraliza todos os elementos Logo/Menu/Botão Inscreva-se em linha HORIZONTALMENTE */
+	justify-content: space-between; /* dá espaçamento igual entre Logo/Menu/Botão Inscreva-se dentro do Container */
+	padding-top: 45px; /* espaçamento do Logo/Menu/Botão Inscreva-se na margem Superior da Tela */
+	padding-left: 8%; /* espaçamento do Logo na margem Esquerda da Tela */
+	padding-right: 8%; /* espaçamento do Botão Inscreva-se na margem Direita da Tela */
+}
+
+.logo { /* Classe - Logo (Portifólio) - Section 1 - Topo da Página */
+	color: white; /* cor do Logo (Portifólio) */
+	font-size: 35px; /* tamanho da Fonte do Logo (Portifólio) */
+	letter-spacing: 1px; /* espaçamento entre as letras do Logo (Portifólio) */
+	cursor: auto; /* cursor aparecerá como traço normal, não será clicável */
+}
+
+span {
+	color: #f9004d; /* cor que será aplicada no Logo (Portifólio) a partir da segunda 
+                      <tag> <span> mais precisamente nas letras L I O */
+}
+
+nav ul li { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - Section 1 - Topo da Página */
+	list-style-type: none; /* (TEORICAMENTE NÃO SERVE PRA NADA)
+                                retira o pontinho que, por padrão, vem com a tag <li> */
+	display: inline-block; /* coloca todos os elementos do Menu um ao lado do outro (em linha) */
+	padding: 10px 25px; /* 10px = espaçamento do Menu em relação a margem Superior da Tela
+                           25px = espaço entre todos os itens do Menu 
+                           (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) */
+}
+
+nav ul li a { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - Section 1 - Topo da Página */
+	color: white; /* cor da Fonte do Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) */
+	text-decoration: none; /* retira o sublinhado que vem como padrão */
+	font-weight: bold; /* NEGRITO */
+	text-transform: capitalize; /* coloca a primeira letra sempre em Caixa Alta */
+}
+
+nav ul li a:hover { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - Section 1 - Topo da Página */
+	color: #f9004d; /* cor da Fonte do Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) */
+	transition: .4s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões do Menu
+						quando o mouse for posicionado sobre eles */
+}
+
+/* Este Botão foi substituído por outro Luminoso */
+btn { /* Classe - Botão Contatos */
+	background-color:#f9004d; /* cor de Fundo do Botão */
+	color: white; /* cor da Fonte */
+	text-decoration: none; /* retira o sublinhado que vem como padrão */
+	border: 2px solid transparent; /* 2px = expessura da borda criada em volta do Botão
+									solid = precisa ser colocado para o 'hover' abaixo funcionar
+							  transparent = precisa ser colocado senão aparecerá uma borda Branca antes do 'hover' */
+	font-weight: bold; /* NEGRITO */
+	padding: 10px 25px; /* 10px = espaçamento das margens Superior/Inferior
+                           25px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+	border-radius: 30px; /* arredondamento das bordas */
+	/* transition: transform .4s ease-in-out;  *//* tempo que levará para APARECER/DESAPARECER a cor dos Botões do Menu
+								  quando o mouse for posicionado sobre eles */
+	transition: transform .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+											  "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+}
+
+/* Este Botão foi substituído por outro Luminoso */
+btn:hover { /* Classe - Botão Contatos */
+	transform: scale(1.2); /* aumenta o tamanho do Botão quando o mouse for posicionado sobre ele */
+}
+
+.content { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolvedor Web... - Section 1 - Topo da Página */
+	position: absolute; /* força a centralização do Texto no centro da página, seguindo os comandos abaixo
+						   relative = não funciona neste caso, faz o Texto ficar bem mais abaixo */
+	top: 50%; /* espaçamento entre o Topo da Página e o meio dela */
+	left: 8%; /* espaçamento que alinha o Texto com o Logo (Portifólio) na margem Esquerda da Tela */
+	transform: translateY(-50%); /* deve ter o mesmo valor de 'top: 50%' para centralizar o Texto 
+									exatamente no centro da página */
+}
+
+
+h1 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolvedor Web... */
+	color: white; /* cor da Fonte no Texto 'Marcos Lopes' */
+	margin: 20px 0px 20px; /* 20px = espaçamento entre 'Marcos Lopes' e o Texto acima (Olá, meu nome é) 
+							   0px = zera o espaçamento entre 'Marcos Lopes' e a margem Esquerda da Tela
+							  20px = espaçamento entre 'Marcos Lopes' e o Texto abaixo (Sou Desenvolvedor Web) */
+	font-size: 75px; /* aumenta o tamanho da Fonte na tag <h1> */
+}
+
+h3 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolvedor Web... */
+	color: white; /* cor da Fonte no Texto 'Sou Desenvolvedor Web' */
+	font-size: 25px; /* aumenta o tamanho da Fonte na tag <h3> */
+	margin-bottom: 50px; /* espaçamento entre Texto 'Sou Desenvolvedor Web' e box para INPUT de e-mail */
+}
+
+h4 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolvedor Web... */
+	color: #fcfc; /* cor da Fonte no Texto 'Olá, meu nome é' */
+	letter-spacing: 2px; /* espaçamento entre as LETRAS no Texto 'Olá, meu nome é' */
+	font-size: 20px; /* aumenta o tamanho da Fonte na tag <h4> */
+
+}
+
+.newslatter form { /* Classe Pai - Formulário 'Digite seu e-mail' e 'Fale comigo' - Section 1 - Topo da Página */
+	width: 380px; /* largura do Box para Digitar E-mail */
+	max-width: 100%; /* largura do Box para Digitar E-mail sempre será de 380px (no máximo) */
+	position: relative; /* será responsivo */
+}
+
+.newslatter form input { /* Era = .newslatter form input:first-child - Classe Filha - Formulário 'Digite seu e-mail' */
+	display: inline-block; /* na mesma linha */
+	width: 100%; /* largura */
+	padding: 14px 130px 14px 15px; /* 14px = espaçamento entre o E-mail e a Margem Superior dentro do Box
+								  	 130px = espaço dentro do Box para digitar E-mail 
+									  14px = espaçamento entre o E-mail e a Margem Inferior dentro do Box
+									  15px = espaçamento entre a Margem Esquerda dentro do Box e E-mail */
+	border: 2px solid #f9004d; /* 2px = expessura da borda ao redor dentro do Box
+								  solid = precisa ser 'solid' para a borda aparecer
+								  cor da Borda ao redor do Box */
+	outline: none; /* garante que quando o E-mail for digidado, não aparecerá borda adicionar em volta do Box */
+	border-radius: 30px; /* arredondamento das bordas */
+}
+
+.botao-email { /* Era = .newslatter form input:last-child - transformei em um Botão para E-mail
+				  Classe Filha - Formulário 'Vamos começar' BOTÃO dentro do Box - Section 1 - Topo da Página */
+	position: absolute; /* posição absoluta dentro do Box */
+	display: inline-block; /* posiciona na mesma linha */
+	/* outline: none; */ /* retira sublinhado 
+							este comando não é necessário aqui, pois transformei a tag <form> em um
+							Botão clicável para enviar e-amil*/
+	border: none; /* retira bordas do BOTÃO dentro do Box */
+	padding: 10px 20px; /* 10px = margens Superior/Inferior
+						   20px = espaçamento nas laterais */
+	border-radius: 30px; /* arredondamento das bordas do BOTÃO dentro do Box */
+	background-color: #f9004d; /* cor de Fundo do Botão */
+	color: white; /* cor da Fonte */	
+	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585; /* 0px 0px 5px = forma uma LINHA ao redor do Botão
+                                                              0px 0px 15px = forma sombreamento */
+	top: 6px; /* faz o Botão 'Vamos começar' ficar alinhado dentro do Box */ 
+	right: 6px; /* faz o Botão ENTRAR dentro do Box 
+			       O Botão 'Vamos começar' está alinhado a direita do Box 'Digite seu e-mail' 
+	               right: 6px faz este Botão 'Vamos começar' ir para esquerda */
+	cursor: pointer; /* cursor aparecerá como dedo apontando */
+	text-decoration: none; /* retira o sublinhado que vem como padrão */
+	font-size: small; /* diminui o tamanho da Fonte */
+}
+
+.about { /* Section 2 about - Sobre mim */
+	width: 100%; /* largura da Section Sobre mim */
+	/* height: 100vh;  *//* 100vh = se for colocado esse valor, quando a Tela entrar no Modo Responsivo
+							haverá um espaço vazio muito grande entre Texto e próxima Section */
+	padding: 50px 0px; /* 40px = espaçamento Superior/Inferior entre a Foto e as 
+						  Section 1 (acima) e Section 3 (abaixo)
+						   0px = deixa a Foto rente a margem Esquerda da Tela */
+	background-color: #191919; /* cor de Fundo - Cinza GRAFITE */
+}
+
+.about img { /* Section 2 about - Sobre mim */
+	height: auto; /* altura da Foto na tag <img> */
+	width: 430px; /* largura da Foto na tag <img> */
+	/* border-radius: 30px; */ /* arredondamento das bordas */ 
+								/* este comando não é necessário aqui Pois coloquei um 
+								border-radius: em cada Foto dentro do HTML para dar espaço 
+								entre o Texto e as Fotos no Modo Responsivo */
+	border: 30px solid #191919; /* coloca uma moldura da mesma cor do Container que ajuda
+									 no Modo Responsivo a deixar o Texto ao lado separdo da Foto
+									 #101010 coloca uma moldura mais escura */
+}
+
+.about-text { /* Section 2 about - Sobre mim */
+	width: 550px; /* largura da class="sobre-mim-texto", do lado da Foto */
+}
+
+.main { /* Section 2 about - Sobre mim - Centralizando Foto e Texto dentro do Conatainer */
+	width: 1130px; /* largura da class="main", Foto e Texto estão dentro desta Classe */
+	max-width: 95%; /* máxima largura que a class="main" terá */
+	margin: 0 auto; /* margem zerada e automática */
+	display: flex; /* faz Foto e Texto dentro da Classe ficarem um do lado do outro */
+	align-items: center; /* centraliza Foto e Texto dentro da Classe, um do lado do outro em linha HORIZONTALMENTE */
+	justify-content: space-around; /* dá um espaço entre a Foto e Texto 
+								     space-between = causa um espaçamento IGUAL entre Foto e 
+									 Texto dentro do Container */
+}
+
+.about-text h2 { /* Section 2 about - Sobre mim - Texto 'Sobre mim' */
+	color: white; /* cor da Fonte no título Sobre mim */
+	font-size: 75px; /* aumenta o tamanho da tag <h2> */
+	text-transform: capitalize; /* coloca a primeira Letra em Caixa Alta */
+	margin-bottom: 20px; /* espaçamento entre o Título Sobre mim e Texto abaixo */
+}
+
+.about-text h5 { /* Section 2 about - Sobre mim - Texto 'Desenvolvedor & Designer' */
+	color: white; /* cor da Fonte no Texto 'Desenvolvedor & Designer' */
+	letter-spacing: 2px;  /* espaçamento entre as LETRAS no Texto 'Desenvolvedor & Designer' */
+	font-size: 22px; /* aumenta o tamanho da tag <h5> */
+	margin-bottom: 25px; /* espaçamento entre o  Texto 'Desenvolvedor & Designer' e Texto abaixo */
+	text-transform: capitalize; /* coloca a primeira Letra em Caixa Alta */
+}
+
+.about-text p { /* Section 2 about - Sobre mim - Parágrafo */
+	color: #fcfc; /* cor da Fonte no Parágrafo */
+	letter-spacing: 1px; /* espaçamento entre as LETRAS do Parágrafo */
+	line-height: 28px; /* altura da linha */
+	font-size: 18px; /* aumenta o tamanho da Fonte */
+	margin-bottom: 45px; /* espaçamento entre o Parágrafo e o Botão abaixo 'Fale comigo' */
+}
+
+button { /* Section 2 about - Sobre mim - Botão 'Enviar WhatsApp' */
+	background-color: #f9004d; /* cor de Fundo do Botão */
+	color: white; /* cor da Fonte */
+	text-decoration: none; /* retira o sublinhado que vem como padrão */
+	border: 2px solid transparent; /* 2px = expessura da borda criada em volta do Botão
+									solid = precisa ser colocado para o 'hover' abaixo funcionar
+						  	  transparent = precisa ser colocado senão aparecerá uma borda Branca antes do 'hover' */
+	font-weight: bold; /* NEGRITO */
+	padding: 13px 30px; /* 13px = espaçamento das margens Superior/Inferior
+						   30px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+	border-radius: 30px; /* arredondamento das bordas */
+	transition: .4s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões do Menu
+						quando o mouse for posicionado sobre eles */
+}
+
+button:hover { /* Section 2 about - Sobre mim - Botão 'Enviar WhatsApp' */
+	background-color: transparent; /* transparent = faz o 'hover' funcionar */
+	border: 2px solid #f9004d; /* 2px = expessura da borda criada em volta do Botão
+								  solid = precisa ser colocado para o 'hover' abaixo funcionar
+								#f9004d = no 'hover' quando o mouse for posicionado sobre o Botão, o Fundo ficará
+										  escuro (da cor do Plano de Fundo) e as bordas ficarão vermelhas */
+	cursor: pointer; /* cursor aparecerá como dedo apontando */
+}
+
+.service { /* Section 3 - Service - Habilidades - Plano de Fundo da Tela */
+	background: #101010; /* cor de Fundo do Container */
+	width: 100%; /* largura do Container */
+	/* height: 100vh;  *//* 100vh = se for colocado esse valor, quando a Tela entrar no Modo Responsivo
+							haverá um espaço vazio muito grande entre Texto e próxima Section */
+	padding: 20px 0px; /* 20px = espaçamento Superior entre o Título (Habilidades) e Section 2 (acima),
+						  também afeta o espaçamento entre o Título abaixo (Habilidades) Section 4
+						   0px = zera o espaçamento entre todos os lados dos Cartões
+						   deixando eles do mesmo tamanho */
+	padding-bottom: 60px; /* espaçamento inferior entre os 3 Boxes criados e a Section 4 (Habilidades) */
+}
+
+.title h2 { /* Section 3 - Service - Habilidades - Título (Habilidades) */
+	color: white; /* cor do Título */
+	font-size: 75px; /* aumenta o tamanho da Fonte na tag <h2> */
+	width: 100%; /* era 1130px - largura que o Título terá, se essa largura for 130px, por exemplo, 
+					  o Título ficará apertado e uma palavra em cima da outra
+					  100% faz o Título ser centralizado no meio do Container
+					  inclusive no modo Responsivo */
+	margin: 40px auto; /* 20px = margem Superior/Inferior dentro do Container
+						  auto = manterá sempre a margem */
+	text-align: center; /* centraliza o Título */
+}
+
+.box { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap */
+	display: flex; /* permite que 3 Boxes sejam manipulados dentro do Container */
+	justify-content: center; /* justifica e centraliza os 3 Boxes dentro do Container */
+	align-items: center; /* alinha os 3 Boxes no centro do Container em linha HORIZONTALMENTE */
+	min-height: 400px; /* altura mínima que os 3 Boxes terão em relação ao Título do Container */
+}
+
+.card { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Cartões dentro dos Boxes */
+	min-height: 365px; /* altura dos Cartões */
+	width: 335px; /* largura dos Cartões */
+	padding: 20px 30px; /* 20px = espaçamento do Texto dentro do Cartão em relação a margem Superior/Inferior 
+						   30px = espaçamento do Texto dentro do Cartão em relação a margem Direita/Esqerda */
+	background: #191919; /* cor de Fundo dos Cartões dentro dos Boxes */
+	border-radius: 20px; /* arredondamento das bordas */
+	margin: 15px; /* margens Direita/Esquerda que os 3 Cartões terão entre eles dentro do Container */
+	position: relative; /* será responsivo */
+	overflow: hidden;
+	text-align: center; /* alinha o Texto dentro dos Cartões */
+}
+
+.card i { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - i=ÍCONES */
+	font-size: 50px; /* tamanho dos ÍCONES */
+	display: block; /* ficarão fixos dentro dos Cartões */
+	text-align: center; /* centraliza os ÍCONES dentro dos Cartões */
+	margin: 25px 0px; /* 25px = espaçamento dos ÍCONES dentro do Cartão em relação a margem Superior/Inferior 
+					      0px = zera o espaçamento dos ÍCONES dentro do Cartão em relação a margem Direita/Esqerda */
+	color: #f9004d; /* cor dos ÍCONES */
+}
+
+h5 {  /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Títulos abaixo dos i=ÍCONES */
+	color: white; /* cor da Fonte */
+	font-size: 23px; /* aumenta o tamanho da Fonte na tag <h5> */
+	margin-bottom: 15px; /* margem Inferior dos Títulos em relação ao Texto abaixo */
+}
+
+.pra p { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
+	color: #fcfc; /* cor do Texto do Parágrafo dentro do Cartão */
+	font-size: 16px; /* aumenta o tamanho do Texto do Parágrafo dentro do Cartão */
+	line-height: 27px; /* altura entre as linhas dentro do Cartão */
+	margin-bottom: 25px; /* margem Inferior do Texto/Parágrafo em relação ao Botão abaixo */
+}
+
+.card .button { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Botões dentro do Cartão */
+	background-color: #f9004d; /* cor de Fundo do Botão */
+	color: white; /* cor da Fonte */
+	text-decoration: none; /* retira o sublinhado que vem como padrão */
+	border: 2px solid transparent; /* 2px = expessura da borda criada em volta do Botão
+									solid = precisa ser colocado para o 'hover' abaixo funcionar
+						  	  transparent = precisa ser colocado senão aparecerá uma borda Branca antes do 'hover' */
+	font-weight: bold; /* NEGRITO */
+	padding: 9px 22px; /* 9px = espaçamento das margens Superior/Inferior
+						 22px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+	border-radius: 30px; /* arredondamento das bordas */
+	transition: .4s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões do Menu
+						quando o mouse for posicionado sobre eles */
+}
+
+.card .button:hover { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Botões dentro do Cartão */
+	background-color: transparent; /* transparent = faz o 'hover' funcionar */
+	border: 2px solid #f9004d; /* 2px = expessura da borda criada em volta do Botão
+								  solid = precisa ser colocado para o 'hover' abaixo funcionar
+								#f9004d = no 'hover' quando o mouse for posicionado sobre o Botão, o Fundo ficará
+										  escuro (da cor do Plano de Fundo) e as bordas ficarão vermelhas */
+	cursor: pointer; /* cursor aparecerá como dedo apontando */
+}
+
+.contact-me { /* Section 4 - differentials - Diferenciais - Container - Contact-me - CARROSSEL */
+	width: 100%; /* largura do Container ocupará toda a Tela */
+	min-height: 290px; /* altura do Container */
+	background: #191919; /* cor de Fundo do Container */
+	display: flex; /* garante que o tudo que estiver dentro deste Container poderá ser movimentado/alterado */
+	align-items: center; /* centraliza todos os itens que foram colocados dentro deste Container em linha HORIZONTALMENTE */
+	flex-direction: column; /* cria uma Coluna dentro do Container, tudo que for digitado pulará para a linha debaixo */
+	justify-content: center; /* justifica e centraliza */
+	padding-bottom: 60px; /* espaçamento inferior entre o Carrossel e a Section abaixo */
+}
+
+/* Retirei do Projeto a Classe abaixo */ 
+contact-me p { /* Section 4 - Parágrafo - Contrate-me */
+	color: white; /* cor da Fonte */
+	font-size: 30px; /* aumenta o tamanho da Fonte */
+	font-weight: bold; /* NEGRITO */
+	margin-bottom: 25px; /* margem Inferior do Texto/Parágrafo em relação ao Botão abaixo */
+}
+
+/* Retirei do Projeto a Classe abaixo */ 
+contact-me .button-two { /* Section 4 - Botão-dois - Contrate-me */
+	background-color: #f9004d; /* cor de Fundo do Botão */
+	color: white; /* cor da Fonte */
+	text-decoration: none; /* retira o sublinhado que vem como padrão */
+	border: 2px solid transparent; /* 2px = expessura da borda criada em volta do Botão
+									solid = precisa ser colocado para o 'hover' abaixo funcionar
+						  	  transparent = precisa ser colocado senão aparecerá uma borda Branca antes do 'hover' */
+	font-weight: bold; /* NEGRITO */
+	padding: 13px 30px; /* 13px = espaçamento das margens Superior/Inferior
+						   30px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+	border-radius: 30px; /* arredondamento das bordas */
+	transition: .4s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões do Menu
+						quando o mouse for posicionado sobre eles */
+}
+
+/* Retirei do Projeto a Classe abaixo */ 
+contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
+	background-color: transparent; /* transparent = faz o 'hover' funcionar */
+	border: 2px solid #f9004d; /* 2px = expessura da borda criada em volta do Botão
+								solid = precisa ser colocado para o 'hover' abaixo funcionar
+							  #f9004d = no 'hover' quando o mouse for posicionado sobre o Botão, o Fundo ficará
+							        	escuro (da cor do Plano de Fundo) e as bordas ficarão vermelhas */
+	cursor: pointer; /* cursor aparecerá como dedo apontando */
+}
+
+/* CSS para controlar Box Projetos */
+.foto-projeto { /* Section 5 - Projetos */
+	display: flex; /* garante que o tudo que estiver dentro desta <div> poderá ser movimentado/alterado */
+	object-fit: cover; /* preenche todos os espaços e centraliza a Foto em um RAIO a partir do meio para as laterais */  
+    height: 385px; /* altura da foto */
+    width: 385px; /* largura da foto */
+    border-radius: 50%; /* deixa a foto totalmente redonda */
+    box-shadow: 0 0 5px #fcfc; /* efeito sombreado ao redor da foto, causa a impressão da estar flutuando */ 
+    transition: .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+                                 "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+}
+
+.foto-projeto:hover { /* Section 5 - Projetos */
+    -moz-transform: scale(1.07); /* garante o funcionamento no aumento de tamanho da Foto para Mozilla */
+    -webkit-transform: scale(1.07); /* garante o funcionamento no aumento de tamanho da Foto para Chrome e Safari */
+    transform: scale(1.07); /* aumenta o tamanho da Foto original em uma escala de 1.07 a mais */
+    -moz-transition: -moz-transform 0.9s; /* garante o funcionamento "de transição na flutuação" da Foto para Mozilla */
+    -webkit-transition: -webkit-transform .9s ease; /* garante o funcionamento "de transição na flutuação" da Foto para Chrome e Safari */
+    transition: .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+                                 "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+    box-shadow: 0 0 30px #f9004d; /* efeito sombreado ao redor da foto, causa a impressão da Foto de Perfil estar flutuando */ 
+	transform: translateY(-10px); /* altura que a Foto irá subir quando o mouse é colocado sobre ela */
+}
+
+.box-projeto { /* Section 5 - Projetos */
+	display: flex; /* permite que 3 Boxes sejam manipulados dentro do Container */
+	justify-content: center; /* justifica e centraliza os 3 Boxes dentro do Container */
+	align-items: center; /* alinha os 3 Boxes no centro do Container em linha HORIZONTALMENTE */
+	min-height: 400px; /* altura mínima que os 3 Boxes terão em relação ao Título do Container */
+	margin-bottom: -20px; /* margem NEGATIVA para deixar o Container visualmente do mesmo tamanho que os outros */
+}
+
+.card-projeto { /* Section 5 - Projetos */
+	text-align: center; /* alinha o Botão dentro dos Cartões */
+	margin: 15px; /* espaço entre as Fotos */
+}
+
+footer { /* Section 6 - Rodapé */
+	position: relative; /* será responsivo */
+	width: 100%; /* largura do Container ocupará toda a Tela */
+	height: 400px; /* altura do Container */
+	background: #191919; /* cor de Fundo do Container */
+	display: flex; /* garante que o tudo que estiver dentro deste Container poderá ser movimentado/alterado */
+	flex-direction: column; /* cria uma Coluna dentro do Container, tudo que for digitado pulará para a linha debaixo */
+	align-items: center; /* centraliza todos os itens que foram colocados dentro deste Container em linha HORIZONTALMENTE */
+	justify-content: center; /* justifica e centraliza */
+}
+
+footer p:nth-child(1) { /* Section 6 - Rodapé - Primeiro Filho - Parágrafo 1 */
+	font-size: 30px; /* aumenta o tamanho da Fonte */
+	color: white; /* cor da Fonte */
+	margin-bottom: 20px; /* margem inferior do Título (Marcos Lopes) em relação ao Texto abaixo */
+	font-weight: bold; /* NEGRITO */
+}
+
+footer p:nth-child(2) { /* Section 6 - Rodapé - Segundo Filho - Parágrafo 2 */
+	color: white; /* cor da Fonte */
+	font-size: 17px; /* aumenta o tamanho da Fonte */
+	width: 500px; /* largura máxima que o Texto ocupará */
+	text-align: center; /* centraliza o Texto */
+	line-height: 26px; /* altura do Texto entre as linhas */
+}
+
+.social { /* Section 6 - Rodapé - ÍCONES de Redes Sociais */
+	display: flex; /* garante que os ÍCONES que estiver dentro deste Container poderão ser movimentados/alterados */
+}
+
+.social a { /* Section 6 - Rodapé - ÍCONES de Redes Sociais */
+	width: 55px; /* largura do Plano de Fundo onde estão os ÍCONES das Redes Sociais */
+	height: 55px; /* altura do Plano de Fundo onde estão os ÍCONES das Redes Sociais */
+	display: flex; /* garante que os ÍCONES que poderão ser movimentados/alterados */
+	align-items: center; /* centraliza todos os ÍCONES dentro do Plano de Fundo em linha HORIZONTALMENTE */
+	justify-content: center; /* justifica e centraliza */
+	background: #f9004d; /* cor de Fundo */
+	border-radius: 50%; /* arredondamento TOTAL do Plano de Fundo */
+	margin: 22px 10px; /* 22px = espaçamento entre as margens Superior/Inferior dos ÍCONES em relação aos Textos acima/abaixo
+						  10px = espaço entre os ÍCONES */
+	color: white; /* cor dos ÍCONES */
+	text-decoration: none; /* retira o sublinhado dos ÍCONES */
+	font-size: 30px; /* aumenta o tamanho dos ÍCONES dentro do Plano de Fundo */
+	transition: .5s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+									"ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+}
+
+.social a:hover { /* Section 6 - Rodapé - ÍCONES de Redes Sociais */
+	transform: scale(1.3); /* aumenta o tamanho dos ÍCONES quando o mouse por posicionado sobre eles */
+	transition: .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+									"ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
+}
+
+.end { /* Section 6 - Rodapé - Desenvolvido por Marcos Lopes */
+	position: absolute;
+	color:#f9004d; /* cor da Fonte */
+	bottom: 35px; /* dá um espaçamento em relação a margem Inferior e coloca este Parágrafo pra cima */
+	font-size: 16px; /* aumenta o tamanho da Fonte */
+}
+
+/* CSS de controle apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence) */
+.button-pages { /* Botão 'VOLTAR' dentro das Páginas 1, 2, 3 */
+	background-color: #f9004d; /* cor de Fundo do Botão */
+	color: white; /* cor da Fonte */
+	text-decoration: none; /* retira o sublinhado que vem como padrão */
+	border: 2px solid transparent; /* 2px = expessura da borda criada em volta do Botão
+									solid = precisa ser colocado para o 'hover' abaixo funcionar
+						  	  transparent = precisa ser colocado senão aparecerá uma borda Branca antes do 'hover' */
+	font-weight: bold; /* NEGRITO */
+	padding: 10px 30px; /* 13px = espaçamento das margens Superior/Inferior
+						   30px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+	border-radius: 0 10px 10px 30px; /* 0 = canto superior Esquerdo do Botão NÃO SERÁ ARREDONDADO
+									 10px = arredondamento superior Direito do Botão
+									 10px = arredondamento inferior Direito do Botão 
+									 30px = arredondamento inferior Esquerdo do Botão*/
+	transition: .4s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões do Menu
+						quando o mouse for posicionado sobre eles */
+	text-transform: uppercase; /* Caixa Alta */
+}
+
+.button-pages:hover { /* Botão 'VOLTAR' dentro das Páginas 1, 2, 3 */
+	background-color: transparent; /* transparent = faz o 'hover' funcionar */
+	border: 2px solid #f9004d; /* 2px = expessura da borda criada em volta do Botão
+								  solid = precisa ser colocado para o 'hover' abaixo funcionar
+								#f9004d = no 'hover' quando o mouse for posicionado sobre o Botão, o Fundo ficará
+										  escuro (da cor do Plano de Fundo) e as bordas ficarão vermelhas */
+	cursor: pointer; /* cursor aparecerá como dedo apontando */
+}
+
+/* SUBLINHADO ABAIXO DOS TÍTULOS */
+.line { /* linha abaixo dos Títulos (SUBLINHADO) */
+	width: 210px; /* LARGURA da linha criada como se fosse SUBLINHADO abaixo dos Títulos */
+	height: 4px; /* expessura da linha */
+	background: #f9004d; /* cor da Linha */
+	margin: 10px auto; /* ajuda a centralizar o SUBLINHADO  */
+	border-radius: 5px; /* arredonda as pontas do SUBLINHADO */
+	margin-top: -40px; /* coloca o SUBLINHADO embaixo do Título */
+	margin-bottom: 40px;
+}
+
+.line-com-recuo { /* linha abaixo dos Títulos (SUBLINHADO) - apanes para Título "Sobre Mim" */
+	width: 210px; /* LARGURA da linha criada como se fosse SUBLINHADO abaixo dos Títulos */
+	height: 4px; /* expessura da linha */
+	background: #f9004d; /* cor da Linha */
+	margin: 10px auto; /* ajuda a centralizar o SUBLINHADO  */
+	border-radius: 5px; /* arredonda as pontas do SUBLINHADO */
+	margin-top: -20px; /* coloca o SUBLINHADO embaixo do Título */
+	margin-left: -1px; /* margem NEGATIVA para colocar o SUBLINHADO alinhado á Esquerda do Título */
+	margin-bottom: 30px; /* espaço entre o Título e parágrafo abaixo */
+}
+
+.espaçoEntreParagrafo { /* Classe usada apenas nas Páginas 1, 2, 3 */
+	margin-top: -20px; /* ajuda os parágrafos ficarem com mesmo espaçamento que entre Títulos */
+}
+
+/* Centralizando Foto e Texto dentro do Container - 
+apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence) */
+.about-pages { 
+	width: 100%; /* largura da Section */
+	height: 100vh; /* ocupará toda a altura da Tela */
+	padding: 10px 0px; /* 10px = espaçamento Superior/Inferior entre a Foto/Texto e as margens Superior/Inferior
+						   0px = deixa a Foto rente a margem Esquerda da Tela */
+	background-color: #191919; /* cor de Fundo - Cinza GRAFITE */
+	overflow: hidden; /* como cada Página tem apenas uma Section, este comando é necessário
+						 pois se a barra de rolagem não for escondida fica aparecendo uma página em branco abaixo */
+}
+
+.about-pages img { 
+	height: 100%; /* altura da Foto na tag <img> */
+	width: 50%; /* largura da Foto na tag <img> */
+	/* border-radius: 30px; */ /* arredondamento das bordas */ 
+								/* este comando não é necessário aqui Pois coloquei um 
+								border-radius: em cada Foto dentro deo HTML */
+	border: 30px solid #191919; /* coloca uma moldura da mesma cor do Container que ajuda
+									 no Modo Responsivo a deixar o Texto ao lado separdo da Foto
+									 #101010 coloca uma moldura mais escura */
+	object-fit: cover; /* cobre todos os espaços e evita que a Foto fique destorcida */
+}
+
+.main-pages { 
+	width: 1130px; /* largura da class="main-pages", Foto e Texto estão dentro desta Classe */
+	max-width: 95%; /* máxima largura que a class="main-pages" terá */
+	margin: 0 auto; /* margem zerada e automática */
+	display: flex; /* faz Foto e Texto dentro da Classe ficarem um do lado do outro */
+	align-items: center; /* centraliza Foto e Texto dentro da Classe, um do lado do outro em linha HORIZONTALMENTE */
+	justify-content: space-around; /* dá um espaço entre a Foto e Texto 
+								     space-between = causa um espaçamento IGUAL entre Foto e 
+									 Texto dentro do Container */
+	height: 100vh; /* será responsiva e ocupará toda a altura da Tela */
+}
+
+/* Modo Responsivo */
+@media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
+    .about-pages img { /* apenas nas Fotos das Páginas 1, 2, 3  */
+        height: 40%; /* altura da Foto na tag <img> no Modo Responsivo
+						se este valor não for especificado, a Foto fica com uma altura muita alta
+		 				pega toda a página */
+    }
+	/* a Responsividade abaixo não será necessária, pois apesar dela diminuir as margens Superior/Inferior
+	provavelmente, não ficará bom no Celular */
+	about-pages { /* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
+		margin-top: -200px; /* diminui a Margem Superior */
+		margin-bottom: -200px; /* diminui a Margem Inferior */
+	}
+	.foto-projeto { 
+		height: 290px; /* altura máxima da foto */
+		width: 290px; /* largura máxima da foto */
+	}
+}

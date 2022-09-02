@@ -1,0 +1,76 @@
+/* CSS Botão Luminoso - Site Fundo Preto - NO TOPO */
+
+/* Botão do TOPO - contatos */
+.botaoLuminoso {
+    background: #f9004d; /* cor de Fundo do Botão */
+    color: white; /* cor da Fonte dentro do Botão */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+    padding: 12px 27px;  /* 12px = espaçamento das margens Superior/Inferior
+                            27px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+    transition: 0.5s; /* tempo de animação quando o mouse for colocado em cima do Botão */
+    border-radius: 30px; /* arredondamento das bordas */
+    font-weight: bold; /* NEGRITO */
+}
+
+.botaoLuminoso:hover {
+    letter-spacing: 0.25em; /* espaçamento/animação que expandirá o Botão quando o mouse for posicionado
+                            acima dele (MUITO LEGAL ISSO) */
+    background: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Linha em volta do Botão
+                            e em cima dos QUADRADINHOS ficará com BRILHO */
+    color: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a COR do Texto dentro do Botão ficará com BRILHO */
+    box-shadow: 0 0 35px var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+    color: #f9004d; /* cor da Fonte dentro do Botão quando o mouse for posicionado sobre ele */
+    transform: translateX(-10%); /* faz o hover mover o Botão pra ambos os Lados */
+    margin-right: -30px; /* margem NEGATIVA ajuda o comando "transform: translateX(-10%)" funcionar 
+                            evita que o MENU trema quando o mouse for posicionado sobre ele */
+}
+
+/* CSS Botão Luminoso - Box Projetos  */
+.botaoLuminosoProjetos {
+    margin-top: -16%; /* centraliza o Botão no meio da Foto */
+    margin-left: -5.5%; /* ajuda a centralizar o Botão no meio da Foto */
+    color: white; /* cor da Fonte dentro do Botão */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+    padding: 10px 25px;  /* 10px = espaçamento das margens Superior/Inferior
+                            25px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+    padding-top: 15px; /* dá um espaçamento na parte Superior dentro do Botão
+                          ajuda ao padding acima a centralizar o Texto (VISITE) no meio do Botão */
+    transition: 0.5s; /* tempo de animação quando o mouse for colocado em cima do Botão */
+    border-radius: 30px; /* arredondamento das bordas */
+    font-weight: bold; /* NEGRITO */
+    font-size: x-large; /* aumenta o tamanho da Fonte */
+    background-color: transparent; /* transparent = faz o 'hover' funcionar */
+	border: 3px solid #f9004d; /* 3px = expessura da borda criada em volta do Botão
+								  solid = precisa ser colocado para o 'hover' abaixo funcionar
+							    #f9004d = no 'hover' quando o mouse for posicionado sobre o Botão, o Fundo ficará
+							        	escuro (da cor do Plano de Fundo) e as bordas ficarão vermelhas */
+    text-transform: uppercase; /* Caixa Alta */
+}
+
+.botaoLuminosoProjetos:hover {
+    position: absolute;
+    letter-spacing: 0.25em; /* espaçamento/animação que expandirá o Botão quando o mouse for posicionado
+                            acima dele (MUITO LEGAL ISSO) */
+    background: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Linha em volta do Botão
+                            e em cima dos QUADRADINHOS ficará com BRILHO */
+    color: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a COR do Texto dentro do Botão ficará com BRILHO */
+    box-shadow: 0 0 35px var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+    color: #f9004d; /* cor da Fonte dentro do Botão quando o mouse for posicionado sobre ele */
+    transform: translateX(-10%); /* faz o hover mover o Botão pra ambos os Lados */
+    border: 3px solid white; /* 3px = expessura da borda criada em volta do Botão
+                                solid = precisa ser colocado para o 'hover' abaixo funcionar
+                                white = no 'hover' quando o mouse for posicionado sobre o Botão, a 
+                                borda ficará Branca, da mesma cor do Fundo */
+} 
+
+
+/* Modo Responsivo */
+@media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
+    .botaoLuminosoProjetos {
+        margin-top: -17%; /* centraliza o Botão no meio da Foto */
+        margin-left: -8%; /* ajuda a centralizar o Botão no meio da Foto */
+    }
+}
+

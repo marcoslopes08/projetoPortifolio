@@ -1,0 +1,23 @@
+/* CSS Site Fundo Preto */
+.voltarAoTopo {
+	position: fixed; /* fixa o botão do lado direito da Tela */
+	bottom: 10px; /* dá um espaçamento entre o Botão e a borda inferior da Tela do Computador */
+	right: 0px; /* aumenta/diminui o espaçamento entre a posição do Botão em relação a borda direita da Tela do Computador */
+	padding: 10px; /* adiciona um espaço de preenchimento ao redor do Botão - esse espaço ajuda a posicionar corretamente o texto */
+	border-radius: 25px; /* arredondamento da Bordas da Imagem da Seta */
+	width: 70px; /* largura da Imagem da Seta */
+	height:70px; /* altura da Imagem da Seta */
+	transition: .9s ease-in-out; /* tempo que levará para o Contorno Azul APARECER/DESAPARECER 
+						quando o mouse for posicionado sobre a Imagem da Seta */
+}
+
+.voltarAoTopo:hover { /* animação/flutuar de estilos ao passar o cursor/mouse sobre o Botão Voltar ao Topo */
+	background-color: #f9004d; /* cor de fundo que aparece quando o cursor/mouse for posicionado sobre o Botão */
+	bottom: 10px; /* dá um espaçamento entre o Botão e a borda inferior da Tela do Computador */
+	right: 0px; /* aumenta/diminui o espaçamento entre a posição do Botão em relação a borda direita da Tela do Computador */
+	padding: 10px; /* adiciona um espaço de preenchimento ao redor do Botão - esse espaço ajuda a posicionar corretamente o texto */
+	border-radius: 50px; /* arredonda TOTALMENTE a imagem da Seta quando o cursor/mouse for posicionado sobre o Botão */
+	border-style: dotted; /* coloca uma linha pontilhada ao redor da Imagem da Seta quando cursor/mouse for posicionado sobre ele */
+	transition: .9s ease-in-out; /* tempo que levará para o Contorno Azul APARECER/DESAPARECER 
+									quando o mouse for posicionado sobre a Imagem da Seta */
+}
