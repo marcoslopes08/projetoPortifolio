@@ -8,10 +8,10 @@
 
  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-	<!-- Ajax jQuery -->
+	<!-- BLOQUEADO - Ajax jQuery -->
 	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.3.min.js"></script>
 	
-	<!-- Abaixo - jQuery (necessário para Pluguins de JavaSript no Bootstrap) -->
+	<!-- BLOQUEADO - Abaixo - jQuery (necessário para Pluguins de JavaSript no Bootstrap) -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<!-- Acima BIBLIOTECAS para controlar o BOTÃO Voltar ao Topo -->
 
@@ -52,7 +52,9 @@
 		<div class="content">
 			<h4>Olá, meu nome é</h4>
 			<h1>Marcos <span>Lopes</span></h1>
-			<h3>Sou Desenvolvedor Web</h3>
+			<h3 style="font-size: 15px; letter-spacing: 4px;">Aqui mostrarei minha trajetória como<br>
+				Desenvolvedor Web e alguns projetos
+			</h3>
 			<div class="newslatter">
 				<form>
 					<input type="email" name="email" id="mail" placeholder="Digite seu e-mail">
@@ -160,22 +162,22 @@
 			
 				<!--início das imagens do slide (slide images start)-->
 				<div class="slide-carrossel first">
-					<img src="https://thumbs2.imgbox.com/81/db/xROLAQg8_t.png" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para que apareça borda ao Redor da foto -->
+					<img src="https://thumbs2.imgbox.com/81/db/xROLAQg8_t.png" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
 					<h1 class="titulo2-2">
 						<span>linguagens que utilizo</span></h1>
 				</div>
 				<div class="slide-carrossel">
-					<img src="https://thumbs2.imgbox.com/86/24/zv8Voq7y_t.jpeg" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para que apareça borda ao Redor da foto -->
+					<img src="https://thumbs2.imgbox.com/86/24/zv8Voq7y_t.jpeg" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
 					<h1 class="titulo2-2">
 						<span>sites responsivos</span></h1>
 				</div>
 				<div class="slide-carrossel">
-					<img src="https://thumbs2.imgbox.com/17/55/bv8fM6tt_t.jpg" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para que apareça borda ao Redor da foto -->
+					<img src="https://thumbs2.imgbox.com/17/55/bv8fM6tt_t.jpg" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
 					<h1 class="titulo2-2">
 						<span>perfeccionismo</span></h1>
 				</div>
 				<div class="slide-carrossel">
-					<img src="https://thumbs2.imgbox.com/ac/41/PrS4gjMw_t.png" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para que apareça borda ao Redor da foto -->
+					<img src="https://thumbs2.imgbox.com/ac/41/PrS4gjMw_t.png" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
 					<h1 class="titulo2-2">
 						<span>uso de Business Intelligence</span></h1>
 				</div>				
@@ -214,26 +216,42 @@
 			<div class="line"></div> <!-- linha (SUBLINHADO abaixo dos Títulos)-->
 		</div>
 
-		<h5 style="text-align: center;">Veja alguns<span> projetos</span></h5>
+		<h5 style="text-align: center;">Veja alguns<span> projetos</span> com uma breve descrição abaixo:</h5>
 
 		<div class="box-projeto">
 			<!-- Box 1 - Projeto Moon Light - Projeto Viagem Cidades -->
 			<div class="card-projeto">			
 				<img class="foto-projeto" src="https://thumbs2.imgbox.com/d2/23/ZJR6Vbf5_t.jpg" alt="">
 				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemCidades/" 
-					style="--clr:white; position:absolute;">visitar</a>			
-			</div>			
+					style="--clr:white; position:absolute;">visitar</a>
+				<div class="card pra-texto-projeto">
+					<p>Com técnica Parallax (imagens paralisadas) com texto
+						que se sobrepõem a elas e efeito inovador.
+					</p>
+				</div>
+			</div>
 			<!-- Box 2 - Projeto Site Viagem -->
 			<div class="card-projeto">
 				<img class="foto-projeto" src="https://thumbs2.imgbox.com/f7/f9/4YlrhbFN_t.jpg" alt="">
 				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemComMenuParaCelular/" 
-					style="--clr:white; position: absolute;">visitar</a>			
+					style="--clr:white; position: absolute;">visitar</a>
+				<div class="card pra-texto-projeto">
+					<p>Uma bela disposição entre textos e fotos e 
+						Menu de Navegação drop-down específico 
+						para celular.
+					</p>
+				</div>
 			</div>					
 			<!-- Box 3 - Projeto Curriculo -->
 			<div class="card-projeto">
 				<img class="foto-projeto" src="https://thumbs2.imgbox.com/78/29/C4qyj0SA_t.jpg" alt="">
 				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoCurriculo/" 
-					style="--clr:white; position: absolute;">visitar</a>			
+					style="--clr:white; position: absolute;">visitar</a>
+				<div class="card pra-texto-projeto">
+					<p>Currículo online com várias técnicas
+						de animações que podem ser replicadas em quaisquer outros projetos.
+					</p>
+				</div>
 			</div>			
 		</div>
 
@@ -272,4 +290,3 @@
 
 </body>
 </html>
-
