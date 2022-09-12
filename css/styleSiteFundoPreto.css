@@ -417,6 +417,15 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
 	margin: 15px; /* espaço entre as Fotos */
 }
 
+.pra-texto-projeto { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
+	color: #fcfc; /* cor do Texto do Parágrafo dentro do Cartão */
+	font-size: 16px; /* aumenta o tamanho do Texto do Parágrafo dentro do Cartão */
+	line-height: 27px; /* altura entre as linhas dentro do Cartão */
+	margin-top: 25px; /* margem Inferior do Texto/Parágrafo em relação ao Botão abaixo */
+	min-height: 65px; /* altura dos Cartões */
+	width: 360px; /* largura dos Cartões */
+}
+
 footer { /* Section 6 - Rodapé */
 	position: relative; /* será responsivo */
 	width: 100%; /* largura do Container ocupará toda a Tela */
@@ -460,7 +469,7 @@ footer p:nth-child(2) { /* Section 6 - Rodapé - Segundo Filho - Parágrafo 2 */
 	color: white; /* cor dos ÍCONES */
 	text-decoration: none; /* retira o sublinhado dos ÍCONES */
 	font-size: 30px; /* aumenta o tamanho dos ÍCONES dentro do Plano de Fundo */
-	transition: .5s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
+	transition: .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
 									"ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
 }
 
@@ -584,5 +593,8 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	.foto-projeto { 
 		height: 290px; /* altura máxima da foto */
 		width: 290px; /* largura máxima da foto */
+	}
+	.pra-texto-projeto { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
+		width: 265px; /* largura dos Cartões */
 	}
 }
