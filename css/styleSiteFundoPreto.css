@@ -95,6 +95,10 @@ btn:hover { /* Classe - Botão Contatos */
 									exatamente no centro da página */
 }
 
+.content h3 { /*  Classe - Aqui mostrarei minha trajetória como... - Section 1 - Topo da Página */
+	font-size: 15px; /* aumenta o tamanho da Fonte na tag <h3> */
+	letter-spacing: 4px; /* espaçamento entre as letras */
+}
 
 h1 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolvedor Web... */
 	color: white; /* cor da Fonte no Texto 'Marcos Lopes' */
@@ -596,5 +600,11 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	}
 	.pra-texto-projeto { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
 		width: 265px; /* largura dos Cartões */
+	}
+	.content h4 {
+		font-size: 28px; /* aumenta o tamanho da Fonte na tag <h4> */
+	}
+	.content h3 {
+		font-size: 30px; /* aumenta o tamanho da Fonte na tag <h3> */
 	}
 }
