@@ -16,8 +16,8 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
 	height: 100vh; /* será responsiva e ocupará toda a altura da Tela */
 	width: 100%; /* largura da Tela */
 	/* background-image: url("https://thumbs2.imgbox.com/82/18/aEgFFd5X_t.png"); */ /* background-sunscreen3 - Antia Foto mais escura */
-	/* background-image: url("https://thumbs2.imgbox.com/a0/ac/cb7P30zH_t.jpg"); */ /* background-sunscreen */
-	background-image: url("https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg"); /* background-sunscreen-novo */
+	background-image: url("https://thumbs2.imgbox.com/a0/ac/cb7P30zH_t.jpg"); /* background-sunscreen */
+	/* background-image: url("https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg"); */ /* background-sunscreen-novo */
 	background-size: cover; /* ocupa todos os espaços */
 	background-position: center; /* centraliza a Foto */
 
