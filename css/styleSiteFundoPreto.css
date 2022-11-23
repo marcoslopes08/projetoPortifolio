@@ -16,12 +16,14 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
 	height: 100vh; /* será responsiva e ocupará toda a altura da Tela */
 	width: 100%; /* largura da Tela */
 	/* background-image: url("https://thumbs2.imgbox.com/82/18/aEgFFd5X_t.png"); */ /* background-sunscreen3 - Antia Foto mais escura */
-	background-image: url("https://thumbs2.imgbox.com/a0/ac/cb7P30zH_t.jpg"); /* background-sunscreen */
+	/* background-image: url("https://thumbs2.imgbox.com/a0/ac/cb7P30zH_t.jpg"); */ /* background-sunscreen */
+	/* background-image: url("https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg"); */ /* background-sunscreen-novo */
+	background-image: url("https://thumbs2.imgbox.com/e0/1c/DUXqAtQy_t.jpg"); /* background - foto centralizada */
 	/* background-image: url("https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg"); */ /* background-sunscreen-novo */
 	background-size: cover; /* ocupa todos os espaços */
 	background-position: center; /* centraliza a Foto */
 
-/* 	EXEMPLOS:
+	/* 	EXEMPLOS que fazem links clicáveis abrir página em branco:
 	<a href="https://imgbox.com/cb7P30zH" target="_blank">
 	<img src="https://thumbs2.imgbox.com/a0/ac/cb7P30zH_t.jpg" alt="image host"/></a>
 	<a href="https://imgbox.com/qKDi8eaM" target="_blank">
