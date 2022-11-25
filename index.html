@@ -294,7 +294,17 @@
 	<!-- Acima, jQuery (Java) que faz Botão VOLTAR AO TOPO aparecer/desaparecer na rolagem da página -->
 	
 	<!-- javaScript para controlar Carrossel - Sobre mim -->
-    <script src="java/carrossel.js"></script>
+    	<script src="java/carrossel.js"></script>
+	
+	<!-- javascript abaixo abre qualquer tag <a></a> em uma nova aba em branco -->
+	<script>
+        $(document).on('click', 'a', function(e){ 
+            e.preventDefault(); 
+            var url = $(this).attr('href'); 
+            window.open(url, '_blank');
+        });
+	</script>
+
 
 </body>
 </html>
