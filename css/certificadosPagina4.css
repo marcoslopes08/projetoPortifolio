@@ -1,0 +1,156 @@
+/* CSS Carrossel - Site Fundo Preto - Página 4 - Certificados */
+
+body {
+    margin: 0; /* zera todas as margens */
+    padding: 0; /* zera todos os espaços dentro da Tela */
+    height: 100vh; /* altura minima que a Tela terá, será responsiva e ocupará toda a altura da Tela */
+    display: flex; /* permite que tudo que for colocado seja manipulado dentro do Container */
+    justify-content: center; /* justifica e centraliza EXATAMENTE no meio da Tela */
+    align-items: center; /* centraliza todos os itens que foram colocados dentro deste Container em linha HORIZONTALMENTE */
+    background: #191919; /* cor de Fundo do Container */
+}
+ 
+.controle-deslizante {
+    width: 700px; /* Era 800px - mas com 5 Slides a última Foto fica cortada, por isso diminui aqui
+                      largura das Fotos e posição centralizada das Fotos HORIZONTALMENTE */
+    height: 500px; /* altura do Container onde ficarão as Fotos */
+    border-radius: 20px; /* arredondamento das bordas */
+    overflow: hidden; /* esconde as Barras de Rolagem, tanto na Direita da Tela como abaixo das Fotos */
+}
+ 
+.slides { /* Fotos dentro do 'controle-deslizante' acima */
+    width: 500%; /* Tem que ser 500% - largura entre a passagem de uma Foto para outra
+                    1500% a Primeira Foto vai passar e ficará uma vão entre a próxima
+                    800% também causa este efeito de grande espaçamento entre as Fotos */
+    height: 500px; /* altura da Fotos */
+    display: flex; /* permite que as Fotos sejam manipuladas */
+}
+ 
+.slides input { 
+    display: none; /* a tag <input type="radio" name="radio-botao" id="radio1"> será escondida atrás das Fotos 
+                      se o comando 'display' for retirado, por exemplo, os Botões ficarão tanto em cima
+                      como embaixo das Fotos, e ainda causará um ERRO na visualização */
+}
+   
+.slide-carrossel {
+    width: 20%; /* espaço entre uma Foto e outra, se for maior que 20%, 
+                   50% = as Fotos passarão muito separadamente uma da outra
+                   10% = fica aparecendo a Foto anterior e posterior enquato passa uma Foto 
+                   DEVE SER 20% */
+    transition: 2s; /* tempo de transição entre uma Foto e outra */
+}
+ 
+.slide-carrossel img {
+    width: 700px; /* Era 800px - mas com 5 Slides a última Foto fica cortada, por isso diminui aqui
+                     centraliza as Fotos no meio da Tela - largura da Foto */
+    height: 500px; /* centraliza as Fotos no meio da Tela - altura da Foto */
+}
+  
+/* CSS para navegação manual dos slides (css for manual slide navigation) */
+  
+.navegacao-manual {
+    position: absolute; /* força a centralização dos Botões em cima das Fotos */
+    width: 700px; /* Era 800px - centraliza os Botões no meio das Fotos - largura da Foto */
+    margin-top: 560px; /* 560px deixa os Botões abaixo das Fotos, ficando mais fácil de
+                         visualizar em Tela 100vh 
+                         Era -40px (só funiciona com 4 Slides) 
+                         é negativa para fazer os Botões ficarem com um espaçamento 
+                         em relação a parte inferior da Foto */ 
+    display: flex; /* possibilita que os comandos ACIMA sejam executados */
+    justify-content: center; /* justifica e centraliza EXATAMENTE no meio das Fotos */
+}
+  
+.manual-botao {
+    border: 7px solid #f9004d; /* Era 2px - 2px = expessura da borda criada em volta do Botão
+                                  solid = precisa ser colocado para aparecer a borda ao redor do Botão
+                                #40D3DC = cor da borda criada em volta do Botão */
+    padding: 7px; /* esse 'padding' faz os Botões aumentarem/diminuírem de tamanho, é o espaço INTERNO que os Botões terão */
+    border-radius: 50px; /* arredonda os Botões, tem o mesmo efeito de um 'border-radius' de 50px, 
+                            pois neste caso, os Botões são pequenos */
+    cursor: pointer; /* cursor aparecerá como dedo apontando */
+    transition: 0.3s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões no HOVER abaixo
+                       quando o mouse for posicionado sobre eles */
+}
+  
+.manual-botao:not(:last-child) {
+    margin-right: 40px; /* espaçamento entre os Botões de Navegação */
+}
+  
+.manual-botao:hover {
+    background: #f9004d; /* cor de PREENCHIMENTO que os Botões terão quando o mouse for posicionado sobre eles */
+}
+ 
+#radio1:checked ~ .first { /* radio1 = Primeira Foto é mostrada */
+    margin-left: 0; /* 0 = a Primeira Foto ocupará a posição ZERO (início) 
+                           aqui, deve-se levar em consideraão que o Carrossel vai de 0 a 100%, portanto
+                           os percentuais devem ser respeitados.
+                           Se os valores abaixo forem mudados para -20%, -30%, -50% as Fotos ficarão paradas
+                           no meio do Slide */
+}
+  
+#radio2:checked ~ .first { /* radio2 = Segunda Foto é mostrada */
+    margin-left: -20%;
+}
+  
+#radio3:checked ~ .first { /* radio3 = Terceira Foto é mostrada */
+    margin-left: -40%;
+}
+  
+#radio4:checked ~ .first { /* radio4 = Quarta Foto é mostrada */
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first { /* radio4 = Quinta Foto é mostrada */
+    margin-left: -80%;
+} 
+  
+/* CSS para navegação automática (CSS for automatic navigation) */
+
+/* A Navegação automática não está funcionando, então desativei estas Classes */
+
+navegacao-automatica { /* Aqui, são inseridos Botões que ficam camuflados sobre os já criados acima na Classe .navegação-manual */
+    position: absolute; /* força a centralização dos Botões em cima das Fotos */
+    display: flex; /* possibilita que os comandos ACIMA sejam executados */
+    width: 700px;  /* Era 800px - centraliza os Botões no meio das Fotos - largura da Foto */
+    justify-content: center; /* justifica e centraliza EXATAMENTE no meio das Fotos */
+    margin-top: 20px; /* os Botões vão ficar abaixo das Fotos, fica mais fácil de visualizar
+                          Era 460px - Como a altura das Fotos é de 500px (800x500), então, aqui a margem é de 460px
+                          já que na Classe .navegação-manual foi colocada uma margem negativa de -40px 
+                          Colocando um valor menor, por exemplo, 450px, aparecerá uma bolinha acima das outras
+                          ai, é só mudar a cor dos #radio1, #radio2, #radio3, #radio4, para VERMELHO que fica interessante */
+}
+  
+navegacao-automatica div { /* outra camuflagem que deve ter os mesmos comando da Classe .manual-botao */
+    border: 7px solid #f9004d; /* 5px - Era 2px = expessura da borda criada em volta do Botão
+                                  solid = precisa ser colocado para aparecer a borda ao redor do Botão
+                                #40D3DC = cor da borda criada em volta do Botão */
+    padding: 7px; /* esse 'padding' faz os Botões aumentarem/diminuírem de tamanho, é o espaço INTERNO que os Botões terão */
+    border-radius: 50px; /* arredonda os Botões, tem o mesmo efeito de um 'border-radius' de 50px, 
+                            pois neste caso, os Botões são pequenos */
+    transition: 1s; /* tempo que levará para APARECER/DESAPARECER a cor dos Botões
+                       quando o mouse for posicionado sobre eles */
+}
+  
+navegacao-automatica div:not(:last-child) { /* Aqui, é a camuflagem oposta a Classe .manual-botao:not(:last-child) */
+    margin-right: 40px; /* espaçamento entre os Botões de Navegação */
+}
+
+/* #radio1:checked ~ .navegacao-automatica .auto-botao1 {
+    background: #f9004d;
+}
+  
+#radio2:checked ~ .navegacao-automatica .auto-botao2 {
+    background: #f9004d;
+}
+  
+#radio3:checked ~ .navegacao-automatica .auto-botao3 {
+    background: #f9004d;
+}
+  
+#radio4:checked ~ .navegacao-automatica .auto-botao4 {
+    background: #f9004d;
+}
+  
+#radio5:checked ~ .navegacao-automatica .auto-botao5 {
+    background: #f9004d;
+} */
