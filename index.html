@@ -33,6 +33,9 @@
 	<!-- Abaixo CSS do Botão LUMINOSO no Topo do Site e Boxes de Projetos -->
 	<link rel="stylesheet" href="css/botaoLuminoso.css">
 
+	<!-- Abaixo CSS que controla as imagens dos CERTIFICADOS -->
+	<link rel="stylesheet" href="css/certificados.css">
+
 </head>
 <body>
 	<!-- hero Section start - Section 1 - Topo da Página -->
@@ -58,7 +61,8 @@
 			<div class="newslatter">
 				<form>
 					<input type="email" name="email" id="mail" placeholder="Digite seu e-mail">
-					<a class="botao-email" href="mailto:marcos.lopes08@gmail.com">Fale comigo</a>
+					<a class="botao-email" href="mailto:marcos.lopes08@gmail.com" 
+						target="_blank" rel="noopener noreferrer">Fale comigo</a>
 				</form>
 			</div>
 		</div>
@@ -110,7 +114,7 @@
 					</p>
 
 					<p style="text-align: center;">
-						<a class="button" href="pages/pagina1.html">Leia mais</a>
+						<a class="button" href="pages/pagina1.html" target="_blank" rel="noopener noreferrer">Leia mais</a>
 					</p>
 				</div>
 			</div>
@@ -125,7 +129,7 @@
 					</p>
 
 					<p style="text-align: center;">
-						<a class="button" href="pages/pagina2.html">Leia mais</a>
+						<a class="button" href="pages/pagina2.html" target="_blank" rel="noopener noreferrer">Leia mais</a>
 					</p>
 				</div>
 			</div>
@@ -140,7 +144,7 @@
 					</p>
 
 					<p style="text-align: center;">
-						<a class="button" href="pages/pagina3.html">Leia mais</a>
+						<a class="button" href="pages/pagina3.html" target="_blank" rel="noopener noreferrer">Leia mais</a>
 					</p>
 				</div>
 			</div>
@@ -214,6 +218,13 @@
 		</div>		
 		<!--fim do controle deslizante de imagem (image slider end)-->
 
+		<div class="clique-aqui">
+			<p>Acesse meus certificados clicando
+				<a style="text-decoration: none;" href="pages/pagina4.html" target="_blank" rel="noopener noreferrer">
+					<span>aqui</span></a>
+			</p>
+		</div>
+
 	</section>
 
 	<!-- service section start - Section 5 - Projetos -->
@@ -231,7 +242,7 @@
 			<div class="card-projeto">			
 				<img class="foto-projeto" src="https://thumbs2.imgbox.com/d2/23/ZJR6Vbf5_t.jpg" alt="">
 				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemCidades/" 
-					style="--clr:white; position:absolute;">visitar</a>
+					style="--clr:white; position:absolute;" target="_blank" rel="noopener noreferrer">visitar</a>
 				<div class="card pra-texto-projeto">
 					<p>Com técnica Parallax (imagens paralisadas) com texto
 						que se sobrepõem a elas e efeito inovador.
@@ -242,11 +253,11 @@
 			<div class="card-projeto">
 				<img class="foto-projeto" src="https://thumbs2.imgbox.com/f7/f9/4YlrhbFN_t.jpg" alt="">
 				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemComMenuParaCelular/" 
-					style="--clr:white; position: absolute;">visitar</a>
+					style="--clr:white; position: absolute;" target="_blank" rel="noopener noreferrer">visitar</a>
 				<div class="card pra-texto-projeto">
-					<p>Uma bela disposição entre textos e fotos e 
+					<p>Bela disposição entre textos e fotos com 
 						Menu de Navegação drop-down específico 
-						para celular.
+						para smartphone.
 					</p>
 				</div>
 			</div>					
@@ -254,7 +265,7 @@
 			<div class="card-projeto">
 				<img class="foto-projeto" src="https://thumbs2.imgbox.com/78/29/C4qyj0SA_t.jpg" alt="">
 				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoCurriculo/" 
-					style="--clr:white; position: absolute;">visitar</a>
+					style="--clr:white; position: absolute;" target="_blank" rel="noopener noreferrer">visitar</a>
 				<div class="card pra-texto-projeto">
 					<p>Currículo online com várias técnicas
 						de animações que podem ser replicadas em quaisquer outros projetos.
@@ -271,12 +282,13 @@
 		<p>Para outras informações e mais códigos em HTML, CSS, Java e de 
 			outras linguagens, visite minhas redes.</p>
 		<div class="social">
-			<a href="https://github.com/marcoslopes08" title="GitHub">
-				<i class="fab fa-github"></i></a>
-			<a href="https://www.linkedin.com/in/marcos-lopes-982616215/" title="LinkedIn">
+			<a href="https://github.com/marcoslopes08" target="_blank" rel="noopener noreferrer" title="GitHub">
+				<i class="fab fa-github"></i>
+			</a>
+			<a href="https://www.linkedin.com/in/marcos-lopes-982616215/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
 				<i class="fab fa-linkedin"></i></a>
-			<a href="https://web.facebook.com/marcos.lopes.1614/" title="Facebook">
-				<i class="fab fa-facebook-f"></i></a>				
+			<!-- <a href="https://web.facebook.com/marcos.lopes.1614/" target="_blank" rel="noopener noreferrer" title="Facebook">
+				<i class="fab fa-facebook-f"></i></a> -->				
 		</div>
 		<p class="end">Desenvolvido por Marcos Lopes &nbsp;&nbsp;&nbsp;&nbsp;
 			(11) 99735-5410 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -294,17 +306,42 @@
 	<!-- Acima, jQuery (Java) que faz Botão VOLTAR AO TOPO aparecer/desaparecer na rolagem da página -->
 	
 	<!-- javaScript para controlar Carrossel - Sobre mim -->
-    	<script src="java/carrossel.js"></script>
-	
+    <script src="java/carrossel.js"></script>
+
+	<!-- javaScript para controlar Botão "Voltar" dentro das Página 1, 2 e 3 -->
+	<!-- Em 25/11/22 resolvi tirar este comando, pois o JavaScript abaixo não deixa voltar -->
+	<!-- <script>
+		function voltar() {
+			window.history.back();
+		}
+	</script> -->
+
 	<!-- javascript abaixo abre qualquer tag <a></a> em uma nova aba em branco -->
-	<script>
+	<!-- <script>
         $(document).on('click', 'a', function(e){ 
             e.preventDefault(); 
             var url = $(this).attr('href'); 
             window.open(url, '_blank');
         });
-	</script>
+    </script> -->
 
+	<!-- <script>
+		function abrirJanela(link) {
+			var novaJanela = window.open("about:blank", link.target);
+			novaJanela.blur();
+			window.focus();
+			novaJanela.location.href = link.href;
+			return false;
+		}
+	</script> -->
+
+	<!-- javascript evita que navegadores mais antigos abram abas maliciosas com target="_blank" --> 
+    <script>
+        var otherWindow = window.open();
+        otherWindow.opener = null;
+        otherWindow.location = url;
+     </script>
 
 </body>
 </html>
+
