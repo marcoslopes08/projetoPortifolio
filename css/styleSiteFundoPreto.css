@@ -236,6 +236,8 @@ h4 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolved
 	margin-bottom: 45px; /* espaçamento entre o Parágrafo e o Botão abaixo 'Fale comigo' */
 }
 
+/* Retirei do Projeto o Botão abaixo abaixo, pois refiz o Texto em "Sobre Mim" e resolvi colocar um link
+para WhatsApp no Rodapé do Site */ 
 button { /* Section 2 about - Sobre mim - Botão 'Enviar WhatsApp' */
 	background-color: #f9004d; /* cor de Fundo do Botão */
 	color: white; /* cor da Fonte */
@@ -251,6 +253,8 @@ button { /* Section 2 about - Sobre mim - Botão 'Enviar WhatsApp' */
 						quando o mouse for posicionado sobre eles */
 }
 
+/* Retirei do Projeto o Botão abaixo abaixo, pois refiz o Texto em "Sobre Mim" e resolvi colocar um link
+para WhatsApp no Rodapé do Site */ 
 button:hover { /* Section 2 about - Sobre mim - Botão 'Enviar WhatsApp' */
 	background-color: transparent; /* transparent = faz o 'hover' funcionar */
 	border: 2px solid #f9004d; /* 2px = expessura da borda criada em volta do Botão
@@ -592,6 +596,23 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	height: 100vh; /* será responsiva e ocupará toda a altura da Tela */
 }
 
+.comentario { /* Parágrafo da Página 4 (Certificados) "Clique nos botões abaixo e navegue..." */
+    margin-top: -570px; /* margem inferior do comentário NEGATIVA, evita que o parágrafo fique 
+						   do lado das imagens, vai ficar acima dos Certificados */
+    margin-right: -1100px; /* espaçamento NEGATIVO da margem direita do comentário em relação a Tela */
+    color: #fcfc; /* cor da fonte */
+    font-size: 22px; /* tamanho da fonte */ 
+	width: 1100px; /* tamanho do Box para inserir o Texto */
+}
+
+.clique-aqui { /* Section 4 - Diferenciais - Acesse meus certificados clicando...  */
+	color: #fcfc; /* cor da Fonte no Parágrafo */
+	letter-spacing: 1px; /* espaçamento entre as LETRAS do Parágrafo */
+	line-height: 40px; /* altura da linha em relação as imagens acima */
+	font-size: 22px; /* aumenta o tamanho da Fonte */
+	margin-bottom: -40px; /* espaçamento entre o Parágrafo e o Botão abaixo 'Fale comigo' */
+}
+
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
     .about-pages img { /* apenas nas Fotos das Páginas 1, 2, 3  */
@@ -612,10 +633,10 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	.pra-texto-projeto { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
 		width: 265px; /* largura dos Cartões */
 	}
-	.content h4 {
+	.content h4 { /* Olá, meu nome é...  */
 		font-size: 28px; /* aumenta o tamanho da Fonte na tag <h4> */
 	}
-	.content h3 {
+	.content h3 { /* Aqui mostrarei minha trajetória como... */
 		font-size: 30px; /* aumenta o tamanho da Fonte na tag <h3> */
 		letter-spacing: 2px; /* espaçamento entre as letras */
 	}
