@@ -27,18 +27,25 @@
 					posicionamento dos principais mecanismos de busca, como o Google, por exemplo.
 				</p>
 				<div style="text-align: right;">
-					<a class="button-pages" title="Voltar" onclick="voltar()">Voltar</a>
+					<a class="button-pages" title="Fechar" onclick="fechar()">Fechar</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<!-- JavaScript para voltar à Página Principal na mesma posição (Section Habilidades)-->
+	<!-- JavaScript para FECHAR esta Aba e retornar na mesma posição (Section Habilidades) -->
 	<script>
+		function fechar() {
+			window.close();
+		}
+	</script>
+	
+	<!-- ERA ASSIM o JavaScript ORIGINAL para voltar à Página Principal na mesma posição (Section Habilidades) -->
+	<!-- <script>
 		function voltar() {
 			window.history.back();
 		}
-	</script>
+	</script> -->
 
 </body>
 </html>
