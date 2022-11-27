@@ -403,13 +403,14 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
 .foto-projeto { /* Section 5 - Projetos */
 	display: flex; /* garante que o tudo que estiver dentro desta <div> poderá ser movimentado/alterado */
 	object-fit: cover; /* preenche todos os espaços e centraliza a Foto em um RAIO a partir do meio para as laterais */  
-    height: 385px; /* altura da foto */
-    width: 385px; /* largura da foto */
+    height: 285px; /* Era 385px - altura da foto */
+    width: 285px; /* Era 385px - largura da foto */
     border-radius: 50%; /* deixa a foto totalmente redonda */
     box-shadow: 0 0 5px #fcfc; /* efeito sombreado ao redor da foto, causa a impressão da estar flutuando */ 
     transition: .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
                                  "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
-}
+	margin-left: 50px; /* ajuda a centralizar as Fotos dentro do Box */
+								}
 
 .foto-projeto:hover { /* Section 5 - Projetos */
     -moz-transform: scale(1.07); /* garante o funcionamento no aumento de tamanho da Foto para Mozilla */
@@ -627,8 +628,8 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		margin-bottom: -200px; /* diminui a Margem Inferior */
 	}
 	.foto-projeto { 
-		height: 290px; /* altura máxima da foto */
-		width: 290px; /* largura máxima da foto */
+		height: 190px; /* Era 290px - altura máxima da foto */
+		width: 190px; /* Era 290px - largura máxima da foto */
 	}
 	.pra-texto-projeto { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
 		width: 265px; /* largura dos Cartões */
