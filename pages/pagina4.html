@@ -79,40 +79,26 @@
 
 </div>
 
-   <!--  <div style="text-align: center; padding-top: 560px; align-items: right;">
-        <a class="button-pages" title="Voltar" onclick="voltar()">Voltar</a>
+    <div class="fechar-pagina">
+        <a class="button-pages" title="Fechar" onclick="fechar()">Fechar</a>
     </div>
- -->
+
 <!--fim do controle deslizante de imagem (image slider end)-->
 
-    <!-- A variável 'counter' começa em 1, então sempre que 'counter for MENOR que 5 (pois são 5 Fotos), 
-    counter volta pro incio e vira um Looping (chega no Final, volta pro começo e isso sempre se repete)-->'
-    <!-- <script type="text/javascript">
-        var counter = 1;
-        setInterval(function () {
-          document.getElementById('radio' + counter).checked = true;
-          counter++;
-          if (counter > 5) {
-            counter = 1;
-          }
-        }, 7000);
-    </script> -->
-
-    <!-- JavaScript para voltar à Página Principal na mesma posição (Section Habilidades)-->
+    <!-- JavaScript para FECHAR esta Aba e retornar na mesma posição (Section Habilidades) -->
 	<script>
-		function voltar() {
-			window.history.back();
+		function fechar() {
+			window.close();
 		}
 	</script>
-
-    <script>
-        $(document).on('click', 'a', function(e){ 
-            e.preventDefault(); 
-            var url = $(this).attr('href'); 
-            window.open(url, '_blank');
-        });
-    </script>
-
+        
+    <!-- ERA ASSIM o JavaScript ORIGINAL para voltar à Página Principal na mesma posição (Section Habilidades) -->
+    <!-- <script>
+        function voltar() {
+            window.history.back();
+        }
+    </script> -->
+    
 </body>
 
 </html>
