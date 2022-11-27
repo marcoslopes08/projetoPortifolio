@@ -154,3 +154,21 @@ navegacao-automatica div:not(:last-child) { /* Aqui, é a camuflagem oposta a Cl
 #radio5:checked ~ .navegacao-automatica .auto-botao5 {
     background: #f9004d;
 } */
+
+.fechar-pagina { /* Botão FECHAR página, apenas para página 4 (CERTIFICADOS) */
+    position: relative; /* é obrigatório colocar este comando pra poder deixar Responsivo depois */
+    padding-top: 560px; /* coloca o botão FECHAR na margem inferior da Tela */
+    margin-left: 120px; /* espaçamento entre as Fotos dos CERTIFICADOS e o Botão FECHAR */
+    margin-right: -240px; /* espaçamento o Botão FECHAR e a margem direita da Tela */
+}
+
+/* Modo Responsivo */
+@media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
+    .fechar-pagina { /* apenas no Botão FECHAR da página 4 (CERTIFICADOS) */
+        position: absolute; /* é obrigatório colocar este comando pra poder deixar Responsivo depois 
+                               com "position: relative;" acima */
+        padding-top: 760px; /* coloca o botão FECHAR na margem inferior da Tela
+                               na mesma linha que os CERTIFICADOS */
+        padding-left: 210px; /* espaçamento o Botão FECHAR e a margem direita da Tela */
+    }
+}
