@@ -446,6 +446,37 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
 	width: 360px; /* largura dos Cartões */
 }
 
+/* CSS para controlar Box Minha Foto no meio e texto nas laterais - Rodapé */
+.foto-rodape { /* Section 6 - Rodapé */
+	display: flex; /* garante que o tudo que estiver dentro desta <div> poderá ser movimentado/alterado */
+	object-fit: cover; /* preenche todos os espaços e centraliza a Foto em um RAIO a partir do meio para as laterais */  
+    height: 165px; /* Era 285px - altura da foto */
+    width: 165px; /* Era 285px - largura da foto */
+    border-radius: 50%; /* deixa a foto totalmente redonda */
+	margin-top: 100px; /* espaçamento entre a margem superior e a Foto */
+}
+
+.box-rodape { /* Section 6 - Rodapé */
+	background-color: #191919; /* cor do Plano de Fundo */
+	display: flex; /* permite que 3 Boxes sejam manipulados dentro do Container */
+	justify-content: center; /* justifica e centraliza os 3 Boxes dentro do Container */
+	align-items: center; /* alinha os 3 Boxes no centro do Container em linha HORIZONTALMENTE */
+	min-height: 260px; /* altura mínima que os 3 Boxes terão em relação ao Título do Container */
+	
+}
+
+.card-rodape { /* Section 6 - Rodapé */
+	text-align: center; /* alinha o texto dentro dos Cartões */
+}
+
+.pra-texto-rodape { /*  Section 6 - Rodapé */
+	color: white; /* cor do Texto do Parágrafo dentro do Cartão */
+	line-height: 27px; /* altura entre as linhas dentro do Cartão */
+	min-height: 65px; /* altura dos Cartões */
+	width: 500px; /* largura dos Cartões */
+	margin-top: 100px; /* espaçamento entre a margem superior e os Textos Motivacionais */
+}
+
 footer { /* Section 6 - Rodapé */
 	position: relative; /* será responsivo */
 	width: 100%; /* largura do Container ocupará toda a Tela */
@@ -460,7 +491,7 @@ footer { /* Section 6 - Rodapé */
 footer p:nth-child(1) { /* Section 6 - Rodapé - Primeiro Filho - Parágrafo 1 */
 	font-size: 30px; /* aumenta o tamanho da Fonte */
 	color: white; /* cor da Fonte */
-	margin-bottom: 20px; /* margem inferior do Título (Marcos Lopes) em relação ao Texto abaixo */
+	margin-bottom: 20px; /* margem inferior do Título (MARCOS LOPES) em relação ao Texto abaixo */
 	font-weight: bold; /* NEGRITO */
 }
 
@@ -623,9 +654,9 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
     }
 	/* a Responsividade abaixo não será necessária, pois apesar dela diminuir as margens Superior/Inferior
 	provavelmente, não ficará bom no Celular */
-	about-pages { /* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
-		margin-top: -200px; /* diminui a Margem Superior */
-		margin-bottom: -200px; /* diminui a Margem Inferior */
+	.about-text { /* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
+		margin-top: -50px; /* diminui a Margem Superior */
+		margin-bottom: -30px; /* diminui a Margem Inferior */
 	}
 	.foto-projeto { 
 		height: 190px; /* Era 290px - altura máxima da foto */
@@ -640,5 +671,20 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	.content h3 { /* Aqui mostrarei minha trajetória como... */
 		font-size: 30px; /* aumenta o tamanho da Fonte na tag <h3> */
 		letter-spacing: 2px; /* espaçamento entre as letras */
+	}
+	.foto-rodape { 
+		height: 120px; /* Era 190px - altura máxima da foto */
+		width: 120px; /* Era 190px - largura máxima da foto */
+		margin-top: 40px; /* espaçamento entre a margem superior e a Foto */
+	}
+	footer { /* Serve para camuflar a Linha Branca que aparece no Modo Responsivo no Rodapé */
+		margin-top: -30px; /* quando eu inseri minha foto no meio com as Frases sobre minha paixão
+							  pela programação no Rodapé, aparecia no Modo Responsivo uma LINHA BRANCA 
+							  que separava os dois rodapés, aí coloquei este comando pra camuflar */
+	}
+	.pra-texto-rodape { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
+		width: 430px; /* largura dos Cartões */
+		font-size: 11px; /* altura entre as linhas dentro do Cartão */
+		margin-top: 40px; /* espaçamento entre a margem superior e o Texto Motivacional */
 	}
 }
