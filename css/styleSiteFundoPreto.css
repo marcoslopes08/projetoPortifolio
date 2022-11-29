@@ -684,7 +684,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	}
 	.pra-texto-rodape { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
 		width: 430px; /* largura dos Cartões */
-		font-size: 11px; /* altura entre as linhas dentro do Cartão */
+		font-size: 12px; /* altura entre as linhas dentro do Cartão */
 		margin-top: 40px; /* espaçamento entre a margem superior e o Texto Motivacional */
 	}
 }
