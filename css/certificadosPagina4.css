@@ -159,7 +159,7 @@ navegacao-automatica div:not(:last-child) { /* Aqui, é a camuflagem oposta a Cl
     position: relative; /* é obrigatório colocar este comando pra poder deixar Responsivo depois */
     padding-top: 560px; /* coloca o botão FECHAR na margem inferior da Tela */
     margin-left: 120px; /* espaçamento entre as Fotos dos CERTIFICADOS e o Botão FECHAR */
-    margin-right: -240px; /* espaçamento o Botão FECHAR e a margem direita da Tela */
+    margin-right: -240px; /* espaçamento entre o Botão FECHAR e a margem direita da Tela */
 }
 
 /* Modo Responsivo */
@@ -167,8 +167,8 @@ navegacao-automatica div:not(:last-child) { /* Aqui, é a camuflagem oposta a Cl
     .fechar-pagina { /* apenas no Botão FECHAR da página 4 (CERTIFICADOS) */
         position: absolute; /* é obrigatório colocar este comando pra poder deixar Responsivo depois 
                                com "position: relative;" acima */
-        padding-top: 760px; /* coloca o botão FECHAR na margem inferior da Tela
+        padding-top: 860px; /* coloca o botão FECHAR na margem inferior da Tela
                                na mesma linha que os CERTIFICADOS */
-        padding-left: 210px; /* espaçamento o Botão FECHAR e a margem direita da Tela */
+        margin-right: -450px; /* espaçamento entre o Botão FECHAR e a margem direita da Tela */
     }
 }
