@@ -678,13 +678,13 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		margin-top: 40px; /* espaçamento entre a margem superior e a Foto */
 	}
 	footer { /* Serve para camuflar a Linha Branca que aparece no Modo Responsivo no Rodapé */
-		margin-top: -30px; /* quando eu inseri minha foto no meio com as Frases sobre minha paixão
+		margin-top: -50px; /* Era -30px - quando eu inseri minha foto no meio com as Frases sobre minha paixão
 							  pela programação no Rodapé, aparecia no Modo Responsivo uma LINHA BRANCA 
 							  que separava os dois rodapés, aí coloquei este comando pra camuflar */
 	}
 	.pra-texto-rodape { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
 		width: 430px; /* largura dos Cartões */
-		font-size: 12px; /* altura entre as linhas dentro do Cartão */
+		font-size: 11.5px; /* Era 12px - altura entre as linhas dentro do Cartão */
 		margin-top: 40px; /* espaçamento entre a margem superior e o Texto Motivacional */
 	}
 }
