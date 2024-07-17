@@ -852,7 +852,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 							  que separava os dois rodapés, aí coloquei este comando pra camuflar */
 	}
 	footer .end {
-		margin-bottom: -150px; /* coloca o texto 'Desenvolvido por Marcos Lopes' no Rodapé da página */
+		margin-bottom: -110px; /* Era -150px - coloca o texto 'Desenvolvido por Marcos Lopes' no Rodapé da página */
 		position: absolute; /* coloca o texto 'Desenvolvido por Marcos Lopes' no Rodapé da página */
 	}
 	.pra-texto-rodape { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
