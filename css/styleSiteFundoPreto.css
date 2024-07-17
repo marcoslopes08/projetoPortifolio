@@ -2,24 +2,24 @@
 *{
 	padding: 0; /* zera todos os espaços dentro da Tela */
 	margin: 0; /* zera todas as margens */
-	font-family: 'Josefin Sans', sans-serif; /* fonte */
 	box-sizing: border-box; /* cria um box */
+	/*background-color: gold;*/ /* teste para ver se existem espaços entre colunas etc */
 }
 
 body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (antigo Internet Explorer) */   
     scroll-behavior: smooth; /* suaviza a rolagem em todo o site, quando o Menu 
 								(Projetos/Certificados/Sobre mim/Contato) for clicado */
     overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
+	font-family: 'Josefin Sans', sans-serif; /* fonte */
 }
 
 .hero { /* Section 1 - Topo da Página */
-	height: 100vh; /* será responsiva e ocupará toda a altura da Tela */
-	width: 100%; /* largura da Tela */
-	/* background-image: url("https://thumbs2.imgbox.com/82/18/aEgFFd5X_t.png"); */ /* background-sunscreen3 - Antia Foto mais escura */
+	height: 100vh; /* ocupará toda a altura da Tela */
+	width: 100vw; /* Era 100% - ocupará toda a largura da Tela */
+	/* background-image: url("https://thumbs2.imgbox.com/82/18/aEgFFd5X_t.png"); */ /* background-sunscreen3 - Antiga Foto mais escura */
 	/* background-image: url("https://thumbs2.imgbox.com/a0/ac/cb7P30zH_t.jpg"); */ /* background-sunscreen */
 	/* background-image: url("https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg"); */ /* background-sunscreen-novo */
 	background-image: url("https://thumbs2.imgbox.com/e0/1c/DUXqAtQy_t.jpg"); /* background - foto centralizada */
-	/* background-image: url("https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg"); */ /* background-sunscreen-novo */
 	background-size: cover; /* ocupa todos os espaços */
 	background-position: center; /* centraliza a Foto */
 
@@ -57,7 +57,7 @@ nav ul li { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - Se
                                 retira o pontinho que, por padrão, vem com a tag <li> */
 	display: inline-block; /* coloca todos os elementos do Menu um ao lado do outro (em linha) */
 	padding: 10px 25px; /* 10px = espaçamento do Menu em relação a margem Superior da Tela
-                           25px = espaço entre todos os itens do Menu 
+                            25px = espaço entre todos os itens do Menu 
                            (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) */
 }
 
@@ -177,13 +177,15 @@ h4 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolved
 }
 
 .about { /* Section 2 about - Sobre mim */
-	width: 100%; /* largura da Section Sobre mim */
-	/* height: 100vh;  *//* 100vh = se for colocado esse valor, quando a Tela entrar no Modo Responsivo
+	width: 100vw; /* Era 100% - ocupará toda a largura da Section Sobre mim */
+	height: 100vh; /* 100vh = se for colocado esse valor, quando a Tela entrar no Modo Responsivo
 							haverá um espaço vazio muito grande entre Texto e próxima Section */
-	padding: 50px 0px; /* 40px = espaçamento Superior/Inferior entre a Foto e as 
+	padding: 40px 0px; /* Era 50px, Era 40px = espaçamento Superior/Inferior entre a Foto e as 
 						  Section 1 (acima) e Section 3 (abaixo)
 						   0px = deixa a Foto rente a margem Esquerda da Tela */
 	background-color: #191919; /* cor de Fundo - Cinza GRAFITE */
+	align-content: center; /* centraliza Foto de Perfil e Texto Sobre Mim no meio da página */
+	justify-content: center; /* justifica e centraliza */
 }
 
 .about img { /* Section 2 about - Sobre mim */
@@ -236,7 +238,7 @@ h4 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolved
 	margin-bottom: 45px; /* espaçamento entre o Parágrafo e o Botão abaixo 'Fale comigo' */
 }
 
-/* Retirei do Projeto o Botão abaixo abaixo, pois refiz o Texto em "Sobre Mim" e resolvi colocar um link
+/* Retirei do Projeto o Botão abaixo, pois refiz o Texto em "Sobre Mim" e resolvi colocar um link
 para WhatsApp no Rodapé do Site */ 
 button { /* Section 2 about - Sobre mim - Botão 'Enviar WhatsApp' */
 	background-color: #f9004d; /* cor de Fundo do Botão */
@@ -266,24 +268,27 @@ button:hover { /* Section 2 about - Sobre mim - Botão 'Enviar WhatsApp' */
 
 .service { /* Section 3 - Service - Habilidades - Plano de Fundo da Tela */
 	background: #101010; /* cor de Fundo do Container */
-	width: 100%; /* largura do Container */
-	/* height: 100vh;  *//* 100vh = se for colocado esse valor, quando a Tela entrar no Modo Responsivo
+	width: 100vw; /* Era 100% - ocupará toda a largura do da página */
+	height: 100vh; /* 100vh = se for colocado esse valor, quando a Tela entrar no Modo Responsivo
 							haverá um espaço vazio muito grande entre Texto e próxima Section */
 	padding: 20px 0px; /* 20px = espaçamento Superior entre o Título (Habilidades) e Section 2 (acima),
 						  também afeta o espaçamento entre o Título abaixo (Habilidades) Section 4
 						   0px = zera o espaçamento entre todos os lados dos Cartões
 						   deixando eles do mesmo tamanho */
 	padding-bottom: 60px; /* espaçamento inferior entre os 3 Boxes criados e a Section 4 (Habilidades) */
+	align-content: center; /* centraliza os 3 Boxes criados e a Section 4 (Habilidades) no meio da página */
+	justify-content: center; /* justifica e centraliza */
 }
 
-.title h2 { /* Section 3 - Service - Habilidades - Título (Habilidades) */
+.title h2 { /* Section 3 - Service - Habilidades - Linha abaixo de Sobre Mim/Habilidades/Diferenciais/Projetos */
 	color: white; /* cor do Título */
 	font-size: 75px; /* aumenta o tamanho da Fonte na tag <h2> */
 	width: 100%; /* era 1130px - largura que o Título terá, se essa largura for 130px, por exemplo, 
 					  o Título ficará apertado e uma palavra em cima da outra
 					  100% faz o Título ser centralizado no meio do Container
 					  inclusive no modo Responsivo */
-	margin: 40px auto; /* 20px = margem Superior/Inferior dentro do Container
+	margin: 40px auto; /* 20px = margem Superior/Inferior dentro do Container, se esta margem for alterada
+							a linha abaixo dos Títulos ficará rente as Letras
 						  auto = manterá sempre a margem */
 	text-align: center; /* centraliza o Título */
 }
@@ -355,14 +360,16 @@ h5 {  /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap -
 }
 
 .contact-me { /* Section 4 - differentials - Diferenciais - Container - Contact-me - CARROSSEL */
-	width: 100%; /* largura do Container ocupará toda a Tela */
+	height: 100vh; /* 100vh = se for colocado esse valor, quando a Tela entrar no Modo Responsivo
+							haverá um espaço vazio muito grande entre Texto e próxima Section */
+	width: 100vw; /* Era 100% - largura do Container ocupará toda a Tela */
 	min-height: 290px; /* altura do Container */
 	background: #191919; /* cor de Fundo do Container */
 	display: flex; /* garante que o tudo que estiver dentro deste Container poderá ser movimentado/alterado */
 	align-items: center; /* centraliza todos os itens que foram colocados dentro deste Container em linha HORIZONTALMENTE */
-	flex-direction: column; /* cria uma Coluna dentro do Container, tudo que for digitado pulará para a linha debaixo */
+	flex-direction: column; /* cria uma Coluna dentro do Container, tudo que for digitado pulará para a linha de baixo */
 	justify-content: center; /* justifica e centraliza */
-	padding-bottom: 60px; /* espaçamento inferior entre o Carrossel e a Section abaixo */
+	/*padding-bottom: 40px;*/ /* Era 60px - espaçamento inferior entre o Carrossel e a Section abaixo */
 }
 
 /* Retirei do Projeto a Classe abaixo */ 
@@ -403,14 +410,14 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
 .foto-projeto { /* Section 5 - Projetos */
 	display: flex; /* garante que o tudo que estiver dentro desta <div> poderá ser movimentado/alterado */
 	object-fit: cover; /* preenche todos os espaços e centraliza a Foto em um RAIO a partir do meio para as laterais */  
-    height: 285px; /* Era 385px - altura da foto */
-    width: 285px; /* Era 385px - largura da foto */
+    height: 255px; /* Era 285px, Era 385px - altura da foto */
+    width: 255px; /* Era 285px, Era 385px - largura da foto */
     border-radius: 50%; /* deixa a foto totalmente redonda */
     box-shadow: 0 0 5px #fcfc; /* efeito sombreado ao redor da foto, causa a impressão da estar flutuando */ 
     transition: .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
                                  "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
-	margin-left: 50px; /* ajuda a centralizar as Fotos dentro do Box */
-								}
+	margin-left: 67px; /* Era 50px - ajuda a centralizar as Fotos dentro do Box */
+}
 
 .foto-projeto:hover { /* Section 5 - Projetos */
     -moz-transform: scale(1.07); /* garante o funcionamento no aumento de tamanho da Foto para Mozilla */
@@ -462,7 +469,7 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
 	justify-content: center; /* justifica e centraliza os 3 Boxes dentro do Container */
 	align-items: center; /* alinha os 3 Boxes no centro do Container em linha HORIZONTALMENTE */
 	min-height: 260px; /* altura mínima que os 3 Boxes terão em relação ao Título do Container */
-	
+	margin-top: 50px; /* espaçamento entre a margem superior e o Box com Frases */
 }
 
 .card-rodape { /* Section 6 - Rodapé */
@@ -474,10 +481,13 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
 	line-height: 27px; /* altura entre as linhas dentro do Cartão */
 	min-height: 65px; /* altura dos Cartões */
 	width: 500px; /* largura dos Cartões */
-	margin-top: 100px; /* espaçamento entre a margem superior e os Textos Motivacionais */
+	/*margin-top: 100px;*/ /* espaçamento entre a margem superior e os Textos Motivacionais */
+	align-items: center;
 }
 
 footer { /* Section 6 - Rodapé */
+	/* height: 100vh;*/ /* 100vh = se for colocado esse valor, quando a Tela entrar no Modo Responsivo
+							haverá um espaço vazio muito grande entre Texto e próxima Section */
 	position: relative; /* será responsivo */
 	width: 100%; /* largura do Container ocupará toda a Tela */
 	height: 400px; /* altura do Container */
@@ -574,7 +584,8 @@ footer p:nth-child(2) { /* Section 6 - Rodapé - Segundo Filho - Parágrafo 2 */
 	margin: 10px auto; /* ajuda a centralizar o SUBLINHADO  */
 	border-radius: 5px; /* arredonda as pontas do SUBLINHADO */
 	margin-top: -40px; /* coloca o SUBLINHADO embaixo do Título */
-	margin-bottom: 40px;
+	margin-bottom: 40px; /* ajuda o SUBLINHADO aparecer embaixo do Título, apenas em PROJETOS 
+							se for retirado o sublinhado desaparece somente em PROJETOS */
 }
 
 .line-com-recuo { /* linha abaixo dos Títulos (SUBLINHADO) - apanes para Título "Sobre Mim" */
@@ -594,7 +605,7 @@ footer p:nth-child(2) { /* Section 6 - Rodapé - Segundo Filho - Parágrafo 2 */
 
 /* Centralizando Foto e Texto dentro do Container - 
 apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence) */
-.about-pages { 
+.about-pages { /* Páginas 1, 2 e 3 */
 	width: 100%; /* largura da Section */
 	height: 100vh; /* ocupará toda a altura da Tela */
 	padding: 10px 0px; /* 10px = espaçamento Superior/Inferior entre a Foto/Texto e as margens Superior/Inferior
@@ -602,11 +613,12 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	background-color: #191919; /* cor de Fundo - Cinza GRAFITE */
 	overflow: hidden; /* como cada Página tem apenas uma Section, este comando é necessário
 						 pois se a barra de rolagem não for escondida fica aparecendo uma página em branco abaixo */
+	
 }
 
-.about-pages img { 
-	height: 100%; /* altura da Foto na tag <img> */
-	width: 50%; /* largura da Foto na tag <img> */
+.about-pages img { /* Páginas 1, 2 e 3 */
+	height: 90%; /* Era 100% - altura da Foto na tag <img> */
+	width: 40%; /* Era 50% - largura da Foto na tag <img> */
 	/* border-radius: 30px; */ /* arredondamento das bordas */ 
 								/* este comando não é necessário aqui Pois coloquei um 
 								border-radius: em cada Foto dentro deo HTML */
@@ -614,53 +626,210 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 									 no Modo Responsivo a deixar o Texto ao lado separdo da Foto
 									 #101010 coloca uma moldura mais escura */
 	object-fit: cover; /* cobre todos os espaços e evita que a Foto fique destorcida */
+	margin-top: -295px; /* Retira espaço entre a margem SUPERIOR e as Fotos, depois que coloquei JavaScript
+						trocaAvatar.js */
+	margin-left: 100px; /* Retira espaço entre a margem ESQUERDA e as Fotos, depois que coloquei JavaScript
+						trocaAvatar.js */
 }
 
-.main-pages { 
-	width: 1130px; /* largura da class="main-pages", Foto e Texto estão dentro desta Classe */
-	max-width: 95%; /* máxima largura que a class="main-pages" terá */
+.main-pages { /* Páginas 1, 2 e 3 */
+	/*width: 1130px;*/ /* largura da class="main-pages", Foto e Texto estão dentro desta Classe */
+	width: auto; /* máxima largura que a class="main-pages" terá */
 	margin: 0 auto; /* margem zerada e automática */
-	display: flex; /* faz Foto e Texto dentro da Classe ficarem um do lado do outro */
+	display:flex; /* faz Foto e Texto dentro da Classe ficarem um do lado do outro */
 	align-items: center; /* centraliza Foto e Texto dentro da Classe, um do lado do outro em linha HORIZONTALMENTE */
-	justify-content: space-around; /* dá um espaço entre a Foto e Texto 
+	justify-content: space-between; /* Era 'space-around' - dá um espaço entre a Foto e Texto 
 								     space-between = causa um espaçamento IGUAL entre Foto e 
 									 Texto dentro do Container */
 	height: 100vh; /* será responsiva e ocupará toda a altura da Tela */
 }
 
+.about-text-pages { /* Páginas 1, 2 e 3 */
+	margin-right: 100px; /* Espaço entre a Foto e Texto Paginas 1, 2 e 3, , depois que coloquei JavaScript
+							trocaAvatar.js */
+}
+
 .comentario { /* Parágrafo da Página 4 (Certificados) "Clique nos botões abaixo e navegue..." */
     margin-top: -570px; /* margem inferior do comentário NEGATIVA, evita que o parágrafo fique 
 						   do lado das imagens, vai ficar acima dos Certificados */
-    margin-right: -1100px; /* espaçamento NEGATIVO da margem direita do comentário em relação a Tela */
+    /*margin-right: -1100px;*/ /* espaçamento NEGATIVO da margem direita do comentário em relação a Tela */
     color: #fcfc; /* cor da fonte */
     font-size: 22px; /* tamanho da fonte */ 
-	width: 1100px; /* tamanho do Box para inserir o Texto */
+	/*width: 1100px;*/ /* tamanho do Box para inserir o Texto */
+	text-align: center; /* centraliza o Texto no meio da Página */
+	position: absolute; /* precisa ser absolute, senão as Fotos aparecem erradas */
 }
 
-.clique-aqui { /* Section 4 - Diferenciais - Acesse meus certificados clicando...  */
+.clique-aqui { /* Section 4 - Diferenciais - Acesse meus certificados 'clicando aqui' */
 	color: #fcfc; /* cor da Fonte no Parágrafo */
 	letter-spacing: 1px; /* espaçamento entre as LETRAS do Parágrafo */
-	line-height: 40px; /* altura da linha em relação as imagens acima */
+	/*line-height: 20px;*/ /* altura da linha em relação as imagens acima */
 	font-size: 22px; /* aumenta o tamanho da Fonte */
-	margin-bottom: -40px; /* espaçamento entre o Parágrafo e o Botão abaixo 'Fale comigo' */
+	margin: 20px; /* espaçamento entre o Carrossel e 'Acesse meus certificados clicando aqui' */
+	text-align: center; /* centraliza o Texto 'Acesse meus certificados clicando aqui' dentro do container */
+}
+
+/* Section 2 about - Sobre mim */
+/* Faz Funcionar a Troca de Foto Principal/AVATAR de SOBRE MIM - JavaScript trocarAvatar.js */
+#slider img { /* Página Principal - INDEX.HTML */
+	opacity: 0; /* CAMUFLAGEM - opacidade vai de 0 até 1, sendo zero transparente e 1 imagem nítida
+				a Foto vai estar totalmente transparente, ao mesmo tempo que a Classe abaixo
+				vai estar totalmente nítida */
+	transition: opacity 5s; /* opacity = aplica OPACIDADE na Transição das Fotos 
+							5s = tempo de transição entre Foto Principal/AVATAR 
+							tem que ser igual ao JavaScript trocarAvatar.js */
+	border-radius: 50px; /* arredondamento das bordas da Foto de Perfil */
+	position: absolute; /* fixa as Fotos de Perfil Principal/AVATAR no container 
+						na última Foto no HTML style="position: relative; 
+						senão não funciona direito */
+}
+#slider img.selected { /* Página Principal - INDEX.HTML */
+	opacity: 1; /* CAMUFLAGEM - opacidade vai de 0 até 1, sendo zero transparente e 1 imagem nítida
+				a Foto vai estar totalmente nítida, ao mesmo tempo que a Classe acima
+				vai estar totalmente transparente */
+	transition: opacity 5s; /* opacity = aplica OPACIDADE na Transição das Fotos 
+							5s = tempo de transição entre Foto Principal/AVATAR 
+							tem que ser igual ao JavaScript trocarAvatar.js */
+	border-radius: 50px; /* arredondamento das bordas da Foto de Perfil */
+	position: absolute; /* fixa as Fotos de Perfil Principal/AVATAR no container 
+						na última Foto no HTML style="position: relative; 
+						senão não funciona direito */
+}
+
+/* Section Section 3 - Habilidades */
+/* Animação = faz piscar, aparecer e desaparecer Fontawesome (Cartões) */
+@keyframes pisca1 { /* Fontawesome (Cartões)
+					Celular/Mobile = class="fas fa-mobile-alt pisca1"
+					Amigos/Pessoas/Friends = class="fas fa-user-friends pisca1"
+					Gráfico/Chart = class="fas fa-chart-line pisca1" */
+	0% { opacity: 1; } /* 1 = visível */
+	10% { opacity: 0.9; }
+	20% { opacity: 0.8; }
+	30% { opacity: 0.7; }
+	40% { opacity: 0.6; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.4; }
+	70% { opacity: 0.3; }
+	80% { opacity: 0.2; }
+	90% { opacity: 0.1; }
+	100% { opacity: 0; } /* 0 = invisível / transparente */
+	from { /* o Fontawesome vai sair da ESQUERDA para DIREITA */
+		transform: translateX(-3%) scaleX(1);
+	}
+	
+	to { /* tempo que o Fontawesome vai levar para sair da ESQUERDA para DIREITA */
+		transform: translateX(0) scaleX(1);
+	}
+}
+.pisca1 {
+	-webkit-animation: pisca1 5s alternate infinite;
+	-moz-animation: pisca1 5s alternate infinite;
+	-ms-animation: pisca1 5s alternate infinite;
+	-o-animation: pisca1 5s alternate infinite;
+	animation: pisca1 5s alternate infinite;
+	animation-direction: alternate infinite;
+}
+
+@keyframes pisca2 { /* Fontawesome (Cartões)
+					Tablet = class="fas fa-tablet-alt pisca2"
+					Dedo/Joinha/Curtir/Thumb = class="far fa-thumbs-up pisca2" */
+	0% { opacity: 1; } /* 1 = visível */
+	10% { opacity: 0.9; }
+	20% { opacity: 0.8; }
+	30% { opacity: 0.7; }
+	40% { opacity: 0.6; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.4; }
+	70% { opacity: 0.3; }
+	80% { opacity: 0.2; }
+	90% { opacity: 0.1; }
+	100% { opacity: 0; } /* 0 = invisível / transparente */
+	from { /* o Fontawesome vai sair DE CIMA para BAIXO */
+		transform: translateY(-50%) scaleY(1);
+	}
+	
+	to {
+		transform: translateY(0) scaleY(1);
+	}
+}
+.pisca2 { /* tempo que o Fontawesome vai levar para sair DE CIMA para BAIXO */
+	-webkit-animation: pisca2 7s alternate infinite;
+	-moz-animation: pisca2 7s alternate infinite;
+	-ms-animation: pisca2 7s alternate infinite;
+	-o-animation: pisca2 7s alternate infinite;
+	animation: pisca2 7s alternate infinite;
+	animation-direction: alternate infinite;
+}
+
+@keyframes pisca3 { /* Fontawesome (Cartões)
+					Desktop/Computador = class="fas fa-desktop pisca3"
+					Dinheiro/Nota de dinheiro/Money = class="fas fa-desktop pisca3" */
+	0% { opacity: 1; } /* 1 = visível */
+	10% { opacity: 0.9; }
+	20% { opacity: 0.8; }
+	30% { opacity: 0.7; }
+	40% { opacity: 0.6; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.4; }
+	70% { opacity: 0.3; }
+	80% { opacity: 0.2; }
+	90% { opacity: 0.1; }
+	100% { opacity: 0; } /* 0 = invisível / transparente */
+	from { /* o Fontawesome vai sair da DIREIRA para ESQUERDA */
+		transform: translateX(3%) scaleX(1);
+	}
+	
+	to {
+		transform: translateX(0) scaleX(1);
+	}
+}
+.pisca3 { /* tempo que o Fontawesome vai levar para sair da DIREIRA para ESQUERDA */
+	-webkit-animation: pisca3 9s alternate infinite;
+	-moz-animation: pisca3 9s alternate infinite;
+	-ms-animation: pisca3 9s alternate infinite;
+	-o-animation: pisca3 9s alternate infinite;
+	animation: pisca3 9s alternate infinite;
+	animation-direction: alternate infinite;
 }
 
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
-    .about-pages img { /* apenas nas Fotos das Páginas 1, 2, 3  */
-        height: 40%; /* altura da Foto na tag <img> no Modo Responsivo
+	.about {
+		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
+		margin-top: -3px; /* esconde uma LINHA BRANCA de background-color que aparece entre as páginas 
+							somente entre o Topo da Site e Sobre Mim */
+	}
+	.service {
+		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
+	}
+	.contact-me {
+		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
+	}
+	.about-pages img { /* apenas nas Fotos das Páginas 1, 2, 3  */
+        height: 55%; /* altura da Foto na tag <img> no Modo Responsivo
 						se este valor não for especificado, a Foto fica com uma altura muita alta
 		 				pega toda a página */
+		margin-top: -530px; /* ajuda a centralizar a Foto depois que coloquei JavaScript trocaAvatar.js */
+		width: 45%; /* largura das Fotos */
     }
+	.about-text-pages { /* Páginas 1, 2 e 3 */
+		margin-left: -100px; /* Espaço entre Texto Paginas 1, 2 e 3 
+								ajuda a centralizar o Texto ao lado da Foto */
+		/*width: 30wh;*/
+		/*justify-content: space-evenly;*/
+		max-width: 300px; /* largura máxima que o container do Texto ao lado da Foto terá */
+		
+	}	
 	/* a Responsividade abaixo não será necessária, pois apesar dela diminuir as margens Superior/Inferior
 	provavelmente, não ficará bom no Celular */
-	.about-text { /* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
+	about-text { /* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
 		margin-top: -50px; /* diminui a Margem Superior */
 		margin-bottom: -30px; /* diminui a Margem Inferior */
 	}
 	.foto-projeto { 
 		height: 190px; /* Era 290px - altura máxima da foto */
 		width: 190px; /* Era 290px - largura máxima da foto */
+		margin-left: 50px; /* centraliza a Foto do Projeto dentro do Box */
 	}
 	.pra-texto-projeto { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
 		width: 265px; /* largura dos Cartões */
@@ -682,9 +851,16 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 							  pela programação no Rodapé, aparecia no Modo Responsivo uma LINHA BRANCA 
 							  que separava os dois rodapés, aí coloquei este comando pra camuflar */
 	}
+	footer .end {
+		margin-bottom: -150px; /* coloca o texto 'Desenvolvido por Marcos Lopes' no Rodapé da página */
+		position: absolute; /* coloca o texto 'Desenvolvido por Marcos Lopes' no Rodapé da página */
+	}
 	.pra-texto-rodape { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
-		width: 430px; /* largura dos Cartões */
-		font-size: 11.7px; /* Era 12px - altura entre as linhas dentro do Cartão */
-		margin-top: 40px; /* espaçamento entre a margem superior e o Texto Motivacional */
+		max-width: 460px; /* Era 430px - largura dos Cartões */
+		font-size: 14px; /* Era 11.7px - Era 12px - tamanho da Fonte dentro do Cartão */
+		/*margin-top: 40px;*/ /* espaçamento entre a margem superior e o Texto Motivacional */
+	}
+	section {
+		margin-bottom: -3px; /* esconde uma LINHA BRANCA de background-color que aparece entre as páginas */
 	}
 }
