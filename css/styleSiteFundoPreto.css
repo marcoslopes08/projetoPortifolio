@@ -805,6 +805,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		scroll-behavior: smooth; /* suaviza a rolagem em todo o site, quando o Menu 
 									(Projetos/Certificados/Sobre mim/Contato) for clicado */
 		overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
+		overflow-y: hidden; /* evita que o conteúdo extrapole as margens */
 		font-family: 'Josefin Sans', sans-serif; /* fonte */
 	}
 	.about {
