@@ -46,11 +46,17 @@
 }
   
 /* CSS para navegação manual dos slides (css for manual slide navigation) */
-  
+
+:checked{
+    width: 50px;
+    height: 50px;
+}  
+
 .navegacao-manual { /* nome da Classe era navigation-manual */
     position: absolute; /* força a centralização dos Botões em cima das Fotos */
     width: 700px; /* centraliza os Botões no meio das Fotos - largura da Foto */
-    margin-top: -40px; /* é negativa para fazer os Botões ficarem com um espaçamento em relação a parte inferior da Foto */ 
+    margin-top: -40px; /* é negativa para fazer os Botões ficarem com um espaçamento em relação a parte inferior da Foto 
+                        se este comando for retirado, o Ponteiro não vira MÃOZINHA sobre os Botões */ 
     display: flex; /* possibilita que os comandos ACIMA sejam executados */
     justify-content: center; /* justifica e centraliza EXATAMENTE no meio das Fotos */
 }
@@ -97,7 +103,8 @@
   
 /* CSS para navegação automática (CSS for automatic navigation) */
   
-.navegacao-automatica { /* nome da Classe era navigation-auto - Aqui, são inseridos Botões que ficam camuflados sobre os já criados acima na Classe .navegação-manual */
+.navegacao-automatica { /* nome da Classe era navigation-auto - Aqui, são inseridos Botões que 
+                            ficam camuflados sobre os já criados acima na Classe .navegação-manual */
     position: absolute; /* força a centralização dos Botões em cima das Fotos */
     display: flex; /* possibilita que os comandos ACIMA sejam executados */
     width: 700px;  /* centraliza os Botões no meio das Fotos - largura da Foto */
