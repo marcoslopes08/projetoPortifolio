@@ -794,6 +794,19 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
+	*{
+		padding: 0; /* zera todos os espaços dentro da Tela */
+		margin: 0; /* zera todas as margens */
+		box-sizing: border-box; /* cria um box */
+		/*background-color: gold;*/ /* teste para ver se existem espaços entre colunas etc */
+	}
+	
+	body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (antigo Internet Explorer) */   
+		scroll-behavior: smooth; /* suaviza a rolagem em todo o site, quando o Menu 
+									(Projetos/Certificados/Sobre mim/Contato) for clicado */
+		overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
+		font-family: 'Josefin Sans', sans-serif; /* fonte */
+	}
 	.about {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
 		margin-top: -3px; /* esconde uma LINHA BRANCA de background-color que aparece entre as páginas 
