@@ -12,19 +12,25 @@
 
 	<!-- About section start - Section 2 - Sobre mim -->
 	<div class="about-pages">
-		<div class="main-pages">
-			<img src="https://thumbs2.imgbox.com/df/9c/fVA41CNX_t.png" style="border-radius: 50px;">
-			<div class="about-text">
-				<h2 style="font-size: 40px;">Responsivi<span>dade</span></h2>
-				<p>Sites feitos com tema responsivo conseguem se adaptar para uma 
-					exibição otimizada em diferentes navegadores e tamanhos de telas. 
-					Essa característica é importante porque, atualmente, muitos usuários 
-					acessam sites por meio de aparelhos móveis, como tablets e principalmente
-					smartphones.
+		<div class="main-pages" id="slider">
+			<div id="slider"> <!-- controla JavaScript trocaAvatar.js, o mesmo usado no INDEX.HTML (Foto Principa/AVATAR) -->
+				<!-- FOTO 1 - Page1-1 - Responsividade -->
+				<img class="selected" src="https://thumbs2.imgbox.com/df/9c/fVA41CNX_t.png">
+				<!-- FOTO 2 - Page1-2 - Responsividade -->
+				<img src="https://thumbs2.imgbox.com/53/f7/QHdD6vfP_t.png">
+				<!-- FOTO 3 - Page1-3 - Responsividade -->
+				<img src="https://thumbs2.imgbox.com/ca/d6/EMbzfWNu_t.jpeg">
+			</div>
+
+			<div class="about-text about-text-pages">
+				<h2 style="font-size: 40px;">Responsivi<span class="pisca1">dade</span></h2>
+				<p>Sites com temas responsivos adaptam-se automaticamente a diferentes navegadores e 
+					tamanhos de tela, garantindo uma exibição otimizada. Essa característica é crucial, 
+					pois muitos usuários acessam sites por dispositivos móveis, como tablets e smartphones.
 				</p>
-				<p class="espaçoEntreParagrafo">Caso o website não seja de fácil navegação ou visualização nesses 
-					aparelhos, pode-se perder muito tráfego e até ser penalizado no  
-					posicionamento dos principais mecanismos de busca, como o Google, por exemplo.
+				<p class="espaçoEntreParagrafo">Se um site não proporciona uma navegação ou 
+					visualização adequada nesses dispositivos, pode perder tráfego significativo 
+					e ser penalizado nos rankings dos principais mecanismos de busca, como o Google.
 				</p>
 				<div style="text-align: right;">
 					<a class="button-pages" title="Fechar" onclick="fechar()">Fechar</a>
@@ -47,6 +53,8 @@
 		}
 	</script> -->
 
+	<!-- javaScript para Trocar Foto Principal por AVATAR Pixar - Sobre mim -->
+    <script src="../java/trocaAvatar.js"></script>
+
 </body>
 </html>
-
