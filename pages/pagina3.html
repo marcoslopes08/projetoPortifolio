@@ -13,21 +13,26 @@
 	<!-- About section start - Section 2 - Sobre mim -->
 	<div class="about-pages" id="about">
 		<div class="main-pages">
-			<img src="https://thumbs2.imgbox.com/38/aa/xipcSFTO_t.jpg" style="border-radius: 50px;">
-			<div class="about-text">
-				<h2 style="font-size: 40px;">Business Intellig<span>ence</span></h2>
-				<p>Não adianta ter um belo website e não saber o que está acontecendo nele.
-					Perguntas como:</p>
-				<p class="espaçoEntreParagrafo">
-					&nbsp;&nbsp;&nbsp;&nbsp;• o site está recebendo tráfego?<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;• como os usuários chegam a ele?<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;• quais as páginas mais visualizadas?<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;• qual a média de tempo de visita ao site?
+			<div id="slider"> <!-- controla JavaScript trocaAvatar.js, o mesmo usado no INDEX.HTML (Foto Principa/AVATAR) -->
+				<!-- FOTO 1 - Page1-1 - Business Intelligence -->
+				<img class="selected" src="https://thumbs2.imgbox.com/38/aa/xipcSFTO_t.jpg">
+				<!-- FOTO 2 - Page1-2 - Business Intelligence -->
+				<img src="https://thumbs2.imgbox.com/81/58/B94RLIKn_t.png">
+				<!-- FOTO 3 - Page1-3 - Business Intelligence -->
+				<img src="https://thumbs2.imgbox.com/1c/0d/Tydo8pzh_t.jpg">
+			</div>
+
+			<div class="about-text about-text-pages">
+				<h2 style="font-size: 40px;">Business Intellig<span class="pisca1">ence</span></h2>
+				<p>Ter um belo website não é suficiente se você não souber o que está acontecendo nele. 
+					É essencial obter respostas claras para perguntas como: O site está recebendo tráfego? 
+					Como os usuários chegam até ele? Quais são as páginas mais visualizadas? Qual é a 
+					média de tempo de visita?
 				</p>
-				<p class="espaçoEntreParagrafo">devem ter respostas claras. Ferramentas como o Google Analytics conseguem fazer o rastreio automático 
-				e inserir um código no seu website, onde as análises são exibidas em um painel de controle bem 
-				amigável, com tabelas e gráficos. Essas métricas (ou KPIs) podem ser a base 
-				para melhorar estratégias e devem ser levadas em consideração.
+				<p class="espaçoEntreParagrafo">Ferramentas como o Google Analytics podem rastrear essas 
+					informações automaticamente, inserindo um código no seu website e exibindo as análises 
+					em um painel de controle amigável, com tabelas e gráficos. Essas métricas (ou KPIs) 
+					são fundamentais para otimizar suas estratégias e devem ser levadas em consideração.
 				</p>
 				<div style="text-align: right;">
 					<a class="button-pages" title="Fechar" onclick="fechar()">Fechar</a>
@@ -49,6 +54,9 @@
 			window.history.back();
 		}
 	</script> -->
+
+	<!-- javaScript para Trocar Foto Principal por AVATAR Pixar - Sobre mim -->
+    <script src="../java/trocaAvatar.js"></script>
 
 </body>
 </html>
