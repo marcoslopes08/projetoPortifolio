@@ -28,7 +28,7 @@
 
 /* CSS Botão Luminoso - Box Projetos  */
 .botaoLuminosoProjetos {
-    margin-top: -12.5%; /* Era -16% - centraliza o Botão no meio da Foto */
+    margin-top: -11.5%; /* Era -12.5% - Era -16% - centraliza o Botão no meio da Foto */
     margin-left: -5.5%; /* ajuda a centralizar o Botão no meio da Foto */
     color: white; /* cor da Fonte dentro do Botão */
     text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
@@ -63,13 +63,12 @@
                                 solid = precisa ser colocado para o 'hover' abaixo funcionar
                                 white = no 'hover' quando o mouse for posicionado sobre o Botão, a 
                                 borda ficará Branca, da mesma cor do Fundo */
-} 
-
+}
 
 /* Modo Responsivo */
 @media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
     .botaoLuminosoProjetos {
-        margin-top: -12.5%; /* Era -17% - centraliza o Botão no meio da Foto */
-        margin-left: -8%; /* ajuda a centralizar o Botão no meio da Foto */
+        margin-top: -12.2%; /* Era -12.5%, Era -17% - centraliza o Botão no meio da Foto */
+        margin-left: -7.9%; /* Era -8% - ajuda a centralizar o Botão no meio da Foto */
     }
 }
