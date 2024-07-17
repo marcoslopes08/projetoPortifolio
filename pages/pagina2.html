@@ -13,19 +13,26 @@
 	<!-- About section start - Section 2 - Sobre mim -->
 	<div class="about-pages">
 		<div class="main-pages">
-			<img src="https://thumbs2.imgbox.com/1a/35/F9K1EZk2_t.jpg" style="border-radius: 50px;">
-			<div class="about-text">
-				<h2 style="font-size: 40px;">Desi<span>gn</span></h2>
-				<p>Na correria do dia a dia, não perdemos muito tempo com 
-					análises demoradas. Informação demais pode aumentar 
-					a chance de abandono dentro de websites. Uma boa interface deve possibilitar 
-					que o usuário a use com facilidade e realize todas as tarefas 
-					que desejar de forma simples e direta.
+			<div id="slider"> <!-- controla JavaScript trocaAvatar.js, o mesmo usado no INDEX.HTML (Foto Principa/AVATAR) -->
+				<!-- FOTO 1 - Page1-1 - Design -->
+				<img class="selected" src="https://thumbs2.imgbox.com/1a/35/F9K1EZk2_t.jpg">
+				<!-- FOTO 2 - Page1-2 - Design -->
+				<img src="https://thumbs2.imgbox.com/4c/a2/HDA7MUzw_t.jpg">
+				<!-- FOTO 3 - Page1-3 - Design -->
+				<img src="https://thumbs2.imgbox.com/4e/1e/eyp9a7WG_t.png">
+			</div>
+
+			<div class="about-text about-text-pages">
+				<h2 style="font-size: 40px;">Desi<span class="pisca1">gn</span></h2>
+				<p>No ritmo acelerado do dia a dia, as pessoas não têm tempo para análises 
+					demoradas. Informações excessivas podem aumentar a taxa de abandono em websites. 
+					Uma interface eficiente deve ser fácil de usar e permitir que os usuários 
+					realizem suas tarefas de forma simples e direta.
 				</p>
-				<p class="espaçoEntreParagrafo">Informações secundárias 
-					podem ser deixadas em segundo plano, como menus e abas. Esta página é um 
-					exemplo disso; você chegou aqui por meio de outra que relatou algo 
-					antes e deu a possibilidade de aprofundamento sobre determinado assunto.
+				<p class="espaçoEntreParagrafo">Elementos secundários, como menus e abas, 
+					podem ser posicionados em segundo plano. Esta página é um exemplo; você 
+					chegou aqui por meio de outra que apresentou um assunto inicial e ofereceu 
+					a opção de aprofundamento.
 				</p>
 				<div style="text-align: right;">
 					<a class="button-pages" title="Fechar" onclick="fechar()">Fechar</a>
@@ -47,6 +54,9 @@
 			window.history.back();
 		}
 	</script> -->
+
+	<!-- javaScript para Trocar Foto Principal por AVATAR Pixar - Sobre mim -->
+    <script src="../java/trocaAvatar.js"></script>
 
 </body>
 </html>
