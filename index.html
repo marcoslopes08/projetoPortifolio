@@ -4,9 +4,10 @@
 	<title>Portfolio - Website Pessoal - Fundo Preto</title>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-  	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- BLOQUEADO - Ajax jQuery -->
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.3.min.js"></script>
@@ -33,9 +34,6 @@
 	<!-- Abaixo CSS do Botão LUMINOSO no Topo do Site e Boxes de Projetos -->
 	<link rel="stylesheet" href="css/botaoLuminoso.css">
 
-	<!-- Abaixo CSS que controla as imagens dos CERTIFICADOS -->
-	<link rel="stylesheet" href="css/certificados.css">
-
 </head>
 <body>
 	<!-- hero Section start - Section 1 - Topo da Página -->
@@ -48,21 +46,28 @@
 				<li><a href="#differentials">diferenciais</a></li>
 				<li><a href="#project">projetos</a></li>
 			</ul>
-			<!-- <a href="#contato" class="btn">contatos</a> --> <!-- Botão Original -->			
-			<a class="botaoLuminoso" href="#contato" style="--clr:white;">contatos</a>	
-		</nav>		
+			<!-- <a href="#contato" class="btn">contatos</a> --> <!-- Botão Original -->
+			<a class="botaoLuminoso" href="#contato" style="--clr:white;">contatos</a>
+		</nav>
 		
 		<div class="content">
 			<h4>Olá, meu nome é</h4>
 			<h1>Marcos <span>Lopes</span></h1>
-			<h3>Aqui mostrarei minha trajetória como<br>
-				Desenvolvedor Web e alguns projetos
+			<h3>Aqui mostrarei minha trajetória com<br>
+				Desenvolvimento Web e alguns projetos
 			</h3>
 			<div class="newslatter">
+				<!-- href="mailto:marcos.lopes08@gmail.com" colocar link para e-mail não funciona,
+					por isso troquei para WhatsApp
+						class="botao-email" deixei pra não ter que refazer o CSS -->
 				<form>
-					<input type="email" name="email" id="mail" placeholder="Digite seu e-mail">
-					<a class="botao-email" href="mailto:marcos.lopes08@gmail.com" 
-						target="_blank" rel="noopener noreferrer">Fale comigo</a>
+					<input type="email" name="email" id="mail" placeholder="Digite seu WhatsApp">
+					<a class="botao-email" href="https://api.whatsapp.com/send?phone=5511997355410"
+						target="_blank" rel="noopener noreferrer" title="Ir para WhatsApp">
+							Fale comigo&nbsp;&nbsp;<i class="icones fab fa-whatsapp"></i></a>
+					<!-- Api de e-mail não funciona -->
+					<!-- <a class="botao-email" href="mailto:marcos.lopes08@gmail.com"
+						target="_blank" rel="noopener noreferrer">Fale comigo</a> -->
 				</form>
 			</div>
 		</div>
@@ -71,26 +76,58 @@
 	<!-- About section start - Section 2 - Sobre mim -->
 	<section class="about" id="about">
 		<div class="main">
+			<div id="slider"> <!-- controla Foto de Rosto Principal/AVATAR pelo JavaScript trocaAvatar.js -->
+				<!-- FOTO 1 - Foto de Rosto Principal -->
+				<img class="selected" src="https://thumbs2.imgbox.com/3e/7e/85lEOOoU_t.png">
+				<!-- FOTO 4 - Mangá Japonês ANIME/QUADRINHOS/COMICS feito no site: https://www.seaart.ai/pt/search/quadrinhos?type=1 -->
+				<img src="https://thumbs2.imgbox.com/5e/93/ZVS338DP_t.png">
+				<!-- FOTO 5 - Foto de Rosto Principal -->
+				<img src="https://thumbs2.imgbox.com/3e/7e/85lEOOoU_t.png">
+				<!-- FOTO 6 - Disney Pixar AVATAR (2) - feito no site: https://www.seaart.ai/pt/explore/detail/cl0hja14msb513gi8270 -->
+				<img src="https://thumbs2.imgbox.com/d3/ee/3q3CBv2I_t.png" style="position: relative;">
+				<!-- FOTO 2 - Disney Pixar AVATAR (1) - feito no site: https://www.seaart.ai/pt/explore/detail/cl0hja14msb513gi8270 -->
+				<!--<img src="https://thumbs2.imgbox.com/75/cb/g9iOOEa6_t.png">-->
+				<!-- FOTO 3 - Foto de Rosto Principal -->
+				<!--<img src="https://thumbs2.imgbox.com/3e/7e/85lEOOoU_t.png">-->
+				
+			</div>
+			<!-- Abaixo Foto de Rosto Principal/AVATAR com Botão que as troca com JavaScript  -->
+			<!-- <img id="image" src="https://thumbs2.imgbox.com/5c/4f/3puSbCEk_t.png" style="border-radius: 50px;"> --> <!-- undefined_image-4 - com Inteligência Artificial -->
+			<!-- <img id="image" src="https://thumbs2.imgbox.com/7d/25/7jBZDZVV_t.png" style="border-radius: 50px;"> --> <!-- undefined_image-4 - com Inteligência Artificial -->
+			<!-- Abaixo Foto de Rosto normal -->
 			<!-- <img src="https://thumbs2.imgbox.com/ca/42/YAD9iv9i_t.png" style="border-radius: 50px;"> --> <!-- antiga Foto -->
-			<img src="https://thumbs2.imgbox.com/5c/0d/d5Y4ddot_t.png" style="border-radius: 50px;"> <!-- main-reduzida-3 -->
-			<!-- <img src="https://thumbs2.imgbox.com/ee/f3/w8hJwK7M_t.png" style="border-radius: 50px;">  --><!-- main-reduzida-4 -->
+			<!-- <img src="https://thumbs2.imgbox.com/5c/0d/d5Y4ddot_t.png" style="border-radius: 50px;"> --> <!-- main-reduzida-3 -->
+			<!-- <img src="https://thumbs2.imgbox.com/ee/f3/w8hJwK7M_t.png" style="border-radius: 50px;"> --> <!-- main-reduzida-4 -->
+		
 			<div class="about-text"><br><br><br>
 				<h2>Sobre mim</h2>
 				<div class="line-com-recuo"></div> <!-- linha (SUBLINHADO abaixo dos Títulos)-->
-				<h5>Desenvolvedor <span>& Designer</span></h5>
-				<!-- <p>Desenvolvedor web com foco em front-end. Prezo pelo visual belo e dinâmico em 
-					cada projeto. Deixo websites mais interativos com animações web, além de designers 
-					responsivos que tornam a experiência do usuário mais agradável e única, independente 
+				<h5>Cria<span>tivo</span> & <span class="pisca1">Multi</span>disciplinar</h5> <!-- Era Devenvolvedor & Designer -->
+				<!-- <p>Desenvolvedor web com foco em front-end. Prezo pelo visual belo e dinâmico em
+					cada projeto. Deixo websites mais interativos com animações web, além de designers
+					responsivos que tornam a experiência do usuário mais agradável e única, independente
 					do dispositivo usado, seja celular, tablet ou computador.
 				</p> -->
-				<p>Aos 18 anos aprendi a programar em dBase e Clipper. No entanto, minha carreira profissional seguiu-se pelas  
-					áreas administrativo-financeira, de benefícios de RH e relacionamento com cliente. Curioso 
-					em relação à tecnologia, resolvi me desafiar estudando linguagens de programação. Hoje, esse aprendizado 
-					tecnológico, somado a bagagem profissional que adquiri, me dá embasamento para desenvolver soluções que 
-					impactem pessoas numa experiência agradável e única, tanto no ambiente virtual quanto no físico. 
+				<!-- <p>Aos 18 anos aprendi a programar em dBase e Clipper. No entanto, minha carreira profissional
+					seguiu-se pelas áreas administrativo-financeira, de benefícios de RH e relacionamento com
+					cliente. Curioso em relação à tecnologia, resolvi me desafiar estudando linguagens de
+					programação. Hoje, esse aprendizado tecnológico, somado a bagagem profissional que adquiri,
+					me dá embasamento para desenvolver soluções que impactem pessoas numa experiência agradável
+					e única, tanto no ambiente virtual quanto no físico.
+				</p> -->
+				<p>Pós-graduando Tecnologias e Sistemas de Informação.
+					Iniciei minha trajetória na programação aos 18 anos, aprendendo dBase e Clipper. Minha carreira 
+					profissional, no entanto, direcionou-se para as áreas administrativa-financeira, benefícios de RH e 
+					relacionamento com o cliente. Motivado por uma curiosidade incessante por tecnologia, dediquei-me 
+					ao estudo de diversas linguagens de programação. Hoje, essa combinação de conhecimentos 
+					tecnológicos e experiência profissional me capacita a criar soluções inovadoras, que 
+					proporcionam experiências únicas e agradáveis tanto no ambiente virtual quanto no físico.
 				</p>
 				<!-- <a href="https://api.whatsapp.com/send?phone=5511997355410">
 					<button type="button">Enviar WhatsApp</button></a> -->
+				
+				<!-- Botão abaixo muda minha Foto com Foto Principal com AVATAR Pixar -->
+					<!--<button onClick="changeImage()">Mudar Foto/Avatar</button> -->
 			</div>
 		</div>
 	</section>
@@ -104,47 +141,58 @@
 		</div>
 
 		<div class="box">
-			<div class="card">
-				<i class="fas fa-bars"></i>
+			<div class="card"> 
+				<!-- disponível em: https://www.w3schools.com/icons/fontawesome5_icons_payment_shopping.asp -->
+				<!-- Era class="fas fa-bars" -->
+				<i class="fas fa-mobile-alt pisca1" style="margin-left:-75px;margin-bottom:-60px;font-size:36px;"></i> 
+				<i class="fas fa-tablet-alt pisca2" style="margin-left:70px;margin-bottom:-60px;font-size:44px;"></i>
+				<i class="fas fa-desktop pisca3" style="font-size:52px;margin-bottom:10px;"></i>
 				<h5>Responsividade</h5>
 				<div class="pra">
-					<p>Todo site que desenvolvo é pensado com dois objetivos principais: 
-						primeiro deve funcionar em quaisquer dispositivos; em segundo 
+					<p>Todo site que desenvolvo é pensado com dois objetivos principais:
+						primeiro deve funcionar em quaisquer dispositivos; em segundo
 						lugar, deve ser o mais rápido possível.
 					</p>
 
 					<p style="text-align: center;">
-						<a class="button" href="pages/pagina1.html" target="_blank" rel="noopener noreferrer">Leia mais</a>
+						<a class="button" href="pages/pagina1.html" target="_blank"
+							rel="noopener noreferrer">Leia mais</a>
 					</p>
 				</div>
 			</div>
 
 			<div class="card">
-				<i class="far fa-user"></i>
+				<!-- Era class="far fa-user" / fas fa-paint-roller (pincél-rolo) / far fa-lightbulb (lâmpada) -->
+				<i class="fas fa-user-friends pisca1" style="margin-left:-25px;margin-bottom:-70px;font-size:58px;"></i> 
+				<i class="far fa-thumbs-up pisca2" style="margin-left:90px;font-size:35px;"></i>
 				<h5>Design</h5>
 				<div class="pra">
-					<p>Em cada criação, me baseio na facilidade de acesso, usando  
-						visuais dinâmicos e interativos, que traduzem o aumento da satisfação 
+					<p>Em cada criação, me baseio na facilidade de acesso, usando
+						visuais dinâmicos e interativos, que traduzem o aumento da satisfação
 						do usuário em toda navegação.
 					</p>
 
 					<p style="text-align: center;">
-						<a class="button" href="pages/pagina2.html" target="_blank" rel="noopener noreferrer">Leia mais</a>
+						<a class="button" href="pages/pagina2.html" target="_blank"
+							rel="noopener noreferrer">Leia mais</a>
 					</p>
 				</div>
 			</div>
 
 			<div class="card">
-				<i class="far fa-bell"></i>
+				<!-- Era class="far fa-bell" -->
+				<i class="fas fa-chart-line pisca3" style="margin-left:-25px;margin-bottom:-90px;margin-top:20px;font-size:64px;"></i>
+				<i class="far fa-money-bill-alt pisca1" style="margin-left:90px;margin-bottom:50px;font-size:30px;"></i>
 				<h5>Business Intelligence</h5>
 				<div class="pra">
-					<p>Trabalhei em projeto que integrou Business Intelligence (Inteligência 
-						de Negócios) ao website de produtos e serviços da empresa, 
+					<p>Trabalhei em projeto que integrou Business Intelligence (Inteligência
+						de Negócios) ao website de produtos e serviços da empresa,
 						resultando em maior produtividade e lucro.
 					</p>
 
 					<p style="text-align: center;">
-						<a class="button" href="pages/pagina3.html" target="_blank" rel="noopener noreferrer">Leia mais</a>
+						<a class="button" href="pages/pagina3.html" target="_blank"
+							rel="noopener noreferrer">Leia mais</a>
 					</p>
 				</div>
 			</div>
@@ -153,15 +201,15 @@
 	</section>
 
 	<!-- Contact Me - Section 4 - Diferenciais - Contacte-me -->
-	<section class="contact-me">
+	<section class="contact-me" id="differentials">
 
-		<div class="title" id="differentials">
-			<h2 style="margin-top: 50px;">Diferenciais</h2>
+		<div class="title">
+			<h2 style="margin-top: 10px;">Diferenciais</h2>
 			<div class="line"></div> <!-- linha (SUBLINHADO abaixo dos Títulos)-->
 		</div>
 
 		<!-- CARROSSEL - início do controle deslizante de imagem (image slider start)-->
-		<div class="controle-deslizante"> <!-- ERA class="slider" -->
+		<div class="controle-deslizante" style="margin-top: 10px;"> <!-- ERA class="slider" -->
 					
 			<div class="slides">
 				
@@ -174,25 +222,29 @@
 			
 				<!--início das imagens do slide (slide images start)-->
 				<div class="slide-carrossel first">
-					<img src="https://thumbs2.imgbox.com/6c/0e/Rog0hGkB_t.png" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
+					<img src="https://thumbs2.imgbox.com/e0/3a/SpDka1Yk_t.png" style="position: absolute;"
+						alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
 					<h1 class="titulo2-2">
-						<span>linguagens que utilizo</span></h1>
+						<span>competência técnica</span></h1>
 				</div>
 				<div class="slide-carrossel">
-					<img src="https://thumbs2.imgbox.com/be/38/LokG6FOr_t.jpg" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
+					<img src="https://thumbs2.imgbox.com/be/38/LokG6FOr_t.jpg" style="position: absolute;"
+						alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
 					<h1 class="titulo2-2">
 						<span>pensamento crítico</span></h1>
 				</div>
 				<div class="slide-carrossel">
-					<img src="https://thumbs2.imgbox.com/f8/93/fUIYEemT_t.jpg" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
+					<img src="https://thumbs2.imgbox.com/f8/93/fUIYEemT_t.jpg" style="position: absolute;"
+						alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
 					<h1 class="titulo2-2">
 						<span>senso de equipe</span></h1>
 				</div>
 				<div class="slide-carrossel">
-					<img src="https://thumbs2.imgbox.com/17/55/bv8fM6tt_t.jpg" style="position: absolute;" alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
+					<img src="https://thumbs2.imgbox.com/17/55/bv8fM6tt_t.jpg" style="position: absolute;"
+						alt=""> <!-- style="position: absolute;" Fundamental para o Texto ficar em cima da foto -->
 					<h1 class="titulo2-2">
 						<span>foco em resultados</span></h1>
-				</div>				
+				</div>
 				<!--fim das imagens do slide (slide images end)-->
 
 				<!--início da navegação automática (automatic navigation start)-->
@@ -214,16 +266,16 @@
 				<label for="radio4" class="manual-botao"></label>
 			</div>
 			<!--fim da navegação manual (manual navigation end)-->
+			
+			<div class="clique-aqui">
+				<p>Acesse meus certificados
+					<a style="text-decoration: none;" href="pages/pagina4.html" target="_blank" rel="noopener noreferrer">
+						<span>clicando aqui</span></a>
+				</p>
+			</div>
 
-		</div>		
-		<!--fim do controle deslizante de imagem (image slider end)-->
-
-		<div class="clique-aqui">
-			<p>Acesse meus certificados clicando
-				<a style="text-decoration: none;" href="pages/pagina4.html" target="_blank" rel="noopener noreferrer">
-					<span>aqui</span></a>
-			</p>
 		</div>
+		<!--fim do controle deslizante de imagem (image slider end)-->
 
 	</section>
 
@@ -235,13 +287,14 @@
 			<div class="line"></div> <!-- linha (SUBLINHADO abaixo dos Títulos)-->
 		</div>
 
-		<h5 style="text-align: center; margin-top: -15px;">Veja alguns<span> projetos</span> com uma breve descrição abaixo:</h5>
+		<h5 style="text-align: center; margin-top: -25px;">Veja alguns<span>
+			projetos</span> com uma breve descrição <span>abaixo</span>:</h5>
 
 		<div class="box-projeto">
 			<!-- Box 1 - Projeto Moon Light - Projeto Viagem Cidades -->
-			<div class="card-projeto">			
+			<div class="card-projeto">
 				<img class="foto-projeto" src="https://thumbs2.imgbox.com/d2/23/ZJR6Vbf5_t.jpg" alt="">
-				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemCidades/" 
+				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemCidades/"
 					style="--clr:white; position:absolute;" target="_blank" rel="noopener noreferrer">visitar</a>
 				<div class="card pra-texto-projeto">
 					<p>Com técnica Parallax (imagens paralisadas) e textos
@@ -252,83 +305,86 @@
 			<!-- Box 2 - Projeto Site Viagem -->
 			<div class="card-projeto">
 				<img class="foto-projeto" src="https://thumbs2.imgbox.com/f7/f9/4YlrhbFN_t.jpg" alt="">
-				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemComMenuParaCelular/" 
+				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoViagemComMenuParaCelular/"
 					style="--clr:white; position: absolute;" target="_blank" rel="noopener noreferrer">visitar</a>
 				<div class="card pra-texto-projeto">
-					<p>Bela disposição entre textos e fotos com 
-						Menu de Navegação drop-down específico 
+					<p>Bela disposição entre textos e fotos com
+						Menu de Navegação drop-down específico
 						para smartphone.
 					</p>
 				</div>
-			</div>					
+			</div>
 			<!-- Box 3 - Projeto Curriculo -->
 			<div class="card-projeto">
 				<img class="foto-projeto" src="https://thumbs2.imgbox.com/78/29/C4qyj0SA_t.jpg" alt="">
-				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoCurriculo/" 
+				<a class="botaoLuminosoProjetos" href="https://marcoslopes08.github.io/projetoCurriculo/"
 					style="--clr:white; position: absolute;" target="_blank" rel="noopener noreferrer">visitar</a>
 				<div class="card pra-texto-projeto">
 					<p>Currículo online com várias técnicas
 						de animações que podem ser replicadas em quaisquer outros projetos.
 					</p>
 				</div>
-			</div>			
+			</div>
 		</div>
 
 	</section>
 
-	<div class="box-rodape">
-		<div class="card-rodape">			
-			<div class="card pra-texto-rodape" style="text-align: right;">
-				<p><span>A programação expandiu meus horizontes e abriu portas;</span><br>
-					com ela, meu olhar, além de mais apurado, <br>
-					ficou mais sensível as demandas e necessidades que <br>
-					antes passavam despercebidas.
-				</p>
+	<!-- Section 6 - Rodapé (footer)-->
+	<section class="contact-me" id="contato">
+		
+		<div class="box-rodape">
+			<div class="card-rodape">
+				<div class="card pra-texto-rodape" style="text-align: right;">
+					<p><span>A programação expandiu meus horizontes e abriu portas;</span><br>
+						com ela, meu olhar, além de mais apurado, <br>
+						ficou mais sensível as demandas e necessidades que <br>
+						antes passavam despercebidas.
+					</p>
+				</div>
+			</div>
+			<div>
+				<!-- <div>
+					<img class="foto-rodape" src="https://thumbs2.imgbox.com/b0/08/7W8zxWXU_t.png" alt="">
+				</div> -->
+			</div>
+			<div class="card-rodape">
+				<div class="card pra-texto-rodape" style="text-align: left;">
+					<p><span>Existe uma linha tênue que separa o real do virtual,</span><br>
+						e trabalhar com pessoas me ensinou que, tanto um quanto <br>
+						o outro mundo não devem ser negligenciados; <br>
+						<span>dá pra cuidar de negócios e gente em ambos os casos.</span>
+					</p>
+				</div>
 			</div>
 		</div>
-		<div>
-			<!-- <div>
-				<img class="foto-rodape" src="https://thumbs2.imgbox.com/b0/08/7W8zxWXU_t.png" alt="">
-			</div> -->
-		</div>
-		<div class="card-rodape">
-			<div class="card pra-texto-rodape" style="text-align: left;">
-				<p><span>Existe uma linha tênue que separa o real do virtual,</span><br>
-					e trabalhar com pessoas me ensinou que, tanto um quanto <br>
-					o outro mundo não devem ser negligenciados; <br>
-					<span>dá pra cuidar de negócios e gente em ambos os casos.</span>
-				</p>
-			</div>
-		</div>			
-	</div>
 
-	<!-- footer start - Section 6 - Rodapé -->
-	<footer id="contato">
-		<p>Marcos Lopes</p>
-		<p>Para outras informações e mais códigos em HTML, CSS, Java e de 
-			outras linguagens, visite minhas redes ou entre em contato.</p>
-		<div class="social">
-			<a href="https://github.com/marcoslopes08" target="_blank" rel="noopener noreferrer" title="GitHub">
-				<i class="fab fa-github"></i></a>
-			<a href="https://www.linkedin.com/in/marcos-lopes-982616215/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-				<i class="fab fa-linkedin"></i></a>
-			<!-- <a href="https://web.facebook.com/marcos.lopes.1614/" target="_blank" rel="noopener noreferrer" title="Facebook">
-				<i class="fab fa-facebook-f"></i></a> -->
-			<a href="https://api.whatsapp.com/send?phone=5511997355410" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-				<i class="icones fab fa-whatsapp"></i></a>
-		</div>
-		<p class="end">Desenvolvido por Marcos Lopes &nbsp;&nbsp;&nbsp;&nbsp;
-			(11) 99735-5410 &nbsp;&nbsp;&nbsp;&nbsp;
-			marcos.lopes08@gmail.com
-		</p>
-	</footer>
+		<footer>
+			<p>Marcos Lopes</p>
+			<p>Para outras informações e códigos em HTML, CSS, JavaScript e
+				mais linguagens, visite minhas redes, entre em contato.</p>
+			<div class="social">
+				<a href="https://github.com/marcoslopes08" target="_blank" rel="noopener noreferrer" title="GitHub">
+					<i class="fab fa-github"></i></a>
+				<a href="https://www.linkedin.com/in/marcos-lopes-982616215/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+					<i class="fab fa-linkedin"></i></a>
+				<!-- <a href="https://web.facebook.com/marcos.lopes.1614/" target="_blank" rel="noopener noreferrer" title="Facebook">
+					<i class="fab fa-facebook-f"></i></a> -->
+				<a href="https://api.whatsapp.com/send?phone=5511997355410" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+					<i class="icones fab fa-whatsapp"></i></a>
+			</div>
+			<p class="end">Desenvolvido por Marcos Lopes 2022 - 2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				marcos.lopes08@gmail.com
+			</p>
+		</footer>
+		
+	</section>
 
 	<!-- Abaixo, jQuery (Java) que faz Botão VOLTAR AO TOPO aparecer/desaparecer na rolagem da página -->
 	<script src="java/animacaoBotaoVoltarAoTopo.js"></script>
 
 	<a href="#" class="voltarAoTopo">
-		<img class="voltarAoTopo" src="https://thumbs2.imgbox.com/0d/fd/60xmUP4b_t.jpg" 
-			 title="Topo da Página" alt="Voltar ao Topo"/>
+		<img class="voltarAoTopo" src="https://thumbs2.imgbox.com/0d/fd/60xmUP4b_t.jpg"
+			title="Topo da Página" alt="Voltar ao Topo"/>
 	</a>
 	<!-- Acima, jQuery (Java) que faz Botão VOLTAR AO TOPO aparecer/desaparecer na rolagem da página -->
 	
@@ -345,9 +401,9 @@
 
 	<!-- javascript abaixo abre qualquer tag <a></a> em uma nova aba em branco -->
 	<!-- <script>
-        $(document).on('click', 'a', function(e){ 
-            e.preventDefault(); 
-            var url = $(this).attr('href'); 
+        $(document).on('click', 'a', function(e){
+            e.preventDefault();
+            var url = $(this).attr('href');
             window.open(url, '_blank');
         });
     </script> -->
@@ -362,12 +418,38 @@
 		}
 	</script> -->
 
-	<!-- javascript evita que navegadores mais antigos abram abas maliciosas com target="_blank" --> 
+	<!-- javascript evita que navegadores mais antigos abram abas maliciosas com target="_blank" -->
     <script>
         var otherWindow = window.open();
         otherWindow.opener = null;
         otherWindow.location = url;
-     </script>
+    </script>
+
+	<!-- javascript para Trocar Foto Principal por AVATAR Pixar - SOBRE MIM -->
+	<!--<script>
+			var image = document.getElementById("image");
+			setInterval(function changeImage(){
+			if(image.src === "https://thumbs2.imgbox.com/5c/4f/3puSbCEk_t.png"){
+				image.src = "https://thumbs2.imgbox.com/7d/25/7jBZDZVV_t.png";
+			}
+			else if(image.src === "https://thumbs2.imgbox.com/7d/25/7jBZDZVV_t.png"){
+				image.src = "https://thumbs2.imgbox.com/5c/4f/3puSbCEk_t.png";
+			}
+		}, 3000);
+	</script> -->
+
+	<!-- javaScript para Trocar Foto Principal por AVATAR Pixar - Sobre mim -->
+    <script src="java/trocaAvatar.js"></script>
+
+	<!-- JavaScript para detectar Touch Screen no Mobile, modo responsivo -->
+    <script>
+        function detectTouchDevice() {
+            return (('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0));
+        }
+        detectTouchDevice()
+    </script>
 
 </body>
 </html>
