@@ -1,6 +1,13 @@
 /* CSS Carrossel - Site Fundo Preto - Página 4 - Certificados */
 
-body {
+*{
+	padding: 0; /* zera todos os espaços dentro da Tela */
+	margin: 0; /* zera todas as margens */
+	box-sizing: border-box; /* cria um box */
+	/*background-color: gold;*/ /* teste para ver se existem espaços entre colunas etc */
+}
+
+body, html {
     margin: 0; /* zera todas as margens */
     padding: 0; /* zera todos os espaços dentro da Tela */
     height: 100vh; /* altura minima que a Tela terá, será responsiva e ocupará toda a altura da Tela */
@@ -8,6 +15,7 @@ body {
     justify-content: center; /* justifica e centraliza EXATAMENTE no meio da Tela */
     align-items: center; /* centraliza todos os itens que foram colocados dentro deste Container em linha HORIZONTALMENTE */
     background: #191919; /* cor de Fundo do Container */
+    overflow: hidden; /* evita que o conteúdo extrapole as margens */
 }
  
 .controle-deslizante { /* ERA class="slider" */
