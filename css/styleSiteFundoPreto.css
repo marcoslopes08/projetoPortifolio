@@ -818,7 +818,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		/*width: 30wh;*/
 		/*justify-content: space-evenly;*/
 		max-width: 300px; /* largura máxima que o container do Texto ao lado da Foto terá */
-		margin-top: -200px; /* diminui a Margem Superior */
+		margin-top: -150px; /* diminui a Margem Superior */
 		
 	}	
 	/* a Responsividade abaixo não será necessária, pois apesar dela diminuir as margens Superior/Inferior
