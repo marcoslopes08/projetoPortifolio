@@ -809,22 +809,6 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	.contact-me {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
 	}
-	
-	.about-pages .main-pages { /* apenas nas Fotos das Páginas 1, 2, 3  */
-		padding: 0; /* retira todos os espaços vazios */
-		margin: 0; /* retira as margens vazias  */
-		overflow: 0; /* não deixa o Container extrapolar as margens  */
-		/*margin-top: -100px;*/
-		margin-bottom: -100px;
-		/*margin-bottom: -200px;*/
-	}
-	body, html .about-pages .main-pages {
-        margin: 0; /* zera todas as margens */
-        padding: 0; /* zera todos os espaços dentro da Tela */
-        overflow-y: hidden; /* evita que o conteúdo extrapole as margens */
-        overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
-        /*margin-top: -50px;*/ /* ajuda o Container ficar centralizado no meio da página */
-    	}
 	.about-pages { /* apenas nas Fotos das Páginas 1, 2, 3  */
 		padding: 0; /* retira todos os espaços vazios */
 		margin: 0; /* retira as margens vazias  */
