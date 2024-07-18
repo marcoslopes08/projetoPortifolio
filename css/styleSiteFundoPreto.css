@@ -886,4 +886,14 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	section {
 		margin-bottom: -3px; /* esconde uma LINHA BRANCA de background-color que aparece entre as páginas */
 	}
+	span {
+		text-shadow: 0 0 2px #f9004d; /* Aumenta o destaque nas palavras: 
+										PortfóLIO, LOPES, CRIAtivo & MULTIdiciplinar 
+										... clicando aqui, ...projetos...abaixo:, A programação expandiu meus horizontes...
+										Existe uma linha tênua..., dá para cuidar de gente...
+										Pagina1 - ResponsiviDADE
+										Pagina2 - DesiGN
+										Pagina3 - Business IntelligENCE
+										Pagina4 - ... e navegue entre meus CERTIFICADOS*/
+	}
 }
