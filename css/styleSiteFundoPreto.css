@@ -809,6 +809,11 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	.contact-me {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
 	}
+	.about-pages { /* apenas nas Fotos das Páginas 1, 2, 3  */
+		padding: 0; /* retira todos os espaços vazios */
+		margin: 0; /* retira as margens vazias  */
+		overflow: 0; /* não deixa o Container extrapolar as margens  */
+	}
 	.about-pages img { /* apenas nas Fotos das Páginas 1, 2, 3  */
         height: 55%; /* altura da Foto na tag <img> no Modo Responsivo
 						se este valor não for especificado, a Foto fica com uma altura muita alta
