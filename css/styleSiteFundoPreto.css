@@ -31,6 +31,9 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
  */
 }
 
+hero {
+	background-image: sepia(50%);
+}
 nav { /* Menu de Navegação - Section 1 - Topo da Página */
 	display: flex; /* permite que Logo/Menu/Botão Inscreva-se sejam manipulados dentro do Container */
 	align-items: center; /* centraliza todos os elementos Logo/Menu/Botão Inscreva-se em linha HORIZONTALMENTE */
@@ -48,8 +51,16 @@ nav { /* Menu de Navegação - Section 1 - Topo da Página */
 }
 
 span {
-	color: #f9004d; /* cor que será aplicada no Logo (Portifólio) a partir da segunda 
-                      <tag> <span> mais precisamente nas letras L I O */
+	color: #f9004d; /* Era #f9004d - cor que será aplicada no Logo (Portifólio) mais precisamente nas letras L I O  
+                      e em todas as tags <span>  */
+	text-shadow: 0 0 2px #f9004d; /* Aumenta o destaque nas palavras: 
+									PortfóLIO, LOPES, CRIAtivo & MULTIdiciplinar 
+									... clicando aqui, ...projetos...abaixo:, A programação expandiu meus horizontes...
+									Existe uma linha tênua..., dá para cuidar de gente...
+									Pagina1 - ResponsiviDADE
+									Pagina2 - DesiGN
+									Pagina3 - Business IntelligENCE
+									Pagina4 - ... e navegue entre meus CERTIFICADOS*/
 }
 
 nav ul li { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - Section 1 - Topo da Página */
@@ -428,7 +439,7 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
     transition: .9s ease-in-out; /* causa uma impressão visual "de flutuação" quando o mouse for colocado sobre o video 
                                  "ease-in-out" especifica um efeito de transição com início lento, depois rápido, depois termina lento */
     box-shadow: 0 0 30px #f9004d; /* efeito sombreado ao redor da foto, causa a impressão da Foto de Perfil estar flutuando */ 
-	transform: translateY(-10px); /* altura que a Foto irá subir quando o mouse é colocado sobre ela */
+	/*transform: translateY(-10px); *//* altura que a Foto irá subir quando o mouse é colocado sobre ela */
 }
 
 .box-projeto { /* Section 5 - Projetos */
@@ -436,12 +447,15 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
 	justify-content: center; /* justifica e centraliza os 3 Boxes dentro do Container */
 	align-items: center; /* alinha os 3 Boxes no centro do Container em linha HORIZONTALMENTE */
 	min-height: 400px; /* altura mínima que os 3 Boxes terão em relação ao Título do Container */
-	margin-bottom: -20px; /* margem NEGATIVA para deixar o Container visualmente do mesmo tamanho que os outros */
+	/*margin-bottom: -20px;*/ /* margem NEGATIVA para deixar o Container visualmente do mesmo tamanho que os outros */
 }
 
 .card-projeto { /* Section 5 - Projetos */
 	text-align: center; /* alinha o Botão dentro dos Cartões */
-	margin: 15px; /* espaço entre as Fotos */
+	/*margin: 15px;*/ /* espaço entre as Fotos e Cards abaixo com descrição de cada projeto
+					Com técnica Parallax (imagens paralisadas)...
+					Bela disposição entre textos e fotos...
+					Currículo online com várias técnicas...*/
 }
 
 .pra-texto-projeto { /* Section 3 - Service - Habilidades - 3 Boxes criados como no Bootstrap - Parágrafos dentro do Cartão */
@@ -454,7 +468,7 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
 }
 
 /* CSS para controlar Box Minha Foto no meio e texto nas laterais - Rodapé */
-.foto-rodape { /* Section 6 - Rodapé */
+foto-rodape { /* Section 6 - Rodapé */
 	display: flex; /* garante que o tudo que estiver dentro desta <div> poderá ser movimentado/alterado */
 	object-fit: cover; /* preenche todos os espaços e centraliza a Foto em um RAIO a partir do meio para as laterais */  
     height: 165px; /* Era 285px - altura da foto */
@@ -477,12 +491,13 @@ contact-me .button-two:hover { /* Section 4 - Botão-dois - Contrate-me */
 }
 
 .pra-texto-rodape { /*  Section 6 - Rodapé */
-	color: white; /* cor do Texto do Parágrafo dentro do Cartão */
+	color: #fcfc; /* Era White - cor do Texto do Parágrafo dentro do Cartão */
 	line-height: 27px; /* altura entre as linhas dentro do Cartão */
 	min-height: 65px; /* altura dos Cartões */
-	width: 500px; /* largura dos Cartões */
+	width: 600px; /* Era 50px - largura dos Cartões */
 	/*margin-top: 100px;*/ /* espaçamento entre a margem superior e os Textos Motivacionais */
 	align-items: center;
+	font-size: 19px;
 }
 
 footer { /* Section 6 - Rodapé */
@@ -498,14 +513,14 @@ footer { /* Section 6 - Rodapé */
 	justify-content: center; /* justifica e centraliza */
 }
 
-footer p:nth-child(1) { /* Section 6 - Rodapé - Primeiro Filho - Parágrafo 1 */
+footer p:nth-child(1) { /* Section 6 - Rodapé - Primeiro Filho - Somente: MARCOS LOPES */
 	font-size: 30px; /* aumenta o tamanho da Fonte */
 	color: white; /* cor da Fonte */
 	margin-bottom: 20px; /* margem inferior do Título (MARCOS LOPES) em relação ao Texto abaixo */
 	font-weight: bold; /* NEGRITO */
 }
 
-footer p:nth-child(2) { /* Section 6 - Rodapé - Segundo Filho - Parágrafo 2 */
+footer p:nth-child(2) { /* Section 6 - Rodapé - Segundo Filho - Somente: Para outras informações e códigos em HTML... */
 	color: white; /* cor da Fonte */
 	font-size: 17px; /* aumenta o tamanho da Fonte */
 	width: 500px; /* largura máxima que o Texto ocupará */
@@ -728,6 +743,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	-o-animation: pisca1 5s alternate infinite;
 	animation: pisca1 5s alternate infinite;
 	animation-direction: alternate infinite;
+	text-shadow: 0 0 2px #f9004d;
 }
 
 @keyframes pisca2 { /* Fontawesome (Cartões)
@@ -759,6 +775,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	-o-animation: pisca2 7s alternate infinite;
 	animation: pisca2 7s alternate infinite;
 	animation-direction: alternate infinite;
+	text-shadow: 0 0 2px #f9004d;
 }
 
 @keyframes pisca3 { /* Fontawesome (Cartões)
@@ -790,6 +807,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	-o-animation: pisca3 9s alternate infinite;
 	animation: pisca3 9s alternate infinite;
 	animation-direction: alternate infinite;
+	text-shadow: 0 0 2px #f9004d;
 }
 
 /* Modo Responsivo */
@@ -809,11 +827,6 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	.contact-me {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
 	}
-	.about-pages { /* apenas nas Fotos das Páginas 1, 2, 3  */
-		padding: 0; /* retira todos os espaços vazios */
-		margin: 0; /* retira as margens vazias  */
-		overflow: 0; /* não deixa o Container extrapolar as margens  */
-	}
 	.about-pages img { /* apenas nas Fotos das Páginas 1, 2, 3  */
         height: 55%; /* altura da Foto na tag <img> no Modo Responsivo
 						se este valor não for especificado, a Foto fica com uma altura muita alta
@@ -821,7 +834,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		margin-top: -530px; /* ajuda a centralizar a Foto depois que coloquei JavaScript trocaAvatar.js */
 		width: 50%; /* largura das Fotos */
 		margin-left: 50px; /* espaço entre margem esquerda e Fotos */
-    }
+     }
 	.about-text-pages { /* Páginas 1, 2 e 3 */
 		margin-left: -100px; /* Espaço entre Texto Paginas 1, 2 e 3 
 								ajuda a centralizar o Texto ao lado da Foto */
@@ -829,8 +842,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		/*justify-content: space-evenly;*/
 		max-width: 300px; /* largura máxima que o container do Texto ao lado da Foto terá */
 		margin-top: -150px; /* diminui a Margem Superior */
-		
-	}	
+	}
 	/* a Responsividade abaixo não será necessária, pois apesar dela diminuir as margens Superior/Inferior
 	provavelmente, não ficará bom no Celular */
 	about-text { /* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
