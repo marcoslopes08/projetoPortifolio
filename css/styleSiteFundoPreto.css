@@ -820,6 +820,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		 				pega toda a página */
 		margin-top: -530px; /* ajuda a centralizar a Foto depois que coloquei JavaScript trocaAvatar.js */
 		width: 45%; /* largura das Fotos */
+		margin-bottom: -100px;
     }
 	.about-text-pages { /* Páginas 1, 2 e 3 */
 		margin-left: -100px; /* Espaço entre Texto Paginas 1, 2 e 3 
