@@ -257,23 +257,12 @@ body, html {
 
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
-    *{
-        padding: 0; /* zera todos os espaços dentro da Tela */
-        margin: 0; /* zera todas as margens */
-        box-sizing: border-box; /* cria um box */
-        /*background-color: gold;*/ /* teste para ver se existem espaços entre colunas etc */
-    }
-    body, html {
+   body, html {
         margin: 0; /* zera todas as margens */
         padding: 0; /* zera todos os espaços dentro da Tela */
-        height: 100vh; /* altura minima que a Tela terá, será responsiva e ocupará toda a altura da Tela */
-        width: 100vw;
-        display: flex; /* permite que tudo que for colocado seja manipulado dentro do Container */
-        justify-content: center; /* justifica e centraliza EXATAMENTE no meio da Tela */
-        align-items: center; /* centraliza todos os itens que foram colocados dentro deste Container em linha HORIZONTALMENTE */
-        background: #191919; /* cor de Fundo do Container */
         overflow-y: hidden; /* evita que o conteúdo extrapole as margens */
         overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
+        margin-top: -50px; /* ajuda o Container ficar centralizado no meio da página */
     }
     .fechar-pagina { /* apenas no Botão FECHAR da página 4 (CERTIFICADOS) */
         position: absolute; /* é obrigatório colocar este comando pra poder deixar Responsivo depois 
@@ -283,8 +272,11 @@ body, html {
         margin-right: 450px; /* Era -550px, Era-450px - espaçamento entre o Botão FECHAR e a margem direita da Tela */
         margin-top: 820px; /* coloca o botão FECHAR na margem inferior da Tela alinhado com CERTIFICADOS */
     }
+    fechar-pagina .button-pages {
+        padding: 0;
+    }
     manual-botao:hover { /* Era class="manual-btn" */
         background: #f9004d; /* cor de PREENCHIMENTO que os Botões terão 
                                 quando o mouse clicar sobre os Botões */
-    }  
+    }
 }
