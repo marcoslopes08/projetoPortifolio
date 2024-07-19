@@ -846,18 +846,18 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		max-width: 300px; /* largura máxima que o container do Texto ao lado da Foto terá */
 		margin-top: -150px; /* diminui a Margem Superior */
 	}
-	body .main-pages { /* Páginas 1, 2 e 3 */
-    	height: 92vh; /* altura da página */
-		background-color: #191919; /* quando eu coloco 'height: 90vh;' fica aparecendo uma linha em branco
+	body .about-pages .main-pages{ /* Páginas 1, 2 e 3 */
+    	height: 90vh; /* altura da página */
+		/*background-color: #191919;*/ /* quando eu coloco 'height: 90vh;' fica aparecendo uma linha em branco
 									no fim da Página, então acrescentei cor de Fundo - Cinza GRAFITE */
 		padding-top: 50px; /* ajuda a centralizar o Container no meio da Página */
     }
 	/* a Responsividade abaixo não será necessária, pois apesar dela diminuir as margens Superior/Inferior
 	provavelmente, não ficará bom no Celular */
-	about-text { /* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
-		margin-top: -50px; /* diminui a Margem Superior */
-		margin-bottom: -30px; /* diminui a Margem Inferior */
-	}
+	/*about-text*/ /*{ *//* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
+		/*margin-top: -50px; *//* diminui a Margem Superior */
+		/*margin-bottom: -30px;*/ /* diminui a Margem Inferior */
+	/*}*/
 	.foto-projeto { 
 		height: 190px; /* Era 290px - altura máxima da foto */
 		width: 190px; /* Era 290px - largura máxima da foto */
