@@ -847,7 +847,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		margin-top: -150px; /* diminui a Margem Superior */
 	}
 	body .about-pages .main-pages{ /* Páginas 1, 2 e 3 */
-    	height: 90vh; /* altura da página */
+    	height: 93vh; /* altura da página */
 		background-color: #191919; /* quando eu coloco 'height: 90vh;' fica aparecendo uma linha em branco
 									no fim da Página, então acrescentei cor de Fundo - Cinza GRAFITE */
 		padding-top: 50px; /* ajuda a centralizar o Container no meio da Página */
