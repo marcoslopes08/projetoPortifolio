@@ -828,10 +828,10 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
 	}
 	.about-pages { /* Páginas 1, 2 e 3 */
-		height: 95%; /* altura que o Container terá no modo Responsivo */
+		height: 90%; /* altura que o Container terá no modo Responsivo */
 	}
 	.about-pages img { /* apenas nas Fotos das Páginas 1, 2, 3  */
-        height: 50%; /* altura da Foto na tag <img> no Modo Responsivo
+        height: 55%; /* altura da Foto na tag <img> no Modo Responsivo
 						se este valor não for especificado, a Foto fica com uma altura muita alta
 		 				pega toda a página */
 		margin-top: -530px; /* ajuda a centralizar a Foto depois que coloquei JavaScript trocaAvatar.js */
