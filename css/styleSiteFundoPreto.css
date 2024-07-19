@@ -846,7 +846,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		max-width: 300px; /* largura máxima que o container do Texto ao lado da Foto terá */
 		margin-top: -150px; /* diminui a Margem Superior */
 	}
-	html .about-pages .main-pages { /* Páginas 1, 2 e 3 */
+	body .main-pages { /* Páginas 1, 2 e 3 */
     	height: 90vh; /* altura da página */
 		background-color: #191919; /* quando eu coloco 'height: 90vh;' fica aparecendo uma linha em branco
 									no fim da Página, então acrescentei cor de Fundo - Cinza GRAFITE */
