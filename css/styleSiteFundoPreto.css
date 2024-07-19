@@ -846,6 +846,14 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		max-width: 300px; /* largura máxima que o container do Texto ao lado da Foto terá */
 		margin-top: -150px; /* diminui a Margem Superior */
 	}
+	body, html .about-pages { /* Páginas 1, 2 e 3 */
+        margin: 0; /* zera todas as margens */
+        padding: 0; /* zera todos os espaços dentro da Tela */
+        overflow-y: hidden; /* evita que o conteúdo extrapole as margens */
+        overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
+		align-items: center;
+		align-content: center;
+    }
 	/* a Responsividade abaixo não será necessária, pois apesar dela diminuir as margens Superior/Inferior
 	provavelmente, não ficará bom no Celular */
 	about-text { /* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
