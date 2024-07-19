@@ -818,7 +818,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 							somente entre o Topo da Site e Sobre Mim */
 	}
 	.main { /* Sobre mim - Foto de Perfil/AVATAR */
-		margin-left: -10px; /* retira espaço entre do lado esquerdo do Container, melhorando e centralizando 
+		margin-left: -5px; /* retira espaço entre do lado esquerdo do Container, melhorando e centralizando 
 							a visualização no modo resposivo*/
 	}
 	.service {
@@ -826,6 +826,9 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	}
 	.contact-me {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
+	}
+	.about-pages { /* Páginas 1, 2 e 3 */
+		height: 95%; /* altura que o Container terá no modo Responsivo */
 	}
 	.about-pages img { /* apenas nas Fotos das Páginas 1, 2, 3  */
         height: 55%; /* altura da Foto na tag <img> no Modo Responsivo
