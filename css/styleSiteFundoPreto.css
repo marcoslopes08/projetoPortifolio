@@ -848,6 +848,9 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	}
 	.about-pages .main-pages{ /* Páginas 1, 2 e 3 */
     	height: 90vh; /* altura da página */
+		background-color: #191919; /* quando eu coloco 'height: 90vh;' fica aparecendo uma linha em branco
+									no fim da Página, então acrescentei cor de Fundo - Cinza GRAFITE */
+		padding-top: 100px; /* ajuda a centralizar o Container no meio da Página */
     }
     }
 	/* a Responsividade abaixo não será necessária, pois apesar dela diminuir as margens Superior/Inferior
