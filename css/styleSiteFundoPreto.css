@@ -831,7 +831,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		height: 95%; /* altura que o Container terá no modo Responsivo */
 	}
 	.about-pages img { /* apenas nas Fotos das Páginas 1, 2, 3  */
-        height: 55%; /* altura da Foto na tag <img> no Modo Responsivo
+        height: 50%; /* altura da Foto na tag <img> no Modo Responsivo
 						se este valor não for especificado, a Foto fica com uma altura muita alta
 		 				pega toda a página */
 		margin-top: -530px; /* ajuda a centralizar a Foto depois que coloquei JavaScript trocaAvatar.js */
@@ -846,15 +846,6 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		max-width: 300px; /* largura máxima que o container do Texto ao lado da Foto terá */
 		margin-top: -150px; /* diminui a Margem Superior */
 	}
-	body .main-pages{ /* Páginas 1, 2 e 3 */
-    	height: 95vh; /* altura da página */
-		background-color: #191919; /* quando eu coloco 'height: 90vh;' fica aparecendo uma linha em branco
-									no fim da Página, então acrescentei cor de Fundo - Cinza GRAFITE */
-		padding-top: 30px; /* ajuda a centralizar o Container no meio da Página */
-		overflow-y: hidden; /* evita que o conteúdo extrapole as margens */
-        overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
-		position: relative;		
-    }
 	/* a Responsividade abaixo não será necessária, pois apesar dela diminuir as margens Superior/Inferior
 	provavelmente, não ficará bom no Celular */
 	/*about-text*/ /*{ *//* apenas nas margens Superior/Inferior das Páginas 1, 2, 3 */ 
