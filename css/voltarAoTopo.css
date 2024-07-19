@@ -21,3 +21,15 @@
 	transition: .9s ease-in-out; /* tempo que levará para o Contorno Azul APARECER/DESAPARECER 
 									quando o mouse for posicionado sobre a Imagem da Seta */
 }
+
+/* Modo Responsivo */
+@media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
+	.voltarAoTopo {
+		right: 10px; /* aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
+					direita da Tela do Computador */
+	}
+	.voltarAoTopo:hover {
+		right: 10px; /* aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
+					direita da Tela do Computador */
+	}
+}
