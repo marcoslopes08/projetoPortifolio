@@ -685,6 +685,19 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	text-align: center; /* centraliza o Texto 'Acesse meus certificados clicando aqui' dentro do container */
 }
 
+a.clique-aqui-2 { /* Section 2 e 4 - Sobre Mim e Diferenciais - 
+					Acesse meus certificados 'clicando aqui' 
+					Veja meu currículo completo em PDF clicando aqui*/
+	text-decoration: none; /* retira o underline do link clicável */
+}
+
+a.clique-aqui-2:hover { /* Section 2 e 4 - Sobre Mim e Diferenciais - 
+						Acesse meus certificados 'clicando aqui' 
+						Veja meu currículo completo em PDF clicando aqui*/
+	text-decoration: underline; /* coloca o underline no link clicável apenas no HOVER */
+	color: #f9004d; /* cor do underline no link clicável apenas no HOVER */
+}
+
 /* Section 2 about - Sobre mim */
 /* Faz Funcionar a Troca de Foto Principal/AVATAR de SOBRE MIM - JavaScript trocarAvatar.js */
 #slider img { /* Página Principal - INDEX.HTML */
