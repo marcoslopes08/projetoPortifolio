@@ -685,7 +685,9 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	text-align: center; /* centraliza o Texto 'Acesse meus certificados clicando aqui' dentro do container */
 }
 
-.clique-aqui-2 { /* Section 2 e 4 - Sobre Mim e Diferenciais - 
+/* a Classe "clique-aqui-2" não funciona no CSS, tem que ser colocada a linha de código no html como: 
+text-decoration: none */
+clique-aqui-2 { /* Section 2 e 4 - Sobre Mim e Diferenciais - 
 					Acesse meus certificados 'clicando aqui' 
 					Veja meu currículo completo em PDF clicando aqui*/
 	text-decoration: none; /* retira o underline do link clicável */
