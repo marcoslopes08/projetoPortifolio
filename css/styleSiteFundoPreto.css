@@ -831,12 +831,12 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		margin-top: -3px; /* esconde uma LINHA BRANCA de background-color que aparece entre as páginas 
 							somente entre o Topo da Site e Sobre Mim */
 	}
-	.main { /* Sobre mim - Foto de Perfil/AVATAR */
-		margin-left: -2px; /* retira espaço entre do lado esquerdo do Container, melhorando e centralizando 
+	/*.main { *//* Sobre mim - Foto de Perfil/AVATAR */
+		/*margin-left: -2px;*/ /* retira espaço entre do lado esquerdo do Container, melhorando e centralizando 
 							a visualização no modo resposivo*/
-	}
+	/*}*/
 	.about img {
-		border: 40px solid #191919; /* Era 30px - Aumenta/Diminui o Tamanho da Foto
+		border: 35px solid #191919; /* Era 40px, 30px - Aumenta/Diminui o Tamanho da Foto
 										coloca uma moldura da mesma cor do Container que ajuda
 										no Modo Responsivo a deixar o Texto ao lado separdo da Foto
 										#101010 coloca uma moldura mais escura */
