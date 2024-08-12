@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="css/voltarAoTopo.css">
 	
 	<!-- Abaixo jQuery (Java) que faz o Botão VOLTAR AO TOPO aparecer/desaparecer na rolagem da página -->
+	<!-- Não colocar rel="stylesheet" pois dá erro no browser -->
 	<link href="java/animacaoBotaoVoltarAoTopo.js">
 	
 	<!-- Abaixo CSS para Carrossel sobre Parallax -->
@@ -61,7 +62,7 @@
 					por isso troquei para WhatsApp
 						class="botao-email" deixei pra não ter que refazer o CSS -->
 				<form>
-					<input type="email" name="email" id="mail" placeholder="Digite seu WhatsApp">
+					<input type="mail" name="mail" id="mail" placeholder="Digite seu WhatsApp">
 					<a class="botao-email" href="https://api.whatsapp.com/send?phone=5511997355410"
 						target="_blank" rel="noopener noreferrer" title="Ir para WhatsApp">
 							Fale comigo&nbsp;&nbsp;<i class="icones fab fa-whatsapp"></i></a>
