@@ -836,7 +836,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 							a visualização no modo resposivo*/
 	/*}*/
 	.about img {
-		border: 35px solid #191919; /* Era 40px, 30px - Aumenta/Diminui o Tamanho da Foto
+		border: 40px solid #191919; /* Era 40px, 30px - Aumenta/Diminui o Tamanho da Foto
 										coloca uma moldura da mesma cor do Container que ajuda
 										no Modo Responsivo a deixar o Texto ao lado separdo da Foto
 										#101010 coloca uma moldura mais escura */
