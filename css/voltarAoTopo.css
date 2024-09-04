@@ -7,8 +7,11 @@
 	border-radius: 25px; /* arredondamento da Bordas da Imagem da Seta */
 	width: 70px; /* largura da Imagem da Seta */
 	height:70px; /* altura da Imagem da Seta */
-	transition: .9s ease-in-out; /* tempo que levará para o Contorno Azul APARECER/DESAPARECER 
+	transition: all 0.9s ease-in-out; /* tempo que levará para o Contorno Azul APARECER/DESAPARECER 
 						quando o mouse for posicionado sobre a Imagem da Seta */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .voltarAoTopo:hover { /* animação/flutuar de estilos ao passar o cursor/mouse sobre o Botão Voltar ao Topo */
@@ -18,34 +21,20 @@
 	padding: 10px; /* adiciona um espaço de preenchimento ao redor do Botão - esse espaço ajuda a posicionar corretamente o texto */
 	border-radius: 50px; /* arredonda TOTALMENTE a imagem da Seta quando o cursor/mouse for posicionado sobre o Botão */
 	border-style: dotted; /* coloca uma linha pontilhada ao redor da Imagem da Seta quando cursor/mouse for posicionado sobre ele */
-	transition: .9s ease-in-out; /* tempo que levará para o Contorno Azul APARECER/DESAPARECER 
+	transition: all 0.9s ease-in-out; /* tempo que levará para o Contorno Azul APARECER/DESAPARECER 
 									quando o mouse for posicionado sobre a Imagem da Seta */
 }
 
 /* Modo Responsivo */
 /* Para telas médias (celulares) */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 480px) {
 	.voltarAoTopo {
 		right: 30px; /*  Era 30px, 20px - aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
 					direita da Tela do Computador */
-		padding: 30px;
 	}
 	.voltarAoTopo:hover {
 		right: 30px; /*  Era 30px, 20px - aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
 					direita da Tela do Computador */
-		padding: 30px;
-	}
-}
-/* Para telas muito pequenas */
-@media (max-width: 480px) {
-	.voltarAoTopo {
-		right: 20px;
-		padding: 20px;
-	}
-	.voltarAoTopo:hover {
-		right: 20px; /*  Era 30px, 20px - aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
-					direita da Tela do Computador */
-		padding: 20px;
 	}
 }
 
@@ -61,4 +50,3 @@
 					direita da Tela do Computador */
 	/* }
 } */
-
