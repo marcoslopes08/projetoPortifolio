@@ -9,9 +9,6 @@
 	height:70px; /* altura da Imagem da Seta */
 	transition: all 0.9s ease-in-out; /* tempo que levará para o Contorno Azul APARECER/DESAPARECER 
 						quando o mouse for posicionado sobre a Imagem da Seta */
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .voltarAoTopo:hover { /* animação/flutuar de estilos ao passar o cursor/mouse sobre o Botão Voltar ao Topo */
