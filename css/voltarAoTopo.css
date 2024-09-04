@@ -23,10 +23,9 @@
 }
 
 /* Modo Responsivo */
-/* Para dispositivos com largura entre 481px e 767px (tablets) */
-@media (min-width: 481px) and (max-width: 767px) {
+@media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
 	.voltarAoTopo {
-		right: 40px; /*  Era 30px, 20px - aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
+		right: 40px; /* Era 30px, 20px - aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
 					direita da Tela do Computador */
 	}
 	.voltarAoTopo:hover {
@@ -34,27 +33,3 @@
 					direita da Tela do Computador */
 	}
 }
-/* Para dispositivos com largura menor que 480px (celulares) */
-@media (max-width: 480px) {
-	.voltarAoTopo {
-	/* Estilos específicos para celulares */
-		right: 40px;
-	}
-	.voltarAoTopo:hover {
-		right: 40px; /*  Era 30px, 20px - aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
-					direita da Tela do Computador */
-	}
-}
-
-/* ERA ANTES */
-/* Modo Responsivo */
-/* @media all and (min-width: 40.063em) and (max-width: 63.938em)  { */ /* Celular com tamanho de Tela Média */
-	/*.voltarAoTopo {
-		right: 30px; */ /* Era 30px, 20px - aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
-					direita da Tela do Computador */
-	/* }
-	.voltarAoTopo:hover {
-		right: 30px; */ /*  Era 30px, 20px - aumenta/diminui o espaçamento entre a posição do Botão em relação a borda 
-					direita da Tela do Computador */
-	/* }
-} */
