@@ -2,7 +2,7 @@
 jQuery(document).ready(function() {
     var offset = 300;
     var duration = 500;
-    var $serviceSection = jQuery('#service');
+    var $serviceSection = jQuery('#about');
     var serviceSectionTop = $serviceSection.offset().top;
 
     jQuery(window).scroll(function() {
