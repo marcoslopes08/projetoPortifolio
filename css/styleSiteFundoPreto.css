@@ -16,24 +16,28 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
 .hero { /* Section 1 - Topo da Página */
 	height: 100vh; /* ocupará toda a altura da Tela */
 	width: 100vw; /* Era 100% - ocupará toda a largura da Tela */
+	background-image: url("https://i.postimg.cc/wTbKWtX5/5925-187109675-unscreen.gif"); /* background-sunscreen3 - Antiga Foto mais escura */
 	/* background-image: url("https://thumbs2.imgbox.com/82/18/aEgFFd5X_t.png"); */ /* background-sunscreen3 - Antiga Foto mais escura */
 	/* background-image: url("https://thumbs2.imgbox.com/a0/ac/cb7P30zH_t.jpg"); */ /* background-sunscreen */
 	/* background-image: url("https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg"); */ /* background-sunscreen-novo */
-	background-image: url("https://thumbs2.imgbox.com/e0/1c/DUXqAtQy_t.jpg"); /* background - foto centralizada */
-	background-size: cover; /* ocupa todos os espaços */
-	background-position: center; /* centraliza a Foto */
+	/* background-image: url("https://thumbs2.imgbox.com/e0/1c/DUXqAtQy_t.jpg"); */ /* background - foto centralizada */
+	background-size: 85vw; /* Era cover = ocupa todos os espaços 
+							90vw = diminui o tamanho da Foto para ficar abaixo do MENU */
+	background-position: 420px 60px; /* Era center; centraliza a Foto 
+										420px = dá um espaço para a direita na Foto
+										60px = dá um espaço na margem direita superior na Foto
+										margin-right não funciona */
+	background-color: black;  /* mesma cor de fundo do GIF */
+	background-repeat: no-repeat; /* a Foto não será repetida */	
 
-	/* 	EXEMPLOS que fazem links clicáveis abrir página em branco:
+	/* background-image: sepia(50%); */ /* aplica Sépia na Foto */
+	/* EXEMPLOS que fazem links clicáveis abrir página em branco:
 	<a href="https://imgbox.com/cb7P30zH" target="_blank">
 	<img src="https://thumbs2.imgbox.com/a0/ac/cb7P30zH_t.jpg" alt="image host"/></a>
 	<a href="https://imgbox.com/qKDi8eaM" target="_blank">
-	<img src="https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg" alt="image host"/></a> 
- */
+	<img src="https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg" alt="image host"/></a>  */
 }
 
-hero {
-	background-image: sepia(50%);
-}
 nav { /* Menu de Navegação - Section 1 - Topo da Página */
 	display: flex; /* permite que Logo/Menu/Botão Inscreva-se sejam manipulados dentro do Container */
 	align-items: center; /* centraliza todos os elementos Logo/Menu/Botão Inscreva-se em linha HORIZONTALMENTE */
@@ -211,6 +215,22 @@ h4 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolved
 									no Modo Responsivo a deixar o Texto ao lado separdo da Foto
 									#101010 coloca uma moldura mais escura */
 }
+/* Classe abaixo desativei - não é mais necessária */
+about-2 img { /* Section 1 about - Sobre mim */
+	height: auto; /* altura da Foto na tag <img> */
+	width: 430px; /* largura da Foto na tag <img> */
+	/* border-radius: 30px; */ /* arredondamento das bordas */ 
+								/* este comando não é necessário aqui Pois coloquei um 
+								border-radius: em cada Foto dentro do HTML para dar espaço 
+								entre o Texto e as Fotos no Modo Responsivo */
+	/*border: 20px solid #191919;*/ /* Era 30px - Aumenta/Diminui o Tamanho da Foto
+									coloca uma moldura da mesma cor do Container que ajuda
+									no Modo Responsivo a deixar o Texto ao lado separdo da Foto
+									#101010 coloca uma moldura mais escura */
+	margin-top: -40px;
+	margin-right: 90px;
+	background-size: cover; /* ocupa todos os espaços */
+}
 
 .about-text { /* Section 2 about - Sobre mim */
 	width: 550px; /* largura da class="sobre-mim-texto", do lado da Foto */
@@ -225,6 +245,24 @@ h4 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolved
 	justify-content: space-around; /* dá um espaço entre a Foto e Texto 
 								     space-between = causa um espaçamento IGUAL entre Foto e 
 									 Texto dentro do Container */
+}
+
+/* Coloquei o GIF como background-image, então está classe não é mais necessária */
+/* Classe gif-control coloca o GIF do lado direito da tela - Section 1 */
+gif-control { /* Section 1 - Topo da Página - JavaScript lado direito do Conatainer */
+	display: flex; /* faz Foto e Texto dentro da Classe ficarem um do lado do outro */
+	justify-content: flex-end; /* Coloca as Fotos do Lado Direito do Container e texto fica do lado Esquerdo */
+	margin-right: -15%; /* alinha o final do GIF na mesma linha do botão luminoso */
+}
+
+/* Coloquei o GIF como background-image, então está classe não é mais necessária */
+/* Classe gif-control-2 especifica o tamanho do GIF do lado direito da tela - Section 1 */
+gif-control-2 {
+	width: 73%; /* largura do video */
+    height: 73%; /* altura do video */   
+  	margin-top: -25px; /* espaçamento superior entre a última linha de texto dentro da Section/Container e os videos */ 
+	clip-path: polygon(26% 6%, 73% 6%, 73% 88%, 26% 88%); /* corta o GIF da esquerda para a direita */
+	pointer-events: none; /* evita que o GIF seja clicável, não deixa abrir outra ABA no navegador */
 }
 
 .about-text h2 { /* Section 2 about - Sobre mim - Texto 'Sobre mim' */
@@ -826,6 +864,11 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
+	.hero { /* Section 1 - Topo da Página */
+		background-size: cover; /* ocupa todos os espaços */
+		background-position: -600px 100px; /* -450px coloca o Globo Terrestre girando no meio do container 
+												100px = dá um espaço na margem direita superior na Foto */
+	}
 	.about {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
 		margin-top: -3px; /* esconde uma LINHA BRANCA de background-color que aparece entre as páginas 
@@ -840,6 +883,19 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 										coloca uma moldura da mesma cor do Container que ajuda
 										no Modo Responsivo a deixar o Texto ao lado separdo da Foto
 										#101010 coloca uma moldura mais escura */
+	}
+	.about-2 img { /* Section 1 about - Sobre mim */
+		height: 100%; /* altura da Foto na tag <img> */
+		width: auto; /* largura da Foto na tag <img> */
+		/* border-radius: 30px; */ /* arredondamento das bordas */ 
+									/* este comando não é necessário aqui Pois coloquei um 
+									border-radius: em cada Foto dentro do HTML para dar espaço 
+									entre o Texto e as Fotos no Modo Responsivo */
+		/*border: 20px solid #191919;*/ /* Era 30px - Aumenta/Diminui o Tamanho da Foto
+										coloca uma moldura da mesma cor do Container que ajuda
+										no Modo Responsivo a deixar o Texto ao lado separdo da Foto
+										#101010 coloca uma moldura mais escura */
+		margin-right: -200px; /* coloca a Foto do lado Direito do Container */
 	}
 	.service {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
@@ -919,4 +975,20 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 										Pagina3 - Business IntelligENCE
 										Pagina4 - ... e navegue entre meus CERTIFICADOS*/
 	}
+	/* Coloquei o GIF como background-image, então está classe não é mais necessária */
+	gif-control { /* Section 1 - Topo da Página - JavaScript lado direito do Conatainer */
+		display: flex; /* faz Foto e Texto dentro da Classe ficarem um do lado do outro */
+		justify-content: flex-end; /* Coloca as Fotos do Lado Direito do Container e texto fica do lado Esquerdo */
+		margin-right: -15%; /* alinha o final do GIF na mesma linha do botão luminoso */
+	}
+	/* Coloquei o GIF como background-image, então está classe não é mais necessária */
+	/* Classe gif-control-2 especifica o tamanho do GIF do lado direito da tela - Section 1 */
+	gif-control-2 {
+		width: 100%; /* largura do video */
+		height: 100%; /* altura do video */   
+	    /*margin-top: -25px;*/ /* espaçamento superior entre a última linha de texto dentro da Section/Container e os videos */ 
+		/*clip-path: polygon(26% 6%, 73% 6%, 73% 88%, 26% 88%);*/ /* corta o GIF da esquerda para a direita */
+		/*pointer-events: none;*/ /* evita que o GIF seja clicável, não deixa abrir outra ABA no navegador */
+	}
+	
 }
