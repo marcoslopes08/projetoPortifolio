@@ -867,7 +867,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	.hero { /* Section 1 - Topo da Página */
 		background-image: url("https://i.postimg.cc/XvTPXq8M/5925-187109675-unscreen.gif");
 		background-size: cover; /* ocupa todos os espaços */
-		background-position: -600px 100px; /* -450px coloca o Globo Terrestre girando no meio do container 
+		background-position: -500px 50px; /* -450px coloca o Globo Terrestre girando no meio do container 
 												100px = dá um espaço na margem direita superior na Foto */
 	}
 	.about {
