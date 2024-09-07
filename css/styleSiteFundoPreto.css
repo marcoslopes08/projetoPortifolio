@@ -865,6 +865,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
 	.hero { /* Section 1 - Topo da Página */
+		background-image: url("https://i.postimg.cc/XvTPXq8M/5925-187109675-unscreen.gif");
 		background-size: cover; /* ocupa todos os espaços */
 		background-position: -600px 100px; /* -450px coloca o Globo Terrestre girando no meio do container 
 												100px = dá um espaço na margem direita superior na Foto */
