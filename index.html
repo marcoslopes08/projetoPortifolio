@@ -142,8 +142,12 @@
 					<!-- Antigo PDF feito no site https://online.fliphtml5.com/pqipr/lwrx/ -->
 					<script>
 						function abrirPDF() {
-							window.open("https://online.fliphtml5.com/pqipr/pjpg/", "_blank");
-						  // Código para controlar o retorno do PDF
+							const novaAba = window.open("https://online.fliphtml5.com/pqipr/pjpg/", "_blank");
+							
+							novaAba.addEventListener('beforeunload', () => {
+							// Redireciona o usuário de volta para a página de origem
+							window.location.href = 'https://marcoslopes08.github.io/projetoPortifolio/#';
+							});
 						}
 					</script>
 					
