@@ -16,7 +16,9 @@ body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (anti
 .hero { /* Section 1 - Topo da Página */
 	height: 100vh; /* ocupará toda a altura da Tela */
 	width: 100vw; /* Era 100% - ocupará toda a largura da Tela */
-	background-image: url("https://i.postimg.cc/wTbKWtX5/5925-187109675-unscreen.gif"); /* background-sunscreen3 - Antiga Foto mais escura */
+	background-image: url("https://i.postimg.cc/wjjYqLb7/ezgif-com-animated-gif-maker-300-quadros-7segundos-delay.gif"); /* /* GIF 300 quadros - 7 segundos de delay - atraso */ 
+	/*background-image: url("https://i.postimg.cc/wTbKWtX5/5925-187109675-unscreen.gif"); */ /* GIF 300 quadros - 3 segundos de delay - atraso */
+	/*background-image: url("https://i.postimg.cc/wTbKWtX5/5925-187109675-unscreen.gif");*/ /* GIF 300 quadros - 3 segundos de delay - atraso */
 	/* background-image: url("https://thumbs2.imgbox.com/82/18/aEgFFd5X_t.png"); */ /* background-sunscreen3 - Antiga Foto mais escura */
 	/* background-image: url("https://thumbs2.imgbox.com/a0/ac/cb7P30zH_t.jpg"); */ /* background-sunscreen */
 	/* background-image: url("https://thumbs2.imgbox.com/7b/67/qKDi8eaM_t.jpg"); */ /* background-sunscreen-novo */
