@@ -866,9 +866,6 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
-	*{
-		overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
-	}
 	.hero { /* Section 1 - Topo da Página */
 		/* abaixo GIF com 75 quadros - 15 segundos de delay - atraso */
 		background-image: url("https://i.postimg.cc/jdN9XLVM/ezgif-com-animated-gif-maker-75-quadros-15segundos-delay.gif");
