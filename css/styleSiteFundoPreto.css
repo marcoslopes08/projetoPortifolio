@@ -866,6 +866,9 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 
 /* Modo Responsivo */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
+	*{
+		overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
+	}
 	.hero { /* Section 1 - Topo da Página */
 		/* abaixo GIF com 75 quadros - 15 segundos de delay - atraso */
 		background-image: url("https://i.postimg.cc/jdN9XLVM/ezgif-com-animated-gif-maker-75-quadros-15segundos-delay.gif");
@@ -876,6 +879,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		background-size: cover; /* ocupa todos os espaços */
 		background-position: -500px 50px; /* -450px coloca o Globo Terrestre girando no meio do container 
 												100px = dá um espaço na margem direita superior na Foto */
+		overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
 	}
 	.about {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
