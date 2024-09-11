@@ -155,7 +155,8 @@ h4 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolved
 	position: relative; /* será responsivo */
 }
 
-.newslatter form input { /* Era = .newslatter form input:first-child - Classe Filha - Formulário 'Digite seu e-mail' */
+/* Substituição da tag input (no html) por uma classe .placeholder-text, para o texto fica estático */
+.newslatter form .placeholder-text { /* Era = .newslatter form input:first-child - Classe Filha - Formulário 'Digite seu e-mail' */
 	display: inline-block; /* na mesma linha */
 	width: 100%; /* largura */
 	padding: 14px 130px 14px 15px; /* 14px = espaçamento entre o E-mail e a Margem Superior dentro do Box
@@ -167,6 +168,9 @@ h4 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolved
 								  cor da Borda ao redor do Box */
 	outline: none; /* garante que quando o E-mail for digidado, não aparecerá borda adicionar em volta do Box */
 	border-radius: 30px; /* arredondamento das bordas */
+	background-color: white; /* cor de Fundo do Botão */
+	color: gray; /* cor da Fonte no Texto 'Entre em contato por' */
+	font-size: 14px; /* tamanho da Fonte */
 }
 
 .botao-email { /* Era = .newslatter form input:last-child - transformei em um Botão para E-mail
@@ -190,7 +194,7 @@ h4 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolved
 	               right: 6px faz este Botão 'Vamos começar' ir para esquerda */
 	cursor: pointer; /* cursor aparecerá como dedo apontando */
 	text-decoration: none; /* retira o sublinhado que vem como padrão */
-	font-size: small; /* diminui o tamanho da Fonte */
+	font-size: 14px; /* Era font-size: small; - diminui o tamanho da Fonte */
 }
 
 .about { /* Section 2 about - Sobre mim */
