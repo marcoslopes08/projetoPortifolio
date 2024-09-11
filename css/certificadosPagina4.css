@@ -53,6 +53,7 @@ body, html {
     width: 800px; /* Era 700px, Era 800px - mas com 5 Slides a última Foto fica cortada, por isso diminui aqui
                      centraliza as Fotos no meio da Tela - largura da Foto */
     height: 500px; /* centraliza as Fotos no meio da Tela - altura da Foto */
+    pointer-events: none; /* evita que o Foto seja clicável, não deixa abrir outra ABA no navegador */
 }
   
 /* CSS para navegação manual dos slides (css for manual slide navigation) */
