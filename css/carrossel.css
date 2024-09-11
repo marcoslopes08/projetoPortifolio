@@ -43,6 +43,7 @@
     height: 400px; /* centraliza as Fotos no meio da Tela - altura da Foto */
     border-radius: 30px; /* arredondamento das bordas */
     /* box-shadow: 0 0 0 3px #f9004d; */ /* coloca uma moldura em volta da Foto */
+    pointer-events: none; /* evita que o Foto seja clicável, não deixa abrir outra ABA no navegador */
 }
   
 /* CSS para navegação manual dos slides (css for manual slide navigation) */
