@@ -124,8 +124,9 @@ btn:hover { /* Classe - Botão Contatos */
 }
 
 .content h3 { /*  Classe - Aqui mostrarei minha trajetória como... - Section 1 - Topo da Página */
-	font-size: 15px; /* aumenta o tamanho da Fonte na tag <h3> */
+	font-size: 18px; /* aumenta o tamanho da Fonte na tag <h3> */
 	letter-spacing: 4px; /* espaçamento entre as letras */
+	color: #909090; /* Cor da Fonte */
 }
 
 h1 { /* Classe - Conteúdo (Olá, meu nome é... Marcos Lopes... Sou Desenvolvedor Web... */
