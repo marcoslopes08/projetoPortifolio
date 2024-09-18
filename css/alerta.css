@@ -1,0 +1,107 @@
+/* ALERTA que aparece no fim do site */
+.swal2-scroll-popup {
+	width: 170px;  /* Definir largura */
+	height: 170px; /* Definir altura para criar o formato quadrado */
+	left: 20px;    /* Distância da borda esquerda */
+	bottom: 20px;  /* Distância da borda inferior */
+	position: fixed;
+	/*font-size: 12px;*/
+	background-color: #101010;
+	color: #fcfcfc;
+	box-shadow: 0 0 15px 2px #f9004d !important;
+	border: transparent !important;
+	border-radius: 20%;
+	padding: 5px; /* Era 10px - Controle de espaçamento interno */
+	text-align: center;
+	overflow: hidden; /* Mantém o conteúdo dentro do quadrado */
+	animation: fadeIn 3s ease-in-out;
+	transition: box-shadow .9s ease-in-out !important; /* vai demorar 1.2 segundos pra cor #f9004d aparecer no HOVER */
+}
+
+.swal2-scroll-popup:hover {
+	box-shadow: 0 0 15px 2px white !important;
+	transition: box-shadow .9s ease-in-out !important; /* vai demorar 1.2 segundos pra cor Branca aparecer no HOVER */
+}
+
+/* Layout do container principal */
+.alert-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+/* Transição suave para a sombra  <!-- 😊 --> */
+.fade-in {
+	animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+        opacity: 0;
+	}
+	to {
+        opacity: 1;
+	}
+}
+
+/* Mensagem */
+.message {
+	font-size: 16px; 
+	color: #fcfc;
+	margin-bottom: 2px;
+	padding: 2px; /* Era 5px */
+	text-align: center;
+	/*display: block;*/
+}
+
+/* Emoji */
+.emoji {
+	font-size: 2.5em;
+	margin-top: 2px;
+}
+
+/* Estilo do rodapé */
+.footer {
+	/*padding-top: 2px;*/
+	background-color: #101010;
+	border: transparent !important;
+	font-size: large;
+	/*object-fit: cover;*/
+}
+
+/* Ajustes para telas menores (responsivo) */
+/* NÃO É NECESSÁRIO MODO RESPONSIVO */
+/* o Emoji não vai aparecer no MODO RESPONSIVO */
+@media (max-width: 768px) {
+	swal2-scroll-popup {
+        max-width: 120px;  /* Mantendo o tamanho quadrado */
+        max-height: 120px;
+        left: 10px;
+        bottom: 100px;
+        /*padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;*/
+	}
+	
+	message {
+        font-size: 10px;     /* Era 8px - Reduz ainda mais o tamanho da fonte */
+        padding: 6px;       /* era 6px - Ajuste de padding para garantir mais espaço */
+        margin-bottom: 5px; /* Era 5px - Ajusta o espaçamento inferior */
+        /*line-height: 1.2; /*  /* Melhora o espaçamento entre as linhas */
+        /*text-align: center;/* /* Garante que o texto fique centralizado */
+        /* word-wrap: break-word; *//* Garante a quebra correta de palavras */
+        /*object-fit: cover; */
+        /*display: block;*/
+	}
+	
+	emoji {
+		font-size: 1.2em;  /* Era 1.2em - Ajusta o tamanho do emoji */
+		margin: 0;
+		display: block;
+	}
+}
