@@ -21,7 +21,7 @@ function showAlert() {
       <div class="swal2-scroll-popup fade-in">
         <div class="emoji">😊</div>Se ainda não viu meus certificados <br><br>
           <a href="https://www.linkedin.com/in/marcos-lopes-982616215/details/certifications/" 
-             target="_blank" class="clique-aqui-2" style="outline: none;">clique aqui</a>
+             target="_blank" class="clique-aqui-2" style="outline: none; color: #f9004d !important;">clique aqui</a>
         </div>
     `,
     backdrop: false,
