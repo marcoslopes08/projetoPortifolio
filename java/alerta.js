@@ -6,10 +6,10 @@ function throttleScroll(callback, delay) {
     let throttleTimeout = null;
     return function () {
         if (!throttleTimeout) {
-        throttleTimeout = setTimeout(() => {
-            callback();
-            throttleTimeout = null;
-        }, delay);
+            throttleTimeout = setTimeout(() => {
+                callback();
+                throttleTimeout = null;
+            }, delay);
         }
     };
 }
@@ -19,9 +19,9 @@ function showAlert() {
     Swal.fire({
         html: `
         <div class="swal2-scroll-popup fade-in">
-        <div class="emoji">😊</div>Se ainda não viu meus certificados <br><br>
-        <a href="https://www.linkedin.com/in/marcos-lopes-982616215/details/certifications/" 
-            target="_blank" class="clique-aqui-2" style="outline: none; color: #f9004d !important;">clique aqui</a>
+            <div class="emoji">😊</div>Se ainda não viu meus certificados <br><br>
+            <a href="https://www.linkedin.com/in/marcos-lopes-982616215/details/certifications/"
+                target="_blank" class="clique-aqui-2" style="outline: none; color: #f9004d !important;">clique aqui</a>
         </div>
         `,
         backdrop: false,
@@ -36,7 +36,7 @@ function showAlert() {
         if (popup) {
             popup.style.opacity = '0';
             setTimeout(() => {
-            popup.style.transition = 'opacity 1s ease';
+            popup.style.transition = 'opacity .5s ease';
             popup.style.opacity = '1'; // Aparece suavemente
             }, 50);
         }
@@ -50,7 +50,7 @@ function smoothAlertFadeOut() {
     const popup = document.querySelector('.swal2-popup');
     if (popup) {
         isFadingOut = true;
-        popup.style.transition = 'opacity 1s ease';
+        popup.style.transition = 'opacity .5s ease';
         popup.style.opacity = '0'; // Desvanece o alerta ao longo de 1 segundo
         setTimeout(() => {
         Swal.close();
@@ -60,7 +60,7 @@ function smoothAlertFadeOut() {
 }
 
 function checkScroll() {
-    const contactSection = document.getElementById('project');
+    const contactSection = document.getElementById('contato');
     const body = document.body;
     const html = document.documentElement;
 
@@ -79,7 +79,7 @@ function checkScroll() {
         setTimeout(() => {
             showAlert();
             isAlertShown = true;
-        }, 300); // Pequeno atraso para garantir que a rolagem finalize
+        }, 50); // Pequeno atraso para garantir que a rolagem finalize
     }
 
     // Ocultar o alerta quando sai da seção project
