@@ -16,9 +16,8 @@
 	padding: 2px; /* Era 10px - Controle de espaçamento interno */
 	text-align: center;
 	overflow: hidden; /* Mantém o conteúdo dentro do quadrado */
-	animation: fadeIn 3s ease-in-out;
-	transition: box-shadow .9s ease-in-out !important; /* vai demorar 1.2 segundos pra cor #f9004d aparecer no HOVER */
-	/*word-wrap: break-word; *//* Garante a quebra correta de palavras */
+	animation: fadeIn 0.5s ease-in-out;
+	transition: box-shadow .9s ease-in-out !important; /* vai demorar 0.9 segundos pra cor #f9004d aparecer no HOVER */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -27,7 +26,7 @@
 
 .swal2-scroll-popup:hover {
 	box-shadow: 0 0 15px 2px white !important;
-	transition: box-shadow .9s ease-in-out !important; /* vai demorar 1.2 segundos pra cor Branca aparecer no HOVER */
+	transition: box-shadow .9s ease-in-out !important; /* vai demorar 0.9 segundos pra cor Branca aparecer no HOVER */
 }
 
 /* Transição suave para a sombra  <!-- 😊 --> */
