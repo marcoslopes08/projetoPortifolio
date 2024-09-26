@@ -69,6 +69,11 @@ span {
 									Pagina4 - ... e navegue entre meus CERTIFICADOS*/
 }
 
+/* Troca a cor da Letras em (Marcos Lopes, Sobre Mim, Habilidades, Diferenciais, Projetos) */
+.custom-text span, .custom-text-2 span {
+    transition: color 0.5s, text-shadow 0.5s; /* Transição suave para cor e sombra */
+}
+
 nav ul li { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - Section 1 - Topo da Página */
 	list-style-type: none; /* (TEORICAMENTE NÃO SERVE PRA NADA)
                                 retira o pontinho que, por padrão, vem com a tag <li> */
@@ -274,8 +279,8 @@ gif-control-2 {
 
 .about-text h2 { /* Section 2 about - Sobre mim - Texto 'Sobre mim' */
 	color: white; /* cor da Fonte no título Sobre mim */
-	font-size: 75px; /* aumenta o tamanho da tag <h2> */
-	text-transform: capitalize; /* coloca a primeira Letra em Caixa Alta */
+	font-size: 55px; /* aumenta o tamanho da tag <h2> */
+	/*text-transform: capitalize;*/ /* coloca a primeira Letra em Caixa Alta */
 	margin-bottom: 20px; /* espaçamento entre o Título Sobre mim e Texto abaixo */
 }
 
@@ -339,7 +344,7 @@ button:hover { /* Section 2 about - Sobre mim - Botão 'Enviar WhatsApp' */
 
 .title h2 { /* Section 3 - Service - Habilidades - Linha abaixo de Sobre Mim/Habilidades/Diferenciais/Projetos */
 	color: white; /* cor do Título */
-	font-size: 75px; /* aumenta o tamanho da Fonte na tag <h2> */
+	font-size: 55px; /* aumenta o tamanho da Fonte na tag <h2> */
 	width: 100%; /* era 1130px - largura que o Título terá, se essa largura for 130px, por exemplo, 
 					  o Título ficará apertado e uma palavra em cima da outra
 					  100% faz o Título ser centralizado no meio do Container
