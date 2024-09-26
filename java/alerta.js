@@ -94,15 +94,6 @@ function checkScroll() {
 // Adicionar o evento de scroll com a função throttle
 window.addEventListener('scroll', throttleScroll(checkScroll, 50));
 
-// Função para forçar o alerta no modo responsivo após carregar a página
-window.addEventListener('load', function() {
-    if (window.innerWidth <= 1024) { // Verifica se é o modo responsivo
-        setTimeout(() => {
-            showAlert();
-        }, 2000); // Força o alerta após 2 segundos
-    }
-});
-
 // Função para rolar suavemente até o final do site
 document.querySelector('.botaoLuminoso').addEventListener('click', function(event) {
     event.preventDefault();
