@@ -27,19 +27,19 @@ function showAlert() {
         backdrop: false,
         position: 'bottom-start',
         customClass: {
-        popup: 'swal2-scroll-popup',
+            popup: 'swal2-scroll-popup',
         },
         showConfirmButton: false,
         allowOutsideClick: false,
         didOpen: () => {
-        const popup = document.querySelector('.swal2-popup');
-        if (popup) {
-            popup.style.opacity = '0';
-            setTimeout(() => {
-            popup.style.transition = 'opacity .5s ease';
-            popup.style.opacity = '1'; // Aparece suavemente
-            }, 50);
-        }
+            const popup = document.querySelector('.swal2-popup');
+            if (popup) {
+                popup.style.opacity = '0';
+                setTimeout(() => {
+                    popup.style.transition = 'opacity .5s ease';
+                    popup.style.opacity = '1'; // Aparece suavemente
+                }, 50);
+            }
         },
     });
 }
@@ -53,12 +53,13 @@ function smoothAlertFadeOut() {
         popup.style.transition = 'opacity .5s ease';
         popup.style.opacity = '0'; // Desvanece o alerta ao longo de 1 segundo
         setTimeout(() => {
-        Swal.close();
-        isFadingOut = false;
+            Swal.close();
+            isFadingOut = false;
         }, 1000); // Fecha após 1 segundo
     }
 }
 
+// Função para verificar o scroll e exibir/ocultar o alerta
 function checkScroll() {
     const contactSection = document.getElementById('contato');
     const body = document.body;
@@ -74,18 +75,18 @@ function checkScroll() {
         const contactTop = contactRect.top + window.scrollY;
         const contactBottom = contactRect.bottom + window.scrollY;
 
-    // Mostrar o alerta somente se a rolagem estiver completa até o final da seção "project"
-    if (scrollY + windowHeight >= contactBottom && !isAlertShown) {
-        setTimeout(() => {
-            showAlert();
-            isAlertShown = true;
-        }, 50); // Pequeno atraso para garantir que a rolagem finalize
-    }
+        // Mostrar o alerta somente se a rolagem estiver completa até o final da seção "contato"
+        if (scrollY + windowHeight >= contactBottom && !isAlertShown) {
+            setTimeout(() => {
+                showAlert();
+                isAlertShown = true;
+            }, 50); // Pequeno atraso para garantir que a rolagem finalize
+        }
 
-    // Ocultar o alerta quando sai da seção project
-    if (scrollY + windowHeight < contactTop && isAlertShown) {
-        smoothAlertFadeOut();
-        isAlertShown = false;
+        // Ocultar o alerta quando sair da seção contato
+        if (scrollY + windowHeight < contactTop && isAlertShown) {
+            smoothAlertFadeOut();
+            isAlertShown = false;
         }
     }
 }
