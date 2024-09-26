@@ -37,7 +37,7 @@ function showAlert() {
                 popup.style.opacity = '0';
                 setTimeout(() => {
                     popup.style.transition = 'opacity .5s ease';
-                    popup.style.opacity = '1'; // Aparece suavemente
+                    popup.style.opacity = '1';
                 }, 50);
             }
         },
@@ -51,11 +51,11 @@ function smoothAlertFadeOut() {
     if (popup) {
         isFadingOut = true;
         popup.style.transition = 'opacity .5s ease';
-        popup.style.opacity = '0'; // Desvanece o alerta ao longo de 1 segundo
+        popup.style.opacity = '0';
         setTimeout(() => {
             Swal.close();
             isFadingOut = false;
-        }, 1000); // Fecha após 1 segundo
+        }, 1000);
     }
 }
 
@@ -80,7 +80,7 @@ function checkScroll() {
             setTimeout(() => {
                 showAlert();
                 isAlertShown = true;
-            }, 50); // Pequeno atraso para garantir que a rolagem finalize
+            }, 50);
         }
 
         // Ocultar o alerta quando sair da seção contato
@@ -94,8 +94,8 @@ function checkScroll() {
 // Adicionar o evento de scroll com a função throttle
 window.addEventListener('scroll', throttleScroll(checkScroll, 50));
 
-// Função para rolar suavemente até o final do site (acionada ao clicar no botão "contatos")
+// Função para rolar suavemente até o final do site
 document.querySelector('.botaoLuminoso').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede a rolagem automática padrão
+    event.preventDefault();
     document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
 });
