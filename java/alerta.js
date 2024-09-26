@@ -75,9 +75,6 @@ function checkScroll() {
         const contactTop = contactRect.top + window.scrollY;
         const contactBottom = contactRect.bottom + window.scrollY;
 
-        // Log para debug no modo responsivo
-        console.log(`scrollY: ${scrollY}, windowHeight: ${windowHeight}, contactBottom: ${contactBottom}`);
-
         // Mostrar o alerta somente se a rolagem estiver completa até o final da seção "contato"
         if (scrollY + windowHeight >= contactBottom && !isAlertShown) {
             setTimeout(() => {
@@ -109,7 +106,9 @@ window.addEventListener('load', function() {
 // Função para rolar suavemente até o final do site
 document.querySelector('.botaoLuminoso').addEventListener('click', function(event) {
     event.preventDefault();
-    document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+    }, 500); // Adiciona um pequeno atraso no clique para evitar conflito com o alerta
 });
 
 // Estilo para garantir que o alerta tenha a prioridade visual
@@ -117,6 +116,11 @@ const style = document.createElement('style');
 style.innerHTML = `
     .swal2-scroll-popup {
         z-index: 9999 !important; /* Garante que o alerta esteja no topo */
+    }
+
+    .botaoLuminoso {
+        position: relative;
+        z-index: 1; /* Certifica que o botão não sobrepõe o alerta */
     }
 `;
 document.head.appendChild(style);
