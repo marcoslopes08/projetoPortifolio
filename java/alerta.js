@@ -25,7 +25,7 @@ function showAlert() {
         </div>
         `,
         backdrop: false,
-        position: 'bottom-start',
+        position: window.innerWidth <= 1024 ? 'center' : 'bottom-start', // Centraliza no modo responsivo
         customClass: {
             popup: 'swal2-scroll-popup',
         },
@@ -75,6 +75,9 @@ function checkScroll() {
         const contactTop = contactRect.top + window.scrollY;
         const contactBottom = contactRect.bottom + window.scrollY;
 
+        // Log para debug no modo responsivo
+        console.log(`scrollY: ${scrollY}, windowHeight: ${windowHeight}, contactBottom: ${contactBottom}`);
+
         // Mostrar o alerta somente se a rolagem estiver completa até o final da seção "contato"
         if (scrollY + windowHeight >= contactBottom && !isAlertShown) {
             setTimeout(() => {
@@ -94,8 +97,26 @@ function checkScroll() {
 // Adicionar o evento de scroll com a função throttle
 window.addEventListener('scroll', throttleScroll(checkScroll, 50));
 
+// Função para forçar o alerta no modo responsivo após carregar a página
+window.addEventListener('load', function() {
+    if (window.innerWidth <= 1024) { // Verifica se é o modo responsivo
+        setTimeout(() => {
+            showAlert();
+        }, 2000); // Força o alerta após 2 segundos
+    }
+});
+
 // Função para rolar suavemente até o final do site
 document.querySelector('.botaoLuminoso').addEventListener('click', function(event) {
     event.preventDefault();
     document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
 });
+
+// Estilo para garantir que o alerta tenha a prioridade visual
+const style = document.createElement('style');
+style.innerHTML = `
+    .swal2-scroll-popup {
+        z-index: 9999 !important; /* Garante que o alerta esteja no topo */
+    }
+`;
+document.head.appendChild(style);
