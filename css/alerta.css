@@ -1,101 +1,85 @@
-let isAlertShown = false;
-let isFadingOut = false;
-
-// Função throttle para limitar a execução do código
-function throttleScroll(callback, delay) {
-    let throttleTimeout = null;
-    return function () {
-        if (!throttleTimeout) {
-            throttleTimeout = setTimeout(() => {
-                callback();
-                throttleTimeout = null;
-            }, delay);
-        }
-    };
+/* ALERTA que aparece no fim do site */
+.swal2-scroll-popup {
+	width: 160px;  /* Definir largura */
+	height: 160px; /* Definir altura para criar o formato quadrado */
+	left: 20px;    /* Distância da borda esquerda */
+	bottom: 20px;  /* Distância da borda inferior */
+	position: fixed;
+	font-size: 18px;
+	margin: 0;
+	background-color: #101010;
+	color: #fcfc;
+	box-shadow: 0 0 15px 2px #f9004d !important;
+	border: transparent !important;
+	outline: none;
+	border-radius: 20%;
+	padding: 2px; /* Era 10px - Controle de espaçamento interno */
+	text-align: center;
+	overflow: hidden; /* Mantém o conteúdo dentro do quadrado */
+	animation: fadeIn 0.5s ease-in-out;
+	transition: box-shadow .9s ease-in-out !important; /* vai demorar 0.9 segundos pra cor #f9004d aparecer no HOVER */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-// Função para exibir o alerta suavemente
-function showAlert() {
-    Swal.fire({
-        html: `
-        <div class="swal2-scroll-popup fade-in">
-            <div class="emoji">😊</div>Se ainda não viu meus certificados <br><br>
-            <a href="https://www.linkedin.com/in/marcos-lopes-982616215/details/certifications/"
-                target="_blank" class="clique-aqui-2" style="outline: none; color: #f9004d !important;">clique aqui</a>
-        </div>
-        `,
-        backdrop: false,
-        position: 'bottom-start',
-        customClass: {
-            popup: 'swal2-scroll-popup',
-        },
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        didOpen: () => {
-            const popup = document.querySelector('.swal2-popup');
-            if (popup) {
-                popup.style.opacity = '0';
-                setTimeout(() => {
-                    popup.style.transition = 'opacity .5s ease';
-                    popup.style.opacity = '1';
-                }, 50);
-            }
-        },
-    });
+.swal2-scroll-popup:hover {
+	box-shadow: 0 0 15px 2px white !important;
+	transition: box-shadow .9s ease-in-out !important; /* vai demorar 0.9 segundos pra cor Branca aparecer no HOVER */
 }
 
-// Função para aplicar transição suave ao alerta quando desaparecer
-function smoothAlertFadeOut() {
-    if (isFadingOut) return;
-    const popup = document.querySelector('.swal2-popup');
-    if (popup) {
-        isFadingOut = true;
-        popup.style.transition = 'opacity .5s ease';
-        popup.style.opacity = '0';
-        setTimeout(() => {
-            Swal.close();
-            isFadingOut = false;
-        }, 1000);
-    }
+/* Transição suave para a sombra  <!-- 😊 --> */
+.fade-in {
+	animation: fadeIn 1s ease-in-out;
 }
 
-// Função para verificar o scroll e exibir/ocultar o alerta
-function checkScroll() {
-    const contactSection = document.getElementById('contato');
-    const body = document.body;
-    const html = document.documentElement;
-
-    const totalPageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-    const windowHeight = window.innerHeight;
-    const scrollY = window.scrollY || window.scrollY;
-    const scrollBottom = scrollY + windowHeight;
-
-    if (contactSection) {
-        const contactRect = contactSection.getBoundingClientRect();
-        const contactTop = contactRect.top + window.scrollY;
-        const contactBottom = contactRect.bottom + window.scrollY;
-
-        // Mostrar o alerta somente se a rolagem estiver completa até o final da seção "contato"
-        if (scrollY + windowHeight >= contactBottom && !isAlertShown) {
-            setTimeout(() => {
-                showAlert();
-                isAlertShown = true;
-            }, 50);
-        }
-
-        // Ocultar o alerta quando sair da seção contato
-        if (scrollY + windowHeight < contactTop && isAlertShown) {
-            smoothAlertFadeOut();
-            isAlertShown = false;
-        }
-    }
+@keyframes fadeIn {
+	from {
+        opacity: 0;
+	}
+	to {
+        opacity: 1;
+	}
 }
 
-// Adicionar o evento de scroll com a função throttle
-window.addEventListener('scroll', throttleScroll(checkScroll, 50));
+/* Emoji */
+.emoji {
+	font-size: 2.5em; /* Tamanho do E-moji */
+	/*margin-top: 2px;*/
+}
 
-// Função para rolar suavemente até o final do site
-document.querySelector('.botaoLuminoso').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
-});
+
+/* Layout do container principal */
+/*alert-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}*/
+
+/* Mensagem */
+/*message {
+	font-size: 18px;
+	color: #fcfc;
+	/*margin-bottom: 2px;*/
+	/*padding: 2px;*/ /* Era 5px */
+	/*text-align: center;*/
+	/*display: block;*/
+/*}*/
+
+/* Estilo do rodapé */
+/*.footer {
+	/*padding-top: 2px;*/
+	/*background-color: #101010;
+	border: none !important;
+	font-size: large #f9004d !important;*/
+	/*object-fit: cover;*/
+	/*color: #f9004d !important;*/ /* cor do underline no link clicável apenas no HOVER */
+
+/*}*/
+
+/* Ajustes para telas menores (responsivo) */
+/* NÃO É NECESSÁRIO MODO RESPONSIVO */
+/* o Emoji não vai aparecer no MODO RESPONSIVO */
