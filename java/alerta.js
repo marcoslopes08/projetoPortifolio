@@ -94,11 +94,11 @@ document.querySelector('.botaoLuminoso').addEventListener('click', function(even
     event.preventDefault();
     document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
 
-    // Exibir o alerta ao clicar no botão
+    // Adicionar um pequeno delay para garantir que o alerta apareça após a rolagem suave
     setTimeout(() => {
         showAlert();
         isAlertShown = true;
-    }, 1000); // Pequeno atraso para não conflitar com a rolagem suave
+    }, 1000); // Delay de 1 segundo para sincronizar com a rolagem
 });
 
 // Estilo para garantir que o alerta tenha a prioridade visual
