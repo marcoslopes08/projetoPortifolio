@@ -67,7 +67,7 @@ function checkScroll() {
     const contactRect = contactSection.getBoundingClientRect();
     const scrollY = window.scrollY || window.pageYOffset;
     const windowHeight = window.innerHeight;
-    
+
     const contactTop = contactRect.top + scrollY;
     const contactBottom = contactRect.bottom + scrollY;
 
@@ -89,12 +89,16 @@ function checkScroll() {
 // Adicionar o evento de scroll com a função throttle
 window.addEventListener('scroll', throttleScroll(checkScroll, 50));
 
-// Função para rolar suavemente até o final do site ao clicar no botão
+// Função para rolar suavemente até a seção "contato" e exibir o alerta ao clicar no botão
 document.querySelector('.botaoLuminoso').addEventListener('click', function(event) {
     event.preventDefault();
+    document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+
+    // Exibir o alerta ao clicar no botão
     setTimeout(() => {
-        document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
-    }, 500); // Adiciona um pequeno atraso no clique para evitar conflito com o alerta
+        showAlert();
+        isAlertShown = true;
+    }, 1000); // Pequeno atraso para não conflitar com a rolagem suave
 });
 
 // Estilo para garantir que o alerta tenha a prioridade visual
