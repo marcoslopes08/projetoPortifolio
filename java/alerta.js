@@ -1,19 +1,6 @@
 let isAlertShown = false;
 let isFadingOut = false;
 
-// Função throttle para limitar a execução do código
-function throttleScroll(callback, delay) {
-    let throttleTimeout = null;
-    return function () {
-        if (!throttleTimeout) {
-            throttleTimeout = setTimeout(() => {
-                callback();
-                throttleTimeout = null;
-            }, delay);
-        }
-    };
-}
-
 // Função para exibir o alerta suavemente
 function showAlert() {
     Swal.fire({
@@ -62,42 +49,32 @@ function smoothAlertFadeOut() {
 // Função para verificar o scroll e exibir/ocultar o alerta
 function checkScroll() {
     const contactSection = document.getElementById('contato');
-    if (!contactSection) return;  // Verifica se a seção existe
+    
+    if (contactSection) {
+        const contactRect = contactSection.getBoundingClientRect();
+        const contactTop = contactRect.top + window.scrollY;
+        const contactBottom = contactRect.bottom + window.scrollY;
+        const scrollY = window.scrollY || window.pageYOffset;
+        const windowHeight = window.innerHeight;
 
-    const contactRect = contactSection.getBoundingClientRect();
-    const scrollY = window.scrollY || window.pageYOffset;
-    const windowHeight = window.innerHeight;
+        // Mostrar o alerta assim que a seção "contato" é visível
+        if (scrollY + windowHeight >= contactTop && !isAlertShown) {
+            setTimeout(() => {
+                showAlert();
+                isAlertShown = true;
+            }, 50);
+        }
 
-    const contactTop = contactRect.top + scrollY;
-    const contactBottom = contactRect.bottom + scrollY;
-
-    // Verificar se estamos na seção de contato ou abaixo dela
-    if (scrollY + windowHeight >= contactBottom && !isAlertShown) {
-        setTimeout(() => {
-            showAlert();
-            isAlertShown = true;
-        }, 50);
-    }
-
-    // Verificar se o usuário rola para cima antes de atingir a seção contato
-    if (scrollY + windowHeight < contactTop && isAlertShown) {
-        smoothAlertFadeOut();
-        isAlertShown = false;
+        // Ocultar o alerta quando rolar para cima
+        if (scrollY + windowHeight < contactTop && isAlertShown) {
+            smoothAlertFadeOut();
+            isAlertShown = false;
+        }
     }
 }
 
-// Detectar eventos de rolagem em dispositivos móveis
-function handleTouchScroll() {
-    // Evento de rolagem em dispositivos com touchscreen
-    window.addEventListener('touchmove', throttleScroll(checkScroll, 50), { passive: true });
-    window.addEventListener('touchend', throttleScroll(checkScroll, 50), { passive: true });
-}
-
-// Adicionar o evento de scroll com a função throttle
-window.addEventListener('scroll', throttleScroll(checkScroll, 50));
-
-// Detectar quando o usuário está usando touchscreen
-handleTouchScroll();
+// Adicionar o evento de scroll para verificar quando exibir o alerta
+window.addEventListener('scroll', checkScroll);
 
 // Estilo para garantir que o alerta tenha a prioridade visual
 const style = document.createElement('style');
