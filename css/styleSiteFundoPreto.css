@@ -87,7 +87,7 @@ nav ul li a { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - 
 	color: white; /* cor da Fonte do Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) */
 	text-decoration: none; /* retira o sublinhado que vem como padrão */
 	font-weight: bold; /* NEGRITO */
-	text-transform: capitalize; /* coloca a primeira letra sempre em Caixa Alta */
+	/*text-transform: capitalize;*/ /* coloca a primeira letra sempre em Caixa Alta */
 }
 
 nav ul li a:hover { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - Section 1 - Topo da Página */
