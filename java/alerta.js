@@ -86,30 +86,20 @@ function checkScroll() {
     }
 }
 
-// Detectar eventos de rolagem em dispositivos móveis
-function handleTouchScroll() {
-    // Evento de rolagem em dispositivos com touchscreen
-    window.addEventListener('touchmove', throttleScroll(checkScroll, 50), { passive: true });
-    window.addEventListener('touchend', throttleScroll(checkScroll, 50), { passive: true });
-}
-
 // Adicionar o evento de scroll com a função throttle
 window.addEventListener('scroll', throttleScroll(checkScroll, 50));
 
-// Detectar quando o usuário está usando touchscreen
-handleTouchScroll();
-
 // Função para rolar suavemente até a seção "contato" e exibir o alerta ao clicar no botão
-document.querySelector('.botaoLuminoso').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+//document.querySelector('.botaoLuminoso').addEventListener('click', function(event) {
+   // event.preventDefault();
+    //document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
 
     // Adicionar um pequeno delay para garantir que o alerta apareça após a rolagem suave
     setTimeout(() => {
         showAlert();
         isAlertShown = true;
     }, 1000); // Delay de 1 segundo para sincronizar com a rolagem
-});
+//});
 
 // Estilo para garantir que o alerta tenha a prioridade visual
 const style = document.createElement('style');
