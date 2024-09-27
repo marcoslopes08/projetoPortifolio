@@ -62,39 +62,34 @@ function smoothAlertFadeOut() {
 // Função para verificar o scroll e exibir/ocultar o alerta
 function checkScroll() {
     const contactSection = document.getElementById('contato');
-    const body = document.body;
-    const html = document.documentElement;
+    if (!contactSection) return;  // Verifica se a seção existe
 
-    const totalPageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    const contactRect = contactSection.getBoundingClientRect();
+    const scrollY = window.scrollY || window.pageYOffset;
     const windowHeight = window.innerHeight;
-    const scrollY = window.scrollY || window.scrollY;
-    const scrollBottom = scrollY + windowHeight;
+    
+    const contactTop = contactRect.top + scrollY;
+    const contactBottom = contactRect.bottom + scrollY;
 
-    if (contactSection) {
-        const contactRect = contactSection.getBoundingClientRect();
-        const contactTop = contactRect.top + window.scrollY;
-        const contactBottom = contactRect.bottom + window.scrollY;
+    // Verificar se estamos na seção de contato ou abaixo dela
+    if (scrollY + windowHeight >= contactBottom && !isAlertShown) {
+        setTimeout(() => {
+            showAlert();
+            isAlertShown = true;
+        }, 50);
+    }
 
-        // Mostrar o alerta somente se a rolagem estiver completa até o final da seção "contato"
-        if (scrollY + windowHeight >= contactBottom && !isAlertShown) {
-            setTimeout(() => {
-                showAlert();
-                isAlertShown = true;
-            }, 50);
-        }
-
-        // Ocultar o alerta quando sair da seção contato
-        if (scrollY + windowHeight < contactTop && isAlertShown) {
-            smoothAlertFadeOut();
-            isAlertShown = false;
-        }
+    // Verificar se o usuário rola para cima antes de atingir a seção contato
+    if (scrollY + windowHeight < contactTop && isAlertShown) {
+        smoothAlertFadeOut();
+        isAlertShown = false;
     }
 }
 
 // Adicionar o evento de scroll com a função throttle
 window.addEventListener('scroll', throttleScroll(checkScroll, 50));
 
-// Função para rolar suavemente até o final do site
+// Função para rolar suavemente até o final do site ao clicar no botão
 document.querySelector('.botaoLuminoso').addEventListener('click', function(event) {
     event.preventDefault();
     setTimeout(() => {
