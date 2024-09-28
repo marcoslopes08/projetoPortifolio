@@ -33,9 +33,9 @@ function applyTextEffects() {
     textElements.forEach(function (element) {
         wrapTextWithSpan(element);
         if (element.classList.contains('custom-text')) {
-            textColorLoop(element, 'white', '#f9004d', 'none', '0 0 5px #f9004d', 300);
+            textColorLoop(element, 'white', '#f9004d', 'none', '0 0 5px #f9004d', 600);
         } else if (element.classList.contains('custom-text-2')) {
-            textColorLoop(element, 'white', 'gray', 'none', '0 0 2px yellow', 100);
+            textColorLoop(element, 'white', 'gray', 'none', '0 0 2px yellow', 300);
         }
     });
 }
