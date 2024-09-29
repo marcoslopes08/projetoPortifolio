@@ -70,7 +70,7 @@ span {
 }
 
 /* Troca a cor da Letras em (Marcos Lopes, Sobre Mim, Habilidades, Diferenciais, Projetos) */
-.custom-text span, .custom-text-2 span {
+.custom-text span, .custom-text-2 .custom-text-3 span {
     transition: color 0.5s, text-shadow 0.5s; /* Transição suave para cor e sombra */
 }
 
