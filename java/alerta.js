@@ -42,7 +42,7 @@ function smoothAlertFadeOut() {
         setTimeout(() => {
             Swal.close();
             isFadingOut = false;
-        }, 2000);
+        }, 3000);
     }
 }
 
