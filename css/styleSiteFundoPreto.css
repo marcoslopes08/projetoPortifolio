@@ -739,6 +739,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 					Acesse meus certificados 'clicando aqui' 
 					Veja meu currículo completo em PDF clicando aqui*/
 	text-decoration: none; /* retira o underline do link clicável */
+	color: #f9004d; /* cor da Fonte */
 }
 
 .clique-aqui-2:hover { /* Section 2 e 4 - Sobre Mim e Diferenciais - 
