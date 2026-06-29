@@ -15,6 +15,8 @@
 	/* 🎯 SOLUÇÃO PARA NÃO EMPURRAR O MENU - criado pelo Gemini */
     display: inline-block; /* Garante que o navegador respeite as margens e dimensões dele */
     text-align: center;    /* Mantém o texto centralizado quando expandir */
+	width: 150px;          /* Força o botão a ter um tamanho fixo (ajuste os pixels se o texto ficar apertado) */
+    text-align: center;    /* Garante que o texto fique centralizado dentro desse tamanho fixo */
 }
 
 .botaoLuminoso:hover {
@@ -26,12 +28,12 @@
     box-shadow: 0 0 35px var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
     text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
     color: #f9004d; /* cor da Fonte dentro do Botão quando o mouse for posicionado sobre ele */
-    /* transform: translateX(-10%); /* faz o hover mover o Botão pra ambos os Lados */
-    /* margin-right: -30px; /* margem NEGATIVA ajuda o comando "transform: translateX(-10%)" funcionar 
+    transform: translateX(-10%); /* faz o hover mover o Botão pra ambos os Lados */
+    margin-right: -30px; /* margem NEGATIVA ajuda o comando "transform: translateX(-10%)" funcionar 
                             evita que o MENU trema quando o mouse for posicionado sobre ele */
 
 	/* 🎯 AJUSTE DO MOVIMENTO - criado pelo Gemini */
-    transform: scale(1.05); /* Em vez de mover para o lado com o translateX, ele cresce sutilmente para frente (efeito 3D) */
+    /* transform: scale(1.05); */ /* Em vez de mover para o lado com o translateX, ele cresce sutilmente para frente (efeito 3D) */
 }
 
 /* CSS Botão Luminoso - Box Projetos  */
