@@ -876,7 +876,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 	text-shadow: 0 0 2px #f9004d;
 }
 
-/* Modo Responsivo */
+/* Modo Responsivo - 1. Telas Médias (Tablets e celulares deitados) */
 @media all and (min-width: 40.063em) and (max-width: 63.938em) { /* Celular com tamanho de Tela Média */
 	.hero { /* Section 1 - Topo da Página */
 		/* abaixo GIF com 75 quadros - 15 segundos de delay - atraso */
