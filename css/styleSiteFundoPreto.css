@@ -890,7 +890,7 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 												100px = dá um espaço na margem direita superior na Foto */
 		overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
 	}
-	/* Menu de Navegação fica responsivo */
+	/* Ajuste para o menu não estourar em telas médias */
 	nav ul li a {
 		font-size: 13px; /* Diminui a letra para caber na linha */
 		padding: 0 6px; /* Reduz o espaço entre as palavras */
@@ -1016,5 +1016,15 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		/*clip-path: polygon(26% 6%, 73% 6%, 73% 88%, 26% 88%);*/ /* corta o GIF da esquerda para a direita */
 		/*pointer-events: none;*/ /* evita que o GIF seja clicável, não deixa abrir outra ABA no navegador */
 	}
-	
+}
+/* 2. Telas Pequenas (Celulares em pé / Smartphone comum) - bloco novo - criado pelo Gemini */
+@media all and (max-width: 40.062em) {
+	nav ul li a {
+		font-size: 12px; /* Letra menor para caber na tela estreita */
+		padding: 0 4px; /* Espaço bem enxuto entre os botões */
+	}
+	.navbar .botaoLuminoso {
+		font-size: 12px; /* Ajusta o botão de contatos também */
+		padding: 6px 10px;
+	}
 }
