@@ -10,6 +10,7 @@
     transition: 0.5s; /* tempo de animação quando o mouse for colocado em cima do Botão */
     border-radius: 30px; /* arredondamento das bordas */
     font-weight: bold; /* NEGRITO */
+	text-transform: uppercase; /* FORÇA O TEXTO EM CAIXA ALTA */
 }
 
 .botaoLuminoso:hover {
