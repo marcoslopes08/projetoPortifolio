@@ -10,13 +10,6 @@
     transition: 0.5s; /* tempo de animação quando o mouse for colocado em cima do Botão */
     border-radius: 30px; /* arredondamento das bordas */
     font-weight: bold; /* NEGRITO */
-	text-transform: uppercase; /* FORÇA O TEXTO EM CAIXA ALTA */
-	
-	/* 🎯 SOLUÇÃO PARA NÃO EMPURRAR O MENU - criado pelo Gemini */
-    display: inline-block; /* Garante que o navegador respeite as margens e dimensões dele */
-    text-align: center;    /* Mantém o texto centralizado quando expandir */
-	width: 150px;          /* Força o botão a ter um tamanho fixo (ajuste os pixels se o texto ficar apertado) */
-    text-align: center;    /* Garante que o texto fique centralizado dentro desse tamanho fixo */
 }
 
 .botaoLuminoso:hover {
@@ -31,9 +24,6 @@
     transform: translateX(-10%); /* faz o hover mover o Botão pra ambos os Lados */
     margin-right: -30px; /* margem NEGATIVA ajuda o comando "transform: translateX(-10%)" funcionar 
                             evita que o MENU trema quando o mouse for posicionado sobre ele */
-
-	/* 🎯 AJUSTE DO MOVIMENTO - criado pelo Gemini */
-    /* transform: scale(1.05); */ /* Em vez de mover para o lado com o translateX, ele cresce sutilmente para frente (efeito 3D) */
 }
 
 /* CSS Botão Luminoso - Box Projetos  */
@@ -81,20 +71,4 @@
         margin-top: -12.2%; /* Era -12.5%, Era -17% - centraliza o Botão no meio da Foto */
         margin-left: -7.9%; /* Era -8% - ajuda a centralizar o Botão no meio da Foto */
     }
-}
-/* 2. Telas Pequenas (Celulares em pé / Smartphone comum) - bloco novo - criado pelo Gemini */
-@media all and (max-width: 40.062em) {
-	nav ul li a {
-		font-size: 12px;       /* Letra menor para caber na tela estreita */
-		padding: 0 4px;        /* Espaço bem enxuto entre os botões */
-	}
-	.botaoLuminoso {
-		font-size: 11px;       /* Ajusta a fonte do botão no celular */
-		padding: 8px 14px;     /* Diminui o botão para não estourar a margem */
-	}
-	.botaoLuminoso:hover {
-		transform: none;       /* Desativa o movimento lateral no celular para não quebrar o layout */
-		margin-right: 0;       /* Zera a margem no celular */
-		letter-spacing: 0.1em; /* Uma expansão bem menor para o dedo não clicar errado */
-	}
 }
