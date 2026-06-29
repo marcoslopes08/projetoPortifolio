@@ -88,7 +88,7 @@ nav ul li a { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - 
 	text-decoration: none; /* retira o sublinhado que vem como padrão */
 	font-weight: bold; /* NEGRITO */
 	/*text-transform: capitalize;*/ /* coloca a primeira letra sempre em Caixa Alta */
-	text-transform: uppercase; /* Força tudo em Caixa Alta */
+	/*text-transform: uppercase;*/ /* Força tudo em Caixa Alta */
 }
 
 nav ul li a:hover { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - Section 1 - Topo da Página */
@@ -890,11 +890,6 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 												100px = dá um espaço na margem direita superior na Foto */
 		overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
 	}
-	/* Ajuste para o menu não estourar em telas médias */
-	nav ul li a {
-		font-size: 13px; /* Diminui a letra para caber na linha */
-		padding: 0 6px; /* Reduz o espaço entre as palavras */
-	}
 	.about {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
 		margin-top: -3px; /* esconde uma LINHA BRANCA de background-color que aparece entre as páginas 
@@ -1017,19 +1012,4 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		/*pointer-events: none;*/ /* evita que o GIF seja clicável, não deixa abrir outra ABA no navegador */
 	}
 }
-/* 2. Telas Pequenas (Celulares em pé / Smartphone comum) - bloco novo - criado pelo Gemini */
-@media all and (max-width: 40.062em) {
-	nav ul li a {
-		font-size: 12px;       /* Letra menor para caber na tela estreita */
-		padding: 0 4px;        /* Espaço bem enxuto entre os botões */
-	}
-	.botaoLuminoso {
-		font-size: 11px;       /* Ajusta a fonte do botão no celular */
-		padding: 8px 14px;     /* Diminui o botão para não estourar a margem */
-	}
-	.botaoLuminoso:hover {
-		transform: none;       /* Desativa o movimento lateral no celular para não quebrar o layout */
-		margin-right: 0;       /* Zera a margem no celular */
-		letter-spacing: 0.1em; /* Uma expansão bem menor para o dedo não clicar errado */
-	}
-}
+
