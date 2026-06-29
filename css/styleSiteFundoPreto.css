@@ -88,6 +88,7 @@ nav ul li a { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - 
 	text-decoration: none; /* retira o sublinhado que vem como padrão */
 	font-weight: bold; /* NEGRITO */
 	/*text-transform: capitalize;*/ /* coloca a primeira letra sempre em Caixa Alta */
+	text-transform: uppercase; /* Força tudo em Caixa Alta */
 }
 
 nav ul li a:hover { /* Menu (Sobre mim/Habilidades/Diferenciais/Projetos/Contactos) - Section 1 - Topo da Página */
@@ -888,6 +889,11 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 		background-position: -500px 50px; /* -450px coloca o Globo Terrestre girando no meio do container 
 												100px = dá um espaço na margem direita superior na Foto */
 		overflow-x: hidden; /* evita que o conteúdo extrapole as margens */
+	}
+	/* Menu de Navegação fica responsivo */
+	nav ul li a {
+		font-size: 13px; /* Diminui a letra para caber na linha */
+		padding: 0 6px; /* Reduz o espaço entre as palavras */
 	}
 	.about {
 		height: 50vh; /* 100vh = a Página ocupa a Tela inteira do celular */
