@@ -1020,11 +1020,16 @@ apenas nas Páginas Links dos Cards (Reponsividade/Design/Business Intelligence)
 /* 2. Telas Pequenas (Celulares em pé / Smartphone comum) - bloco novo - criado pelo Gemini */
 @media all and (max-width: 40.062em) {
 	nav ul li a {
-		font-size: 12px; /* Letra menor para caber na tela estreita */
-		padding: 0 4px; /* Espaço bem enxuto entre os botões */
+		font-size: 12px;       /* Letra menor para caber na tela estreita */
+		padding: 0 4px;        /* Espaço bem enxuto entre os botões */
 	}
-	.navbar .botaoLuminoso {
-		font-size: 12px; /* Ajusta o botão de contatos também */
-		padding: 6px 10px;
+	.botaoLuminoso {
+		font-size: 11px;       /* Ajusta a fonte do botão no celular */
+		padding: 8px 14px;     /* Diminui o botão para não estourar a margem */
+	}
+	.botaoLuminoso:hover {
+		transform: none;       /* Desativa o movimento lateral no celular para não quebrar o layout */
+		margin-right: 0;       /* Zera a margem no celular */
+		letter-spacing: 0.1em; /* Uma expansão bem menor para o dedo não clicar errado */
 	}
 }
